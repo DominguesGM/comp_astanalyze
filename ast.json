@@ -1,0 +1,340 @@
+{
+   "name": "Root",
+   "children": [
+   {
+      "name": "RootPackage",
+      "content": "",
+      "children": [
+      {
+         "name": "Package",
+         "content": "unnamed package",
+         "children": [
+         {
+            "name": "Class",
+            "content": "MainClass",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:2)",
+            "children": [
+            {
+               "name": "Constructor",
+               "content": "MainClass()",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:2)",
+               "children": [
+               {
+                  "name": "Block",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:2)",
+                  "children": [
+                  {
+                     "name": "Invocation",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:2)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "Object",
+                        "children": [
+                        {
+                           "name": "PackageReference",
+                           "content": "java.lang",
+                           "children": [],
+                        }],
+                     },
+                     {
+                        "name": "ExecutableReference",
+                        "content": "<init>",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": [],
+                           }],
+                        },
+                        {
+                           "name": "TypeReference",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": [],
+                           }],
+                        }],
+                     }],
+                  }],
+               }],
+            },
+            {
+               "name": "Method",
+               "content": "main",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:3)",
+               "children": [
+               {
+                  "name": "TypeReference",
+                  "content": "void",
+                  "children": [],
+               },
+               {
+                  "name": "Parameter",
+                  "content": "args",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:3)",
+                  "children": [
+                  {
+                     "name": "ArrayTypeReference",
+                     "content": "Array",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReference",
+                           "content": "java.lang",
+                           "children": [],
+                        }],
+                     }],
+                  }],
+               },
+               {
+                  "name": "Block",
+                  "children": [
+                  {
+                     "name": "LocalVariable",
+                     "content": "a",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:4)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "int",
+                        "children": [],
+                     },
+                     {
+                        "name": "Literal",
+                        "content": "4",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:4)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": [],
+                        }],
+                     }],
+                  },
+                  {
+                     "name": "LocalVariable",
+                     "content": "b",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:5)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "int",
+                        "children": [],
+                     },
+                     {
+                        "name": "Literal",
+                        "content": "10",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:5)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": [],
+                        }],
+                     }],
+                  },
+                  {
+                     "name": "LocalVariable",
+                     "content": "c",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:6)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "int",
+                        "children": [],
+                     },
+                     {
+                        "name": "BinaryOperator",
+                        "content": "+",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:6)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": [],
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:6)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "a",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              }],
+                           }],
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:6)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "b",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              }],
+                           }],
+                        }],
+                     }],
+                  },
+                  {
+                     "name": "Invocation",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:7)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "void",
+                        "children": [],
+                     },
+                     {
+                        "name": "FieldRead",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:7)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "PrintStream",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.io",
+                              "children": [],
+                           }],
+                        },
+                        {
+                           "name": "FieldReference",
+                           "content": "out",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "System",
+                              "children": [
+                              {
+                                 "name": "PackageReference",
+                                 "content": "java.lang",
+                                 "children": [],
+                              }],
+                           },
+                           {
+                              "name": "TypeReference",
+                              "content": "PrintStream",
+                              "children": [
+                              {
+                                 "name": "PackageReference",
+                                 "content": "java.io",
+                                 "children": [],
+                              }],
+                           }],
+                        }],
+                     },
+                     {
+                        "name": "ExecutableReference",
+                        "content": "println",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "PrintStream",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.io",
+                              "children": [],
+                           }],
+                        },
+                        {
+                           "name": "TypeReference",
+                           "content": "void",
+                           "children": [],
+                        }],
+                     },
+                     {
+                        "name": "BinaryOperator",
+                        "content": "+",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:7)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "String",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": [],
+                           }],
+                        },
+                        {
+                           "name": "Literal",
+                           "content": ""Output: "",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:7)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReference",
+                                 "content": "java.lang",
+                                 "children": [],
+                              }],
+                           }],
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:7)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "c",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              }],
+                           }],
+                        }],
+                     }],
+                  },
+                  {
+                     "name": "Return",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:8)",
+                     "children": [],
+                  }],
+               }],
+            }],
+         }],
+      }],
+   }],
+}
