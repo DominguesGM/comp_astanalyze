@@ -34,8 +34,8 @@
                         {
                            "name": "PackageReference",
                            "content": "java.lang",
-                           "children": [],
-                        }],
+                           "children": []
+                        }]
                      },
                      {
                         "name": "ExecutableReference",
@@ -48,8 +48,8 @@
                            {
                               "name": "PackageReference",
                               "content": "java.lang",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
                            "name": "TypeReference",
@@ -58,12 +58,12 @@
                            {
                               "name": "PackageReference",
                               "content": "java.lang",
-                              "children": [],
-                           }],
-                        }],
-                     }],
-                  }],
-               }],
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
             },
             {
                "name": "Method",
@@ -73,7 +73,7 @@
                {
                   "name": "TypeReference",
                   "content": "void",
-                  "children": [],
+                  "children": []
                },
                {
                   "name": "Parameter",
@@ -91,10 +91,10 @@
                         {
                            "name": "PackageReference",
                            "content": "java.lang",
-                           "children": [],
-                        }],
-                     }],
-                  }],
+                           "children": []
+                        }]
+                     }]
+                  }]
                },
                {
                   "name": "Block",
@@ -107,7 +107,7 @@
                      {
                         "name": "TypeReference",
                         "content": "int",
-                        "children": [],
+                        "children": []
                      },
                      {
                         "name": "Literal",
@@ -117,9 +117,9 @@
                         {
                            "name": "TypeReference",
                            "content": "int",
-                           "children": [],
-                        }],
-                     }],
+                           "children": []
+                        }]
+                     }]
                   },
                   {
                      "name": "LocalVariable",
@@ -129,7 +129,7 @@
                      {
                         "name": "TypeReference",
                         "content": "int",
-                        "children": [],
+                        "children": []
                      },
                      {
                         "name": "Literal",
@@ -139,9 +139,9 @@
                         {
                            "name": "TypeReference",
                            "content": "int",
-                           "children": [],
-                        }],
-                     }],
+                           "children": []
+                        }]
+                     }]
                   },
                   {
                      "name": "LocalVariable",
@@ -151,7 +151,7 @@
                      {
                         "name": "TypeReference",
                         "content": "int",
-                        "children": [],
+                        "children": []
                      },
                      {
                         "name": "BinaryOperator",
@@ -161,7 +161,7 @@
                         {
                            "name": "TypeReference",
                            "content": "int",
-                           "children": [],
+                           "children": []
                         },
                         {
                            "name": "VariableRead",
@@ -170,7 +170,7 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
                               "name": "LocalVariableReference",
@@ -179,9 +179,9 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
-                              }],
-                           }],
+                                 "children": []
+                              }]
+                           }]
                         },
                         {
                            "name": "VariableRead",
@@ -190,7 +190,7 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
                               "name": "LocalVariableReference",
@@ -199,11 +199,11 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
-                              }],
-                           }],
-                        }],
-                     }],
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     }]
                   },
                   {
                      "name": "Invocation",
@@ -212,7 +212,7 @@
                      {
                         "name": "TypeReference",
                         "content": "void",
-                        "children": [],
+                        "children": []
                      },
                      {
                         "name": "FieldRead",
@@ -225,8 +225,8 @@
                            {
                               "name": "PackageReference",
                               "content": "java.io",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
                            "name": "FieldReference",
@@ -239,8 +239,8 @@
                               {
                                  "name": "PackageReference",
                                  "content": "java.lang",
-                                 "children": [],
-                              }],
+                                 "children": []
+                              }]
                            },
                            {
                               "name": "TypeReference",
@@ -249,10 +249,10 @@
                               {
                                  "name": "PackageReference",
                                  "content": "java.io",
-                                 "children": [],
-                              }],
-                           }],
-                        }],
+                                 "children": []
+                              }]
+                           }]
+                        }]
                      },
                      {
                         "name": "ExecutableReference",
@@ -265,14 +265,14 @@
                            {
                               "name": "PackageReference",
                               "content": "java.io",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
                            "name": "TypeReference",
                            "content": "void",
-                           "children": [],
-                        }],
+                           "children": []
+                        }]
                      },
                      {
                         "name": "BinaryOperator",
@@ -286,12 +286,12 @@
                            {
                               "name": "PackageReference",
                               "content": "java.lang",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
                            "name": "Literal",
-                           "content": ""Output: "",
+                           "content": "",
                            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:7)",
                            "children": [
                            {
@@ -301,9 +301,9 @@
                               {
                                  "name": "PackageReference",
                                  "content": "java.lang",
-                                 "children": [],
-                              }],
-                           }],
+                                 "children": []
+                              }]
+                           }]
                         },
                         {
                            "name": "VariableRead",
@@ -312,7 +312,7 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
                               "name": "LocalVariableReference",
@@ -321,20 +321,20 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
-                              }],
-                           }],
-                        }],
-                     }],
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     }]
                   },
                   {
                      "name": "Return",
                      "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/MainClass.java:8)",
-                     "children": [],
-                  }],
-               }],
-            }],
-         }],
-      }],
-   }],
+                     "children": []
+                  }]
+               }]
+            }]
+         }]
+      }]
+   }]
 }
