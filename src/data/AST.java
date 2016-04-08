@@ -1,4 +1,4 @@
-package parser;
+package data;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -6,8 +6,24 @@ import java.io.IOException;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
+import other.Log;
+
 public class AST {
 	private JSONObject ast;
+	
+	public AST(){
+		ast = null;
+	}
+	
+	public AST(String astFile) {
+		try{
+			parseFile(astFile);
+		} catch(IOException e){
+			ast = null;
+			Log.error("Could not open file to read AST from");
+			e.printStackTrace();
+		}
+	}
 	
 	/**
 	 * parseFile.
