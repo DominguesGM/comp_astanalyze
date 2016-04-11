@@ -43,4 +43,8 @@ public class AST {
 	}
 	
 	
+	public JSONObject getTree(){
+		return ast;
+	}
+	
 }
