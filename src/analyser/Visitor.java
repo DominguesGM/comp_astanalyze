@@ -16,67 +16,49 @@ public class Visitor {
 		JSONObject mainFunc = (JSONObject) ((JSONArray) mainClass.get("children")).get(1);
 		JSONObject mainFuncCode = (JSONObject) ((JSONArray) mainFunc.get("children")).get(2);
 		JSONArray mainBlock = (JSONArray) mainFuncCode.get("children");
-	
 		
-		for(int i = 0; i < mainBlock.size(); i++){
-			JSONObject newNode = (JSONObject) mainBlock.get(i);
-			switch((String) newNode.get("content")){
-				case "if":
-					// Do something for if node
-					exploreNode((JSONArray) newNode.get("children"));
-					break;
-				case "while":
-					// Do something for while node
-					exploreNode((JSONArray) newNode.get("children"));
-					break;
-				case "for":
-					// Do something for for node
-					exploreNode((JSONArray) newNode.get("children"));
-					break;
-				case "switch":
-					// Do something for switch node
-					exploreNode((JSONArray) newNode.get("children"));
-					break;
-				case "return":
-					// Do something for return node
-					exploreNode((JSONArray) newNode.get("children"));
-					break;
-				default:
-					break;
-			}
-		}
+		exploreNode(mainBlock);
 	}
 	
 	public void exploreNode(JSONArray currentNodeContent){
 		
 		for(int i = 0; i < currentNodeContent.size(); i++){
 			JSONObject newNode = (JSONObject) currentNodeContent.get(i);
-			switch((String) newNode.get("content")){
-				case "if":
+			switch((String) newNode.get("name")){
+				case "If":
 					// Do something for if node
 					exploreNode((JSONArray) newNode.get("children"));
 					break;
-				case "while":
+				case "While":
 					// Do something for while node
 					exploreNode((JSONArray) newNode.get("children"));
 					break;
-				case "for":
+				case "For":
 					// Do something for for node
 					exploreNode((JSONArray) newNode.get("children"));
 					break;
-				case "switch":
+				case "Switch":
 					// Do something for switch node
 					exploreNode((JSONArray) newNode.get("children"));
 					break;
-				case "return":
+				case "Return":
 					// Do something for return node
 					exploreNode((JSONArray) newNode.get("children"));
 					break;
 				default:
+					//exploreNode((JSONArray) newNode.get("children"));
 					break;
 			}
 		}
 		
 		return;
+	}
+
+	public JSONObject getMainFunction() {
+		return mainFunction;
+	}
+
+	public void setMainFunction(JSONObject mainFunction) {
+		this.mainFunction = mainFunction;
 	}
 }
