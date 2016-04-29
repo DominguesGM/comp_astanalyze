@@ -15,7 +15,7 @@ public class Visitor {
 		JSONObject mainClass = (JSONObject) ((JSONArray) packageMain.get("children")).get(0);
 		JSONObject mainFunc = (JSONObject) ((JSONArray) mainClass.get("children")).get(1);
 		JSONObject mainFuncCode = (JSONObject) ((JSONArray) mainFunc.get("children")).get(2);
-		JSONArray mainBlock = (JSONArray) mainFuncCode.get("children");
+
 		
 		int[] level_position = {1};
 		int level = 0;
@@ -24,42 +24,7 @@ public class Visitor {
 		addNode(level_position);
 	
 		
-		for(int i = 0; i < mainBlock.size(); i++){
-			JSONObject newNode = (JSONObject) mainBlock.get(i);
-			switch((String) newNode.get("content")){
-				case "if":
-					// process condition
-					String ifString = processContition((JSONObject) ((JSONArray) newNode.get("children")).get(0));
-					// process first block
-					
-					exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1));
-					// if second block exists, process
-					if(((JSONArray) newNode.get("children")).size() > 2){
-						// Process Else (second block)
-						exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(2));
-					}
-					
-					break;
-				case "while":
-					// Do something for while node
-					exploreNode(newNode);
-					break;
-				case "for":
-					// Do something for for node
-					exploreNode(newNode);
-					break;
-				case "switch":
-					// Do something for switch node
-					exploreNode(newNode);
-					break;
-				case "return":
-					// Do something for return node
-					exploreNode(newNode);
-					break;
-				default:
-					break;
-			}
-		}
+		exploreNode(mainFuncCode);
 	}
 	
 	public void exploreNode(JSONObject currentNode){
@@ -84,19 +49,20 @@ public class Visitor {
 					// process code block
 					exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1));
 					break;
-				case "for":
+				case "For":
 					// Do something for for node
 					exploreNode(newNode);
 					break;
-				case "switch":
+				case "Switch":
 					// Do something for switch node
 					exploreNode(newNode);
 					break;
-				case "return":
+				case "Return":
 					// Do something for return node
 					exploreNode(newNode);
 					break;
 				default:
+					//exploreNode((JSONArray) newNode.get("children"));
 					break;
 			}
 		}
@@ -148,6 +114,5 @@ public class Visitor {
 		nodeContent += level_position[level_position.length - 1];
 		graph.addVertex(nodeContent);
 		return nodeContent;
-		
 	}
 }
