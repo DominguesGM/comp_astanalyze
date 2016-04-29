@@ -4,5 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="json-simple-1.1.1.jar"/>
 	<classpathentry kind="lib" path="javax.json-api-1.0.jar"/>
+	<classpathentry kind="lib" path="jgraph-5.13.0.0.jar"/>
+	<classpathentry kind="lib" path="jgrapht-core-0.9.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
