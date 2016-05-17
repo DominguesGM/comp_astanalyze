@@ -1,5 +1,7 @@
 package analyser;
-import org.jgrapht.graph.DirectedMultigraph;
+import java.util.ArrayList;
+
+import org.jgrapht.graph.DirectedPseudograph;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -7,7 +9,9 @@ import data.AST;
 
 public class Visitor {
 	private JSONObject mainFunction;
-	private DirectedMultigraph<String, String> graph;
+	private DirectedPseudograph<String, String> graph;
+	private int nodeCounter = 0;
+	private int edgeCounter = 0;
 	
 	public Visitor(AST ast){
 		JSONObject rootPackage = (JSONObject) ((JSONArray) AnalyseAst.getAST().getTree().get("children")).get(0);
@@ -17,102 +21,221 @@ public class Visitor {
 		JSONObject mainFuncCode = (JSONObject) ((JSONArray) mainFunc.get("children")).get(2);
 
 		
-		int[] level_position = {1};
-		int level = 0;
-		
-		graph = new DirectedMultigraph<String,String>(String.class);
-		addNode(level_position);
+		graph = new DirectedPseudograph<String,String>(String.class);
 	
 		
-		exploreNode(mainFuncCode);
+		exploreNode(mainFuncCode, null);
 	}
 	
-	public void exploreNode(JSONObject currentNode){
+	public ArrayList<String> exploreNode(JSONObject currentNode, String prevStartNode){
+		String startNode = prevStartNode;
+		ArrayList<String> exitNodesList = new ArrayList<String>();
+		
 		JSONArray currentNodeContent = (JSONArray) currentNode.get("children");
-		for(int i = 0; i < currentNodeContent.size(); i++){
+		String childStartingNode;
+		String condition;
+		int i = 0;
+		if(currentNode.get("name").equals("Case")){
+			i = 1;
+			JSONObject caseNode = (JSONObject) currentNodeContent.get(0);
+			childStartingNode = newNodeName() + ": Case " + processGeneric((JSONObject) currentNodeContent.get(0));
+			graph.addVertex(childStartingNode);
+			graph.addEdge(startNode, childStartingNode, newEdgeName());
+			exitNodesList.add(childStartingNode);
+		} else{
+			if(startNode != null)
+				exitNodesList.add(startNode);
+		}
+		for(; i < currentNodeContent.size(); i++){
+			condition = null;
 			JSONObject newNode = (JSONObject) currentNodeContent.get(i);
-			switch((String) newNode.get("content")){
-				case "if":
-					// process condition
-					processContition((JSONObject) ((JSONArray) newNode.get("children")).get(0));
+			System.out.println(newNode.get("name"));
+			switch((String) newNode.get("name")){
+				case "If":
+					// process condition and create condition node
+					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
+					childStartingNode = newNodeName() + ": " + condition;
+					System.out.println(childStartingNode);
+					graph.addVertex(childStartingNode);
+					
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, childStartingNode, newEdgeName());
+					}
+					
+					// reset exitNodesList array
+					exitNodesList.clear();
+					
 					// process first block
-					exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1));
+					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), childStartingNode));
 					// if second block exists, process
 					if(((JSONArray) newNode.get("children")).size() > 2){
 						// Process Else (second block)
-						exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(2));
+						exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(2), childStartingNode));
 					}
 					break;
-				case "while":
-					// process condition
-					processContition((JSONObject) ((JSONArray) newNode.get("children")).get(0));
+				case "While":
+					// process condition and create condition node
+					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
+					childStartingNode = newNodeName() + ": " + condition;
+					System.out.println(childStartingNode);
+					graph.addVertex(childStartingNode);
+					
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, childStartingNode, newEdgeName());
+					}
+					
+					// reset exitNodesList array
+					exitNodesList.clear();
+					
 					// process code block
-					exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1));
+					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), childStartingNode));
+
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, childStartingNode, newEdgeName());
+					}
+					
+					// the conditional node is were the loop will end and connect to the rest of the code
+					exitNodesList.add(childStartingNode);
 					break;
 				case "For":
+					// process condition and create condition node
+					String assignment = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
+					String assignmentNode = newNodeName() + ": " + assignment;
+					graph.addVertex(assignmentNode);
+					
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, assignmentNode, newEdgeName());
+					}
+					
+					// reset exitNodesList array
+					exitNodesList.clear();
+					
+					// process condition and create condition node
+					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(1));
+					String conditionNode = newNodeName() + ": " + condition;
+					graph.addVertex(conditionNode);
+					graph.addEdge(assignmentNode, conditionNode, newEdgeName());
+					
+					// process condition and create condition node
+					String statement = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(2));
+					String statementNode = newNodeName() + ": " + statement;
+					graph.addVertex(statementNode);
+					graph.addEdge(conditionNode, statementNode, newEdgeName());
+					
 					// Do something for for node
-					exploreNode(newNode);
+					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), statementNode));
 					break;
 				case "Switch":
-					// Do something for switch node
-					exploreNode(newNode);
+					// process condition and create condition node
+					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
+					childStartingNode = newNodeName() + ": " + condition;
+					graph.addVertex(childStartingNode);
+					
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, childStartingNode, newEdgeName());
+					}
+					
+					// reset exitNodesList array
+					exitNodesList.clear();
+					
+					for(int j = 1; j < ((JSONArray) newNode.get("children")).size(); j++){
+						exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), childStartingNode));
+					}
 					break;
 				case "Return":
-					// Do something for return node
-					exploreNode(newNode);
 					break;
 				default:
-					//exploreNode((JSONArray) newNode.get("children"));
+					// process statement and create condition node
+					childStartingNode = newNodeName() + ": " + processGeneric(newNode);
+					System.out.println(childStartingNode);
+					graph.addVertex(childStartingNode);
+					
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, childStartingNode, newEdgeName());
+					}
+					
+					exitNodesList.clear();
+					exitNodesList.add(childStartingNode);
 					break;
 			}
 		}
 		
-		return;
+		return exitNodesList;
 	}
-
-	private String processContition(JSONObject conditionalNode) {
-		String node = null;
-		switch((String) conditionalNode.get("name")){
-		case "BinaryOperator":
-			if(((JSONObject)((JSONArray) conditionalNode.get("children")).get(0)).get("content").equals("boolean")){
-				String rightSide = processGeneric((JSONObject)((JSONArray) conditionalNode.get("children")).get(2));
-				String leftSide = processGeneric((JSONObject)((JSONArray) conditionalNode.get("children")).get(1));
-				node = leftSide + conditionalNode.get("content") + rightSide;
-			}
-		}
-		return node;
-	}
+	
 
 	private String processGeneric(JSONObject node) {
 		String type = (String) node.get("name");
 		String content = (String) node.get("content");
 		JSONArray children = (JSONArray) node.get("children");
+		String leftSide = null;
+		String rightSide = null;
+		String output = null;
 		
 		switch(type){
 		case "TypeReference":
 			return content;
 		case "VariableRead":
 			return processGeneric((JSONObject) children.get(1));
+		case "LocalVariable":
+			output = processGeneric((JSONObject) children.get(0)) + " " + content;
+			if(children.size() == 2)
+				output += " = " + processGeneric((JSONObject) children.get(1));
+			return output;
 		case "Literal":
 			return content;
 		case "LocalVariableReference":
 			return content;
 		case "BinaryOperator":
-			String rightSide = processGeneric((JSONObject)node.get(2));
-			String leftSide = processGeneric((JSONObject)node.get(1));
+			rightSide = processGeneric((JSONObject)children.get(2));
+			leftSide = processGeneric((JSONObject)children.get(1));
 			return leftSide + content + rightSide;
+		case "Assignment":
+			leftSide = processGeneric((JSONObject)children.get(1));
+			rightSide = processGeneric((JSONObject)children.get(2));
+			return leftSide + " = " + rightSide;
+		case "VariableWrite":
+			return processGeneric((JSONObject)children.get(1));
+		case "OperatorAssignement":
+			return processGeneric((JSONObject)children.get(2)) +" "+ content +" "+ processGeneric((JSONObject)children.get(1));
+		case "UnaryOperator":
+			if(content.charAt(0) == '_'){
+				String contentEdited = content.replace("_", "");
+				return processGeneric((JSONObject)children.get(1)) + contentEdited;
+			} else {
+				String contentEdited = content.replace("_", "");
+				return contentEdited + processGeneric((JSONObject)children.get(1));
+			}
+		case "Break":
+			return type;
+		case "Continue":
+			return type;
+		case "Return":
+			return type;
 		}
 		
 		return null;
 	}
 	
-	private String addNode(int[] level_position){
-		String nodeContent = "Block_";
-		for(int i = 0; i < level_position.length - 1; i++){
-			nodeContent += level_position[i] + ".";
-		}
-		nodeContent += level_position[level_position.length - 1];
-		graph.addVertex(nodeContent);
-		return nodeContent;
+	private String newNodeName(){
+		String newNode = Integer.toString(nodeCounter);
+		nodeCounter++;
+		return newNode;
+	}
+	
+	private String newEdgeName(){
+		String newEdge = Integer.toString(edgeCounter);
+		edgeCounter++;
+		return newEdge;
+	}
+	
+	public DirectedPseudograph<String,String> getGraph(){
+		return graph;
 	}
 }

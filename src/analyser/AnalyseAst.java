@@ -1,5 +1,7 @@
 package analyser;
 
+import org.json.simple.JSONObject;
+
 import data.AST;
 
 public class AnalyseAst {
@@ -7,8 +9,10 @@ public class AnalyseAst {
 	private static Visitor visitor;
 
 	public static void main(String args[]){
-		ast = new AST("json/ast.json");
+		ast = new AST("json/ast2.json");
+		System.out.println((JSONObject) ast.getTree());
 		visitor = new Visitor(ast);
+		System.out.println(visitor.getGraph());
 	}
 	
 	public static AST getAST(){
