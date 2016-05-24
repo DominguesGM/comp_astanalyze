@@ -26,7 +26,7 @@ public class Visitor {
 	private int edgeCounter = 0;
 	
 	public Visitor(AST ast){
-		JSONObject rootPackage = (JSONObject) ((JSONArray) AnalyseAst.getAST().getTree().get("children")).get(0);
+		JSONObject rootPackage = (JSONObject) ((JSONArray) ast.getTree().get("children")).get(0);
 		JSONObject packageMain = (JSONObject) ((JSONArray) rootPackage.get("children")).get(0);
 		JSONObject mainClass = (JSONObject) ((JSONArray) packageMain.get("children")).get(0);
 		JSONObject mainFunc = (JSONObject) ((JSONArray) mainClass.get("children")).get(1);
