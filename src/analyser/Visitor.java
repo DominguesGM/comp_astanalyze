@@ -1,5 +1,7 @@
 package analyser;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 import org.jgrapht.graph.DirectedPseudograph;
 import org.json.simple.JSONArray;
@@ -9,10 +11,19 @@ import data.AST;
 
 public class Visitor {
 	private JSONObject mainFunction;
+	
 	private DirectedPseudograph<String, String> graph;
 	private ArrayList<String> breakNodes = new ArrayList<String>();
 	private ArrayList<String> continueNodes = new ArrayList<String>();
 	private ArrayList<String> returnNodes = new ArrayList<String>();
+	
+	private DirectedPseudograph<String, String> dataGraph;
+	private HashMap<String,HashSet<String>> use;
+	private HashMap<String,HashSet<String>> def;
+	private HashSet<String> useTemp;
+	private HashSet<String> defTemp;
+
+	
 	private int nodeCounter = 0;
 	private int edgeCounter = 0;
 	
@@ -22,12 +33,21 @@ public class Visitor {
 		JSONObject mainClass = (JSONObject) ((JSONArray) packageMain.get("children")).get(0);
 		JSONObject mainFunc = (JSONObject) ((JSONArray) mainClass.get("children")).get(1);
 		JSONObject mainFuncCode = (JSONObject) ((JSONArray) mainFunc.get("children")).get(2);
-
-		
-		graph = new DirectedPseudograph<String,String>(String.class);
 	
+		graph = new DirectedPseudograph<String,String>(String.class);
+		dataGraph = new DirectedPseudograph<String,String>(String.class);
+		
+		use = new HashMap<>();
+		def = new HashMap<>();
+
+		useTemp = new HashSet<>();
+		defTemp = new HashSet<>();
 		
 		exploreNode(mainFuncCode, null);
+		
+		System.out.println("DEF " + def);
+		
+		System.out.println("USE " + use);
 	}
 	
 	public ArrayList<String> exploreNode(JSONObject currentNode, String prevStartNode){
@@ -45,6 +65,8 @@ public class Visitor {
 			graph.addVertex(childStartingNode);
 			graph.addEdge(startNode, childStartingNode, newEdgeName());
 			exitNodesList.add(childStartingNode);
+			
+			saveDataFlow(childStartingNode);
 		} else{
 			if(startNode != null)
 				exitNodesList.add(startNode);
@@ -53,6 +75,7 @@ public class Visitor {
 			condition = null;
 			JSONObject newNode = (JSONObject) currentNodeContent.get(i);
 			System.out.println(newNode.get("name"));
+			
 			switch((String) newNode.get("name")){
 				case "If":
 					// process condition and create condition node
@@ -60,6 +83,8 @@ public class Visitor {
 					childStartingNode = newNodeName() + ": " + condition;
 					System.out.println(childStartingNode);
 					graph.addVertex(childStartingNode);
+					
+					saveDataFlow(childStartingNode);
 					
 					// connect condition node to previous child end nodes
 					for(String node : exitNodesList){
@@ -83,6 +108,8 @@ public class Visitor {
 					childStartingNode = newNodeName() + ": " + condition;
 					System.out.println(childStartingNode);
 					graph.addVertex(childStartingNode);
+					
+					saveDataFlow(childStartingNode);
 					
 					// connect condition node to previous child end nodes
 					for(String node : exitNodesList){
@@ -115,7 +142,10 @@ public class Visitor {
 					String assignment = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 					String assignmentNode = newNodeName() + ": " + assignment;
 					graph.addVertex(assignmentNode);
-
+					
+					//Dataflow related
+					saveDataFlow(assignmentNode);
+					
 					// connect condition node to previous child end nodes
 					for(String node : exitNodesList){
 						graph.addEdge(node, assignmentNode, newEdgeName());
@@ -132,12 +162,16 @@ public class Visitor {
 					
 					// Explore For code block
 					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(3), conditionNode));
+
+					//Dataflow related
+					saveDataFlow(conditionNode);
 					
 					// process condition and create condition node
 					String statement = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(2));
 					String statementNode = newNodeName() + ": " + statement;
 					graph.addVertex(statementNode);
 					
+
 					// connect condition node to previous child end nodes
 					for(String node : exitNodesList){
 						graph.addEdge(node, statementNode, newEdgeName());
@@ -157,12 +191,16 @@ public class Visitor {
 					// the conditional node is were the loop will end and connect to the rest of the code
 					exitNodesList.add(conditionNode);
 					
+					//Dataflow related
+					saveDataFlow(statementNode);
 					break;
 				case "Switch":
 					// process condition and create condition node
 					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 					childStartingNode = newNodeName() + ": switch(" + condition + ")";
 					graph.addVertex(childStartingNode);
+					
+					saveDataFlow(childStartingNode);
 					
 					// connect condition node to previous child end nodes
 					for(String node : exitNodesList){
@@ -226,6 +264,8 @@ public class Visitor {
 					System.out.println(childStartingNode);
 					graph.addVertex(childStartingNode);
 					
+					saveDataFlow(childStartingNode);
+					
 					// connect condition node to previous child end nodes
 					for(String node : exitNodesList){
 						graph.addEdge(node, childStartingNode, newEdgeName());
@@ -239,7 +279,13 @@ public class Visitor {
 		
 		return exitNodesList;
 	}
-	
+
+	private void saveDataFlow(String nodeId) {
+		use.put(nodeId, (HashSet<String>) useTemp.clone());
+		useTemp.clear();
+		def.put(nodeId, (HashSet<String>) defTemp.clone());
+		defTemp.clear();
+	}
 
 	private String processGeneric(JSONObject node) {
 		String type = (String) node.get("name");
@@ -253,11 +299,20 @@ public class Visitor {
 		case "TypeReference":
 			return content;
 		case "VariableRead":
-			return processGeneric((JSONObject) children.get(1));
+			output = processGeneric((JSONObject) children.get(1));
+			
+			// mark variable use
+			useTemp.add(output);
+			
+			return output;
 		case "LocalVariable":
 			output = processGeneric((JSONObject) children.get(0)) + " " + content;
-			if(children.size() == 2)
+			if(children.size() == 2){
 				output += " = " + processGeneric((JSONObject) children.get(1));
+			}
+
+			// mark variable definition
+			defTemp.add(content);
 			return output;
 		case "Literal":
 			return content;
@@ -268,20 +323,29 @@ public class Visitor {
 			leftSide = processGeneric((JSONObject)children.get(1));
 			return leftSide + content + rightSide;
 		case "Assignment":
-			leftSide = processGeneric((JSONObject)children.get(1));
+			leftSide = processGeneric((JSONObject)children.get(1));			
 			rightSide = processGeneric((JSONObject)children.get(2));
 			return leftSide + " = " + rightSide;
 		case "VariableWrite":
-			return processGeneric((JSONObject)children.get(1));
+			output = processGeneric((JSONObject)children.get(1));
+			
+			// mark variable definition
+			defTemp.add(output);
+			
+			return output;
 		case "OperatorAssignment":
 			return processGeneric((JSONObject)children.get(2)) +" "+ content +" "+ processGeneric((JSONObject)children.get(1));
 		case "UnaryOperator":
 			if(content.charAt(0) == '_'){
 				String contentEdited = content.replace("_", "");
-				return processGeneric((JSONObject)children.get(1)) + contentEdited;
+				String variable = processGeneric((JSONObject)children.get(1));
+				defTemp.add(variable);
+				return variable + contentEdited;
 			} else {
 				String contentEdited = content.replace("_", "");
-				return contentEdited + processGeneric((JSONObject)children.get(1));
+				String variable = processGeneric((JSONObject)children.get(1));
+				defTemp.add(variable);
+				return contentEdited + variable;
 			}
 		case "Break":
 			return type;
@@ -310,3 +374,4 @@ public class Visitor {
 		return graph;
 	}
 }
+
