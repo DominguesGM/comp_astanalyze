@@ -10,6 +10,9 @@ import data.AST;
 public class Visitor {
 	private JSONObject mainFunction;
 	private DirectedPseudograph<String, String> graph;
+	private ArrayList<String> breakNodes = new ArrayList<String>();
+	private ArrayList<String> continueNodes = new ArrayList<String>();
+	private ArrayList<String> returnNodes = new ArrayList<String>();
 	private int nodeCounter = 0;
 	private int edgeCounter = 0;
 	
@@ -85,17 +88,24 @@ public class Visitor {
 					for(String node : exitNodesList){
 						graph.addEdge(node, childStartingNode, newEdgeName());
 					}
-					
-					// reset exitNodesList array
-					exitNodesList.clear();
-					
-					// process code block
-					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), childStartingNode));
+
+					// reset exitNodesList array and process code block
+					exitNodesList = exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), childStartingNode);
 
 					// connect condition node to previous child end nodes
 					for(String node : exitNodesList){
 						graph.addEdge(node, childStartingNode, newEdgeName());
 					}
+					exitNodesList.clear(); //fix
+					
+					// connect breaks and continues
+					System.out.println(breakNodes);
+					exitNodesList.addAll(breakNodes);
+					breakNodes.clear();
+					for(String node : continueNodes){
+						graph.addEdge(node, childStartingNode, newEdgeName());
+					}
+					continueNodes.clear();
 					
 					// the conditional node is were the loop will end and connect to the rest of the code
 					exitNodesList.add(childStartingNode);
@@ -105,7 +115,7 @@ public class Visitor {
 					String assignment = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 					String assignmentNode = newNodeName() + ": " + assignment;
 					graph.addVertex(assignmentNode);
-					
+
 					// connect condition node to previous child end nodes
 					for(String node : exitNodesList){
 						graph.addEdge(node, assignmentNode, newEdgeName());
@@ -120,19 +130,38 @@ public class Visitor {
 					graph.addVertex(conditionNode);
 					graph.addEdge(assignmentNode, conditionNode, newEdgeName());
 					
+					// Explore For code block
+					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(3), conditionNode));
+					
 					// process condition and create condition node
 					String statement = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(2));
 					String statementNode = newNodeName() + ": " + statement;
 					graph.addVertex(statementNode);
-					graph.addEdge(conditionNode, statementNode, newEdgeName());
 					
-					// Do something for for node
-					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), statementNode));
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, statementNode, newEdgeName());
+					}
+					graph.addEdge(statementNode, conditionNode, newEdgeName());
+					
+					// reset exitNodesList array
+					exitNodesList.clear();
+					
+					exitNodesList.addAll(breakNodes);
+					breakNodes.clear();
+					for(String node : continueNodes){
+						graph.addEdge(node, conditionNode, newEdgeName());
+					}
+					continueNodes.clear();
+					
+					// the conditional node is were the loop will end and connect to the rest of the code
+					exitNodesList.add(conditionNode);
+					
 					break;
 				case "Switch":
 					// process condition and create condition node
 					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
-					childStartingNode = newNodeName() + ": " + condition;
+					childStartingNode = newNodeName() + ": switch(" + condition + ")";
 					graph.addVertex(childStartingNode);
 					
 					// connect condition node to previous child end nodes
@@ -144,10 +173,52 @@ public class Visitor {
 					exitNodesList.clear();
 					
 					for(int j = 1; j < ((JSONArray) newNode.get("children")).size(); j++){
-						exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), childStartingNode));
+						exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(j), childStartingNode));
 					}
+					
+					exitNodesList.addAll(breakNodes);
+					exitNodesList.add(childStartingNode);
+					breakNodes.clear();
+					
 					break;
 				case "Return":
+					childStartingNode = newNodeName()+": return";
+					graph.addVertex(childStartingNode);
+					returnNodes.add(childStartingNode);
+					
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, childStartingNode, newEdgeName());
+					}
+					
+					// reset exitNodesList array
+					exitNodesList.clear();
+					break;
+				case "Continue":
+					childStartingNode = newNodeName()+": continue";
+					graph.addVertex(childStartingNode);
+					continueNodes.add(childStartingNode);
+					
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, childStartingNode, newEdgeName());
+					}
+					
+					// reset exitNodesList array
+					exitNodesList.clear();
+					break;
+				case "Break":
+					childStartingNode = newNodeName()+": break";
+					graph.addVertex(childStartingNode);
+					breakNodes.add(childStartingNode);
+					
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, childStartingNode, newEdgeName());
+					}
+					
+					// reset exitNodesList array
+					exitNodesList.clear();
 					break;
 				default:
 					// process statement and create condition node
@@ -202,7 +273,7 @@ public class Visitor {
 			return leftSide + " = " + rightSide;
 		case "VariableWrite":
 			return processGeneric((JSONObject)children.get(1));
-		case "OperatorAssignement":
+		case "OperatorAssignment":
 			return processGeneric((JSONObject)children.get(2)) +" "+ content +" "+ processGeneric((JSONObject)children.get(1));
 		case "UnaryOperator":
 			if(content.charAt(0) == '_'){
@@ -218,9 +289,9 @@ public class Visitor {
 			return type;
 		case "Return":
 			return type;
+		default:
+			return type;
 		}
-		
-		return null;
 	}
 	
 	private String newNodeName(){
