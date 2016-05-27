@@ -1,6 +1,7 @@
 ([0: int c = 1, 
 1: int cond = 0+c, 
-2: c<0, 3: cond = 1, 
+2: c<0, 
+3: cond = 1, 
 4: cond = 2, 
 5: int ciclo = 0, 
 6: int i = 0, 
