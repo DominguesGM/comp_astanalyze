@@ -1,14 +1,16 @@
 package output;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import analyser.Visitor;
+import data.AST;
 import org.jgrapht.ext.DOTExporter;
 import org.jgrapht.ext.IntegerNameProvider;
 import org.jgrapht.ext.StringEdgeNameProvider;
 import org.jgrapht.ext.StringNameProvider;
-import analyser.Visitor;
-import data.AST; 
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Output {
 	public static AST ast;
@@ -17,6 +19,18 @@ public class Output {
 	public Output(AST a, Visitor v){
 		ast = a;
 		visitor = v;
+
+		File exportDir = new File("export");
+
+		// if the directory does not exist, create it
+		if (!exportDir.exists()) {
+			try{
+				exportDir.mkdir();
+			}
+			catch(SecurityException se){
+				//handle it
+			}
+		}
 	}
 	
 	public void printGraph(String filename) throws IOException {
