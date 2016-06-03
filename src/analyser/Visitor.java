@@ -50,9 +50,10 @@ public class Visitor {
 		System.out.println("USE " + use);
 	}
 	
-	public ArrayList<String> exploreNode(JSONObject currentNode, String prevStartNode){
-		String startNode = prevStartNode;
+	public ArrayList<String> exploreNode(JSONObject currentNode, ArrayList<String> prevStartNodes){
+		ArrayList<String> startNodeList = prevStartNodes;
 		ArrayList<String> exitNodesList = new ArrayList<String>();
+		ArrayList<String> argumentList = new ArrayList<String>();
 		
 		JSONArray currentNodeContent = (JSONArray) currentNode.get("children");
 		String childStartingNode;
@@ -61,15 +62,20 @@ public class Visitor {
 		if(currentNode.get("name").equals("Case")){
 			i = 1;
 			JSONObject caseNode = (JSONObject) currentNodeContent.get(0);
-			childStartingNode = newNodeName() + ": Case " + processGeneric((JSONObject) currentNodeContent.get(0));
+			if(((String) ((JSONObject) currentNodeContent.get(0)).get("name")).equals("Literal"))
+				childStartingNode = newNodeName() + ": Case " + processGeneric((JSONObject) currentNodeContent.get(0));
+			else
+				childStartingNode = newNodeName() + ": Default";
 			graph.addVertex(childStartingNode);
-			graph.addEdge(startNode, childStartingNode, newEdgeName());
+			for(String node : startNodeList){
+				graph.addEdge(node, childStartingNode, newEdgeName());
+			}
 			exitNodesList.add(childStartingNode);
 			
 			saveDataFlow(childStartingNode);
 		} else{
-			if(startNode != null)
-				exitNodesList.add(startNode);
+			if(startNodeList != null)
+				exitNodesList.addAll(startNodeList);
 		}
 		for(; i < currentNodeContent.size(); i++){
 			condition = null;
@@ -95,11 +101,15 @@ public class Visitor {
 					exitNodesList.clear();
 					
 					// process first block
-					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), childStartingNode));
+					argumentList.clear();
+					argumentList.add(childStartingNode);
+					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), argumentList));
 					// if second block exists, process
 					if(((JSONArray) newNode.get("children")).size() > 2){
 						// Process Else (second block)
-						exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(2), childStartingNode));
+						argumentList.clear();
+						argumentList.add(childStartingNode);
+						exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(2), argumentList));
 					}
 					break;
 				case "While":
@@ -117,7 +127,9 @@ public class Visitor {
 					}
 
 					// reset exitNodesList array and process code block
-					exitNodesList = exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), childStartingNode);
+					argumentList.clear();
+					argumentList.add(childStartingNode);
+					exitNodesList = exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), argumentList);
 
 					// connect condition node to previous child end nodes
 					for(String node : exitNodesList){
@@ -161,7 +173,9 @@ public class Visitor {
 					graph.addEdge(assignmentNode, conditionNode, newEdgeName());
 					
 					// Explore For code block
-					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(3), conditionNode));
+					argumentList.clear();
+					argumentList.add(conditionNode);
+					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(3), argumentList));
 
 					//Dataflow related
 					saveDataFlow(conditionNode);
@@ -194,6 +208,46 @@ public class Visitor {
 					//Dataflow related
 					saveDataFlow(statementNode);
 					break;
+				case "Do":
+					// process condition and create condition node
+					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
+					conditionNode = newNodeName() + ": " + condition;
+					String doStartNode = newNodeName() + ": do";
+					graph.addVertex(conditionNode);
+					graph.addVertex(doStartNode);
+					
+					saveDataFlow(conditionNode);
+					
+					// connect DO node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, doStartNode, newEdgeName());
+					}
+
+					// reset exitNodesList array and process code block
+					argumentList.clear();
+					argumentList.add(doStartNode);
+					exitNodesList = exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), argumentList);
+
+					// connect condition node to previous child end nodes
+					for(String node : exitNodesList){
+						graph.addEdge(node, conditionNode, newEdgeName());
+					}
+					exitNodesList.clear(); //fix
+					
+					graph.addEdge(conditionNode, doStartNode, newEdgeName());
+					
+					// connect breaks and continues
+					System.out.println(breakNodes);
+					exitNodesList.addAll(breakNodes);
+					breakNodes.clear();
+					for(String node : continueNodes){
+						graph.addEdge(node, doStartNode, newEdgeName());
+					}
+					continueNodes.clear();
+					
+					// the conditional node is were the loop will end and connect to the rest of the code
+					exitNodesList.add(conditionNode);
+					break;
 				case "Switch":
 					// process condition and create condition node
 					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
@@ -210,12 +264,19 @@ public class Visitor {
 					// reset exitNodesList array
 					exitNodesList.clear();
 					
+					// if there's no break statement in any case, it'll fall through to the next Case's first statement
+					ArrayList<String> lastCaseElement = new ArrayList<String>();
+					
 					for(int j = 1; j < ((JSONArray) newNode.get("children")).size(); j++){
-						exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(j), childStartingNode));
+						argumentList.clear();
+						lastCaseElement.clear();
+						argumentList.add(childStartingNode);
+						argumentList.addAll(lastCaseElement);
+						lastCaseElement.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(j), argumentList));
 					}
 					
+					exitNodesList.addAll(lastCaseElement);
 					exitNodesList.addAll(breakNodes);
-					exitNodesList.add(childStartingNode);
 					breakNodes.clear();
 					
 					break;
@@ -231,7 +292,7 @@ public class Visitor {
 					
 					// reset exitNodesList array
 					exitNodesList.clear();
-					break;
+					return exitNodesList;
 				case "Continue":
 					childStartingNode = newNodeName()+": continue";
 					graph.addVertex(childStartingNode);
@@ -244,7 +305,7 @@ public class Visitor {
 					
 					// reset exitNodesList array
 					exitNodesList.clear();
-					break;
+					return exitNodesList;
 				case "Break":
 					childStartingNode = newNodeName()+": break";
 					graph.addVertex(childStartingNode);
@@ -257,7 +318,7 @@ public class Visitor {
 					
 					// reset exitNodesList array
 					exitNodesList.clear();
-					break;
+					return exitNodesList;
 				default:
 					// process statement and create condition node
 					childStartingNode = newNodeName() + ": " + processGeneric(newNode);
