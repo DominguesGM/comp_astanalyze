@@ -13,7 +13,7 @@ digraph G {
   12 [ label="11: int forvar" ];
   13 [ label="12: forvar = 0" ];
   14 [ label="13: forvar<ciclo" ];
-  15 [ label="14: 'a' += var" ];
+  15 [ label="14: var += 'a'" ];
   16 [ label="15: forvar++" ];
   17 [ label="16: int result" ];
   18 [ label="17: switch(forvar)" ];

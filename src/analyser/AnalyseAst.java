@@ -16,10 +16,10 @@ public class AnalyseAst {
 		ast = new AST("json/ast.json");
 		System.out.println((JSONObject) ast.getTree());
 		visitor = new Visitor(ast);
-		System.out.println(visitor.getGraph());
-		output = new Output(ast, visitor);
+		output = new Output(visitor);
 		try {
-			output.printGraph("export/graph.dot");
+			output.printControlGraph("export/graph.dot");
+			output.printDataGraph("export/datagraph.dot");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

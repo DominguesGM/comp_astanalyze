@@ -13,11 +13,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Output {
-	public static AST ast;
 	public static Visitor visitor;
 	
-	public Output(AST a, Visitor v){
-		ast = a;
+	public Output(Visitor v){
 		visitor = v;
 
 		File exportDir = new File("export");
@@ -33,13 +31,23 @@ public class Output {
 		}
 	}
 	
-	public void printGraph(String filename) throws IOException {
+	public void printControlGraph(String filename) throws IOException {
 		FileWriter fstream = new FileWriter(filename);
 		BufferedWriter out = new BufferedWriter(fstream);
 		DOTExporter<String, String> exporter = new DOTExporter<String, String>(
 				new IntegerNameProvider<String>(),
 				new StringNameProvider<String>(),
 				new StringEdgeNameProvider<String>());
-		exporter.export(out, visitor.getGraph());
+		exporter.export(out, visitor.getControlGraph());
+	}
+	
+	public void printDataGraph(String filename) throws IOException {
+		FileWriter fstream = new FileWriter(filename);
+		BufferedWriter out = new BufferedWriter(fstream);
+		DOTExporter<String, String> exporter = new DOTExporter<String, String>(
+				new IntegerNameProvider<String>(),
+				new StringNameProvider<String>(),
+				new StringEdgeNameProvider<String>());
+		exporter.export(out, visitor.getDataGraph());
 	}
 }
