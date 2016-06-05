@@ -1,0 +1,344 @@
+{
+   "name": "Root",
+   "children": [
+   {
+      "name": "RootPackage",
+      "content": "",
+      "children": [
+      {
+         "name": "Package",
+         "content": "test",
+         "children": [
+         {
+            "name": "Class",
+            "content": "DoWhileExample",
+            "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+            "children": [
+            {
+               "name": "Constructor",
+               "content": "test.DoWhileExample()",
+               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+               "children": [
+               {
+                  "name": "Block",
+                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+                  "children": [
+                  {
+                     "name": "Invocation",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "Object",
+                        "children": [
+                        {
+                           "name": "PackageReference",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "ExecutableReference",
+                        "content": "<init>",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "TypeReference",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            },
+            {
+               "name": "Method",
+               "content": "main",
+               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:4)",
+               "children": [
+               {
+                  "name": "TypeReference",
+                  "content": "String",
+                  "children": [
+                  {
+                     "name": "PackageReference",
+                     "content": "java.lang",
+                     "children": []
+                  }]
+               },
+               {
+                  "name": "Parameter",
+                  "content": "args",
+                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:4)",
+                  "children": [
+                  {
+                     "name": "ArrayTypeReference",
+                     "content": "Array",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReference",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     }]
+                  }]
+               },
+               {
+                  "name": "Block",
+                  "children": [
+                  {
+                     "name": "LocalVariable",
+                     "content": "finalString",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:5)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReference",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "Literal",
+                        "content": "",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:5)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "String",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "LocalVariable",
+                     "content": "i",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:6)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "int",
+                        "children": []
+                     },
+                     {
+                        "name": "Literal",
+                        "content": "10",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:6)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": []
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "Do",
+                     "children": [
+                     {
+                        "name": "BinaryOperator",
+                        "content": ">",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "boolean",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "Literal",
+                           "content": "0",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "Block",
+                        "children": [
+                        {
+                           "name": "OperatorAssignment",
+                           "content": "+=",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReference",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWrite",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReference",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReference",
+                                 "content": "finalString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReference",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReference",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "Literal",
+                              "content": "a",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReference",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "UnaryOperator",
+                           "content": "_--",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:10)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableRead",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:10)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReference",
+                                 "content": "i",
+                                 "children": [
+                                 {
+                                    "name": "TypeReference",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "Return",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:13)",
+                     "children": [
+                     {
+                        "name": "VariableRead",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/DoWhileExample.java:13)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "String",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "LocalVariableReference",
+                           "content": "finalString",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReference",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            }]
+         }]
+      }]
+   }]
+}

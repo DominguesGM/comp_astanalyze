@@ -1,0 +1,453 @@
+{
+   "name": "Root",
+   "children": [
+   {
+      "name": "RootPackage",
+      "content": "",
+      "children": [
+      {
+         "name": "Package",
+         "content": "test",
+         "children": [
+         {
+            "name": "Class",
+            "content": "ForExample",
+            "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:3)",
+            "children": [
+            {
+               "name": "Constructor",
+               "content": "test.ForExample()",
+               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:3)",
+               "children": [
+               {
+                  "name": "Block",
+                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:3)",
+                  "children": [
+                  {
+                     "name": "Invocation",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:3)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "Object",
+                        "children": [
+                        {
+                           "name": "PackageReference",
+                           "content": "java.lang",
+                           "children": [],
+                        }],
+                     },
+                     {
+                        "name": "ExecutableReference",
+                        "content": "<init>",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": [],
+                           }],
+                        },
+                        {
+                           "name": "TypeReference",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": [],
+                           }],
+                        }],
+                     }],
+                  }],
+               }],
+            },
+            {
+               "name": "Method",
+               "content": "main",
+               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:4)",
+               "children": [
+               {
+                  "name": "TypeReference",
+                  "content": "void",
+                  "children": [],
+               },
+               {
+                  "name": "Parameter",
+                  "content": "args",
+                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:4)",
+                  "children": [
+                  {
+                     "name": "ArrayTypeReference",
+                     "content": "Array",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReference",
+                           "content": "java.lang",
+                           "children": [],
+                        }],
+                     }],
+                  }],
+               },
+               {
+                  "name": "Block",
+                  "children": [
+                  {
+                     "name": "LocalVariable",
+                     "content": "values",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:5)",
+                     "children": [
+                     {
+                        "name": "ArrayTypeReference",
+                        "content": "Array",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": [],
+                        }],
+                     },
+                     {
+                        "name": "NewArray",
+                        "content": "type:initialization",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:5)",
+                        "children": [
+                        {
+                           "name": "ArrayTypeReference",
+                           "content": "Array",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           }],
+                        },
+                        {
+                           "name": "Literal",
+                           "content": "1",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:5)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           }],
+                        },
+                        {
+                           "name": "Literal",
+                           "content": "2",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:5)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           }],
+                        },
+                        {
+                           "name": "Literal",
+                           "content": "3",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:5)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           }],
+                        },
+                        {
+                           "name": "UnaryOperator",
+                           "content": "-",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:5)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           },
+                           {
+                              "name": "Literal",
+                              "content": "1",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:5)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              }],
+                           }],
+                        }],
+                     }],
+                  },
+                  {
+                     "name": "LocalVariable",
+                     "content": "size",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:6)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "int",
+                        "children": [],
+                     },
+                     {
+                        "name": "FieldRead",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:6)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": [],
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:6)",
+                           "children": [
+                           {
+                              "name": "ArrayTypeReference",
+                              "content": "Array",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              }],
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "values",
+                              "children": [
+                              {
+                                 "name": "ArrayTypeReference",
+                                 "content": "Array",
+                                 "children": [
+                                 {
+                                    "name": "TypeReference",
+                                    "content": "int",
+                                    "children": [],
+                                 }],
+                              }],
+                           }],
+                        },
+                        {
+                           "name": "FieldReference",
+                           "content": "length",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           },
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           }],
+                        }],
+                     }],
+                  },
+                  {
+                     "name": "For",
+                     "children": [
+                     {
+                        "name": "LocalVariable",
+                        "content": "i",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:8)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": [],
+                        },
+                        {
+                           "name": "Literal",
+                           "content": "0",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:8)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           }],
+                        }],
+                     },
+                     {
+                        "name": "BinaryOperator",
+                        "content": "<",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:8)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "boolean",
+                           "children": [],
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:8)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              }],
+                           }],
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:8)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "size",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              }],
+                           }],
+                        }],
+                     },
+                     {
+                        "name": "UnaryOperator",
+                        "content": "_++",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:8)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": [],
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:8)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              }],
+                           }],
+                        }],
+                     },
+                     {
+                        "name": "Block",
+                        "children": [
+                        {
+                           "name": "Assignment",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:9)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": [],
+                           },
+                           {
+                              "name": "ArrayWrite",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:9)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              },
+                              {
+                                 "name": "VariableRead",
+                                 "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:9)",
+                                 "children": [
+                                 {
+                                    "name": "ArrayTypeReference",
+                                    "content": "Array",
+                                    "children": [
+                                    {
+                                       "name": "TypeReference",
+                                       "content": "int",
+                                       "children": [],
+                                    }],
+                                 },
+                                 {
+                                    "name": "LocalVariableReference",
+                                    "content": "values",
+                                    "children": [
+                                    {
+                                       "name": "ArrayTypeReference",
+                                       "content": "Array",
+                                       "children": [
+                                       {
+                                          "name": "TypeReference",
+                                          "content": "int",
+                                          "children": [],
+                                       }],
+                                    }],
+                                 }],
+                              },
+                              {
+                                 "name": "VariableRead",
+                                 "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:9)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReference",
+                                    "content": "int",
+                                    "children": [],
+                                 },
+                                 {
+                                    "name": "LocalVariableReference",
+                                    "content": "i",
+                                    "children": [
+                                    {
+                                       "name": "TypeReference",
+                                       "content": "int",
+                                       "children": [],
+                                    }],
+                                 }],
+                              }],
+                           },
+                           {
+                              "name": "Literal",
+                              "content": "1",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForExample.java:9)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": [],
+                              }],
+                           }],
+                        }],
+                     }],
+                  }],
+               }],
+            }],
+         }],
+      }],
+   }],
+}
