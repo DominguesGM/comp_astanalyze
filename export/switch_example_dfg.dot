@@ -1,0 +1,30 @@
+digraph G {
+  1 [ label="0: int month = 8" ];
+  2 [ label="2: switch(month)" ];
+  3 [ label="4: monthString = January" ];
+  4 [ label="7: monthString = February" ];
+  5 [ label="10: monthString = March" ];
+  6 [ label="13: monthString = April" ];
+  7 [ label="16: monthString = May" ];
+  8 [ label="19: monthString = June" ];
+  9 [ label="22: monthString = July" ];
+  10 [ label="25: monthString = August" ];
+  11 [ label="28: monthString = September" ];
+  12 [ label="31: monthString = October" ];
+  13 [ label="34: monthString = November" ];
+  14 [ label="37: monthString = December" ];
+  15 [ label="41: return monthString" ];
+  1 -> 2 [ label="0: month" ];
+  3 -> 15 [ label="1: monthString" ];
+  4 -> 15 [ label="2: monthString" ];
+  5 -> 15 [ label="3: monthString" ];
+  6 -> 15 [ label="4: monthString" ];
+  7 -> 15 [ label="5: monthString" ];
+  8 -> 15 [ label="6: monthString" ];
+  9 -> 15 [ label="7: monthString" ];
+  10 -> 15 [ label="8: monthString" ];
+  11 -> 15 [ label="9: monthString" ];
+  12 -> 15 [ label="10: monthString" ];
+  13 -> 15 [ label="11: monthString" ];
+  14 -> 15 [ label="12: monthString" ];
+}

@@ -34,8 +34,8 @@
                         {
                            "name": "PackageReference",
                            "content": "java.lang",
-                           "children": [],
-                        }],
+                           "children": []
+                        }]
                      },
                      {
                         "name": "ExecutableReference",
@@ -48,8 +48,8 @@
                            {
                               "name": "PackageReference",
                               "content": "java.lang",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
                            "name": "TypeReference",
@@ -58,12 +58,12 @@
                            {
                               "name": "PackageReference",
                               "content": "java.lang",
-                              "children": [],
-                           }],
-                        }],
-                     }],
-                  }],
-               }],
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
             },
             {
                "name": "Method",
@@ -73,7 +73,7 @@
                {
                   "name": "TypeReference",
                   "content": "void",
-                  "children": [],
+                  "children": []
                },
                {
                   "name": "Parameter",
@@ -91,10 +91,10 @@
                         {
                            "name": "PackageReference",
                            "content": "java.lang",
-                           "children": [],
-                        }],
-                     }],
-                  }],
+                           "children": []
+                        }]
+                     }]
+                  }]
                },
                {
                   "name": "Block",
@@ -111,8 +111,8 @@
                         {
                            "name": "TypeReference",
                            "content": "int",
-                           "children": [],
-                        }],
+                           "children": []
+                        }]
                      },
                      {
                         "name": "NewArray",
@@ -126,8 +126,8 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
                            "name": "Literal",
@@ -137,8 +137,8 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
                            "name": "Literal",
@@ -148,8 +148,8 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
                            "name": "Literal",
@@ -159,8 +159,8 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
                            "name": "UnaryOperator",
@@ -170,7 +170,7 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
                               "name": "Literal",
@@ -180,11 +180,11 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
-                              }],
-                           }],
-                        }],
-                     }],
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     }]
                   },
                   {
                      "name": "LocalVariable",
@@ -194,7 +194,7 @@
                      {
                         "name": "TypeReference",
                         "content": "int",
-                        "children": [],
+                        "children": []
                      },
                      {
                         "name": "FieldRead",
@@ -203,7 +203,7 @@
                         {
                            "name": "TypeReference",
                            "content": "int",
-                           "children": [],
+                           "children": []
                         },
                         {
                            "name": "VariableRead",
@@ -216,8 +216,8 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
-                              }],
+                                 "children": []
+                              }]
                            },
                            {
                               "name": "LocalVariableReference",
@@ -230,10 +230,10 @@
                                  {
                                     "name": "TypeReference",
                                     "content": "int",
-                                    "children": [],
-                                 }],
-                              }],
-                           }],
+                                    "children": []
+                                 }]
+                              }]
+                           }]
                         },
                         {
                            "name": "FieldReference",
@@ -242,15 +242,15 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
-                           }],
-                        }],
-                     }],
+                              "children": []
+                           }]
+                        }]
+                     }]
                   },
                   {
                      "name": "For",
@@ -263,7 +263,7 @@
                         {
                            "name": "TypeReference",
                            "content": "int",
-                           "children": [],
+                           "children": []
                         },
                         {
                            "name": "Literal",
@@ -273,9 +273,9 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
-                           }],
-                        }],
+                              "children": []
+                           }]
+                        }]
                      },
                      {
                         "name": "BinaryOperator",
@@ -285,7 +285,7 @@
                         {
                            "name": "TypeReference",
                            "content": "boolean",
-                           "children": [],
+                           "children": []
                         },
                         {
                            "name": "VariableRead",
@@ -294,7 +294,7 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
                               "name": "LocalVariableReference",
@@ -303,9 +303,9 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
-                              }],
-                           }],
+                                 "children": []
+                              }]
+                           }]
                         },
                         {
                            "name": "VariableRead",
@@ -314,7 +314,7 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
                               "name": "LocalVariableReference",
@@ -323,10 +323,10 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
-                              }],
-                           }],
-                        }],
+                                 "children": []
+                              }]
+                           }]
+                        }]
                      },
                      {
                         "name": "UnaryOperator",
@@ -336,7 +336,7 @@
                         {
                            "name": "TypeReference",
                            "content": "int",
-                           "children": [],
+                           "children": []
                         },
                         {
                            "name": "VariableRead",
@@ -345,7 +345,7 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
                               "name": "LocalVariableReference",
@@ -354,10 +354,10 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
-                              }],
-                           }],
-                        }],
+                                 "children": []
+                              }]
+                           }]
+                        }]
                      },
                      {
                         "name": "Block",
@@ -369,7 +369,7 @@
                            {
                               "name": "TypeReference",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
                               "name": "ArrayWrite",
@@ -378,7 +378,7 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
+                                 "children": []
                               },
                               {
                                  "name": "VariableRead",
@@ -391,8 +391,8 @@
                                     {
                                        "name": "TypeReference",
                                        "content": "int",
-                                       "children": [],
-                                    }],
+                                       "children": []
+                                    }]
                                  },
                                  {
                                     "name": "LocalVariableReference",
@@ -405,10 +405,10 @@
                                        {
                                           "name": "TypeReference",
                                           "content": "int",
-                                          "children": [],
-                                       }],
-                                    }],
-                                 }],
+                                          "children": []
+                                       }]
+                                    }]
+                                 }]
                               },
                               {
                                  "name": "VariableRead",
@@ -417,7 +417,7 @@
                                  {
                                     "name": "TypeReference",
                                     "content": "int",
-                                    "children": [],
+                                    "children": []
                                  },
                                  {
                                     "name": "LocalVariableReference",
@@ -426,10 +426,10 @@
                                     {
                                        "name": "TypeReference",
                                        "content": "int",
-                                       "children": [],
-                                    }],
-                                 }],
-                              }],
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
                            },
                            {
                               "name": "Literal",
@@ -439,15 +439,15 @@
                               {
                                  "name": "TypeReference",
                                  "content": "int",
-                                 "children": [],
-                              }],
-                           }],
-                        }],
-                     }],
-                  }],
-               }],
-            }],
-         }],
-      }],
-   }],
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            }]
+         }]
+      }]
+   }]
 }
