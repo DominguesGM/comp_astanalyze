@@ -1,0 +1,400 @@
+{
+   "name": "Root",
+   "children": [
+   {
+      "name": "RootPackage",
+      "content": "",
+      "children": [
+      {
+         "name": "Package",
+         "content": "test",
+         "children": [
+         {
+            "name": "Class",
+            "content": "ForBreakExample",
+            "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:3)",
+            "children": [
+            {
+               "name": "Constructor",
+               "content": "test.ForBreakExample()",
+               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:3)",
+               "children": [
+               {
+                  "name": "Block",
+                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:3)",
+                  "children": [
+                  {
+                     "name": "Invocation",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:3)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "Object",
+                        "children": [
+                        {
+                           "name": "PackageReference",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "ExecutableReference",
+                        "content": "<init>",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "TypeReference",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReference",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            },
+            {
+               "name": "Method",
+               "content": "main",
+               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:4)",
+               "children": [
+               {
+                  "name": "TypeReference",
+                  "content": "void",
+                  "children": []
+               },
+               {
+                  "name": "Parameter",
+                  "content": "args",
+                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:4)",
+                  "children": [
+                  {
+                     "name": "ArrayTypeReference",
+                     "content": "Array",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReference",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     }]
+                  }]
+               },
+               {
+                  "name": "Block",
+                  "children": [
+                  {
+                     "name": "For",
+                     "children": [
+                     {
+                        "name": "LocalVariable",
+                        "content": "i",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:6)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "Literal",
+                           "content": "0",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:6)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BinaryOperator",
+                        "content": "<",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:6)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "boolean",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:6)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "Literal",
+                           "content": "10",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:6)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "UnaryOperator",
+                        "content": "_++",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:6)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:6)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "Block",
+                        "children": [
+                        {
+                           "name": "If",
+                           "children": [
+                           {
+                              "name": "BinaryOperator",
+                              "content": "==",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:7)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "boolean",
+                                 "children": []
+                              },
+                              {
+                                 "name": "VariableRead",
+                                 "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:7)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReference",
+                                    "content": "int",
+                                    "children": []
+                                 },
+                                 {
+                                    "name": "LocalVariableReference",
+                                    "content": "i",
+                                    "children": [
+                                    {
+                                       "name": "TypeReference",
+                                       "content": "int",
+                                       "children": []
+                                    }]
+                                 }]
+                              },
+                              {
+                                 "name": "Literal",
+                                 "content": "6",
+                                 "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:7)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReference",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "Break",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:7)",
+                              "children": []
+                           },
+                           {
+                              "name": "Continue",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:8)",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "LocalVariable",
+                     "content": "a",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:11)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "int",
+                        "children": []
+                     },
+                     {
+                        "name": "Literal",
+                        "content": "2",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:11)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": []
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "LocalVariable",
+                     "content": "b",
+                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:12)",
+                     "children": [
+                     {
+                        "name": "TypeReference",
+                        "content": "int",
+                        "children": []
+                     },
+                     {
+                        "name": "Literal",
+                        "content": "4",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:12)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "int",
+                           "children": []
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "While",
+                     "children": [
+                     {
+                        "name": "BinaryOperator",
+                        "content": ">",
+                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:14)",
+                        "children": [
+                        {
+                           "name": "TypeReference",
+                           "content": "boolean",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:14)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "b",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "VariableRead",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:14)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReference",
+                              "content": "a",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "Block",
+                        "children": [
+                        {
+                           "name": "UnaryOperator",
+                           "content": "_++",
+                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:15)",
+                           "children": [
+                           {
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableRead",
+                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/ForBreakExample.java:15)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReference",
+                                 "content": "a",
+                                 "children": [
+                                 {
+                                    "name": "TypeReference",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            }]
+         }]
+      }]
+   }]
+}
