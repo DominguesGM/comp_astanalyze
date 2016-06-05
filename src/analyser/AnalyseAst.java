@@ -13,7 +13,7 @@ public class AnalyseAst {
 	private static Output output;
 
 	public static void main(String args[]){
-		ast = new AST("json/ast.json");
+		ast = new AST("json/if_example.json");
 		System.out.println((JSONObject) ast.getTree());
 		visitor = new Visitor(ast);
 		output = new Output(visitor);
