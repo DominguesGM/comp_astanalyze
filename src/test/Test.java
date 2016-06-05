@@ -47,7 +47,6 @@ public class Test {
             String nameFile = file.substring(file.lastIndexOf('/') + 1, file.lastIndexOf('.'));
 
             ast = new AST(file);
-            System.out.println((JSONObject) ast.getTree());
             visitor = new Visitor(ast);
             output = new Output(visitor);
 

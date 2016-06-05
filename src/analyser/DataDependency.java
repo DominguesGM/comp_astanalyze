@@ -95,4 +95,8 @@ public class DataDependency implements Comparable<DataDependency>{
 		return this.dependencyVars;
 	}
 	
+	public String toString(){
+		return this.node;
+	}
+	
 }

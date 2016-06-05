@@ -65,7 +65,6 @@ public class Visitor {
 				String nodeName = graph.getEdgeSource(edgeName);
 				tempPredecessors.add(getNodeDataDependency(nodeName));
 			}
-			System.out.println(tempPredecessors);
 			node.setPredecessors(tempPredecessors);
 		}
 		
@@ -110,7 +109,7 @@ public class Visitor {
 				case "If":
 					// process condition and create condition node
 					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
-					childStartingNode = newNodeName() + ": " + condition;
+					childStartingNode = newNodeName() + ": if(" + condition + ")";
 					graph.addVertex(childStartingNode);
 					
 					saveDataFlow(childStartingNode);
@@ -133,12 +132,14 @@ public class Visitor {
 						argumentList.clear();
 						argumentList.add(childStartingNode);
 						exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(2), argumentList));
+					} else {
+						exitNodesList.add(childStartingNode);
 					}
 					break;
 				case "While":
 					// process condition and create condition node
 					condition = processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
-					childStartingNode = newNodeName() + ": " + condition;
+					childStartingNode = newNodeName() + ": while(" + condition + ")";
 					graph.addVertex(childStartingNode);
 					
 					saveDataFlow(childStartingNode);
@@ -304,7 +305,10 @@ public class Visitor {
 					
 					break;
 				case "Return":
-					childStartingNode = newNodeName()+": return";
+					String returnContent = "";
+					if(((JSONArray) newNode.get("children")).size() != 0)
+						returnContent = " " + processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
+					childStartingNode = newNodeName()+": return" + returnContent;
 					graph.addVertex(childStartingNode);
 					returnNodes.add(childStartingNode);
 					
@@ -450,6 +454,22 @@ public class Visitor {
 				defTemp.add(variable);
 				return contentEdited + variable;
 			}
+		case "ArrayTypeReference":
+			return processGeneric((JSONObject)children.get(0)) + "[]";
+		case "NewArray":
+			String array = "{";
+			for(int i = 1; i < children.size(); i++){
+				array += processGeneric((JSONObject)children.get(i));
+				if(i + 1 < children.size())
+					array += ", ";
+			}
+			return array + "}";
+		case "ArrayWrite":
+			return processGeneric((JSONObject)children.get(1)) + "[" + processGeneric((JSONObject)children.get(2)) + "]";
+		case "FieldRead":
+			return processGeneric((JSONObject)children.get(1)) + "." + processGeneric((JSONObject)children.get(2));
+		case "FieldReference":
+			return content;
 		case "Break":
 			return type;
 		case "Continue":
@@ -479,7 +499,6 @@ public class Visitor {
 				
 				//check for a definition for each predecessor
 				Iterator<DataDependency> iPredecessor = predecessorsToVisit.iterator();
-				System.out.println(predecessorsToVisit);
 				for(int i = 0; i < predecessorsToVisit.size(); i++){
 					DataDependency tempPredecessor = predecessorsToVisit.get(i);
 					visitedPredecessors = new ArrayList<DataDependency>();
@@ -567,8 +586,10 @@ public class Visitor {
 	
 	public DataDependency getNodeDataDependency(String nodeName){
 		for(DataDependency node : dataDependency){
-			if(node.getNode().equals(nodeName))
+			if(node.getNode().equals(nodeName)){
+				System.out.println(node.toString());
 				return node;
+			}
 		}
 		return null;
 	}
