@@ -5,6 +5,8 @@ import java.util.HashSet;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import other.Tool;
+
 public class CodeGenerator {
 	
 	private HashSet<String> useTemp;
@@ -46,7 +48,9 @@ public class CodeGenerator {
 
 			return output;
 		case "Literal":
-			return content;
+			if(Tool.isNumeric(content))
+				return content;
+			else	return "\\\"" + content + "\\\""; // efectivelly having \" on the string is necessary for graphviz not to break reading the dot file
 		case "LocalVariableReference":
 			return content;
 		case "BinaryOperator":

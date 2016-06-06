@@ -21,7 +21,7 @@ public class CodeProcessor {
 	private ArrayList<DataDependency> dataDependency;
 	private HashMap<String,HashSet<String>> use;
 	private HashMap<String,HashSet<String>> def;
-	private boolean setExitLoopControl = false;
+	private boolean exitLoopControl = false;
 	
 	private CodeGenerator generator;
 	private Visitor parent;
@@ -186,6 +186,7 @@ public class CodeProcessor {
 			
 			// the conditional node is were the loop will end and connect to the rest of the code
 			exitNodesList.add(childStartingNode);
+			setExitLoopControl(false);
 			break;
 		case "For":
 			// process condition and create condition node
@@ -247,6 +248,7 @@ public class CodeProcessor {
 			
 			//Dataflow related
 			saveDataFlow(statementNode);
+			setExitLoopControl(false);
 			break;
 		case "Do":
 			String doStartNode = this.parent.newNodeName() + ": do";
@@ -288,6 +290,7 @@ public class CodeProcessor {
 			
 			// the conditional node is were the loop will end and connect to the rest of the code
 			exitNodesList.add(conditionNode);
+			setExitLoopControl(false);
 			break;
 		case "Switch":
 			// process condition and create condition node
@@ -388,16 +391,15 @@ public class CodeProcessor {
 			exitNodesList.add(childStartingNode);
 			break;
 		}
-		setExitLoopControl(false);
 		return exitNodesList;
 	}
 	
 	private void setExitLoopControl(boolean var){
-		this.setExitLoopControl = var;
+		this.exitLoopControl = var;
 	}
 	
 	private boolean getExitLoopControl(){
-		return this.setExitLoopControl ;
+		return this.exitLoopControl ;
 	}
 	
 	
