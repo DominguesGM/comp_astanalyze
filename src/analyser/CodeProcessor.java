@@ -21,7 +21,7 @@ public class CodeProcessor {
 	private ArrayList<DataDependency> dataDependency;
 	private HashMap<String,HashSet<String>> use;
 	private HashMap<String,HashSet<String>> def;
-	private boolean exitLoopControl = false;
+	private boolean setExitLoopControl = false;
 	
 	private CodeGenerator generator;
 	private Visitor parent;
@@ -106,7 +106,7 @@ public class CodeProcessor {
 					condition = null;
 					JSONObject newNode = (JSONObject) currentNodeContent.get(i);
 					exitNodesList = processNode(newNode, exitNodesList, argumentList);
-					if(getExitLoopControl()){
+					if(getExitLoopControl() && !currentNode.get("name").equals("Case")){
 						break;
 					}
 				}
@@ -322,7 +322,7 @@ public class CodeProcessor {
 			exitNodesList.addAll(lastCaseElement);
 			exitNodesList.addAll(breakNodes);
 			breakNodes.clear();
-			
+			setExitLoopControl(false);
 			break;
 		case "Return":
 			String returnContent = "";
@@ -395,11 +395,11 @@ public class CodeProcessor {
 	}
 	
 	private void setExitLoopControl(boolean var){
-		this.exitLoopControl = var;
+		this.setExitLoopControl = var;
 	}
 	
 	private boolean getExitLoopControl(){
-		return this.exitLoopControl ;
+		return this.setExitLoopControl ;
 	}
 	
 	

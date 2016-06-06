@@ -75,15 +75,15 @@ explicit in that method's graph. The fact the graphs of different functions aren
 easily visualized and more understandable when using a tool like graphviz.
 The code generated for the construction of the graphs is designed to be easily interpreted, making it more suitable for presentation
 purposes.
-Every different control structure is supported (with the exception mentioned in the CONS section).
+Most control structure are supported (with the exception mentioned in the CONS section).
 
 
 
 
 **CONS: 
 
-This tool is entirely dependent of the spoon2ast.jar tool, give that it was this tool's specific output our tool was designed to process.
-Some specific and less common control structures weren't accounted for, such as incomplete for loops (for example for(; i<0; i++) or even for(;;)).
+This tool is entirely dependent of the spoon2ast.jar tool, given that it was this tool's specific output our tool was designed to process.
+Some specific and less common control structures weren't accounted for, such as try/catch and incomplete for loops (for example for(; i<0; i++) or even for(;;)).
 The usage of this tool is limited to a single java class at a time, though using it separately on more than one class would achieve
 similar results to what it would if multiple class support were to be implemented (the only difference being the graph existing in separate dot files)
 
