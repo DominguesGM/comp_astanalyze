@@ -5,8 +5,11 @@ public class ForExample {
 		int[] values = { 1, 2, 3, -1 };
 		int size = values.length;
 
-		for (int i = 0; i < size; i++) {
+		int i = 0;
+
+		for (;;) {
 			values[i] = 1;
+			i++;
 		}
 	}
 }

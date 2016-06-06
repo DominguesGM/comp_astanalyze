@@ -101,13 +101,17 @@ public class CodeProcessor {
 				if(startNodeList != null)
 					exitNodesList.addAll(startNodeList);
 			}
-			for(; i < currentNodeContent.size(); i++){
-				condition = null;
-				JSONObject newNode = (JSONObject) currentNodeContent.get(i);
-				exitNodesList = processNode(newNode, exitNodesList, argumentList);
-				if(getExitLoopControl()){
-					break;
+			if(currentNode.get("name").equals("Case") || currentNode.get("name").equals("Block")){
+				for(; i < currentNodeContent.size(); i++){
+					condition = null;
+					JSONObject newNode = (JSONObject) currentNodeContent.get(i);
+					exitNodesList = processNode(newNode, exitNodesList, argumentList);
+					if(getExitLoopControl()){
+						break;
+					}
 				}
+			} else {
+				exitNodesList = processNode(currentNode, exitNodesList, argumentList);
 			}
 			return exitNodesList;
 	}
@@ -234,7 +238,7 @@ public class CodeProcessor {
 			exitNodesList.addAll(breakNodes);
 			breakNodes.clear();
 			for(String node : continueNodes){
-				graph.addEdge(node, conditionNode, this.parent.newEdgeName());
+				graph.addEdge(node, statementNode, this.parent.newEdgeName());
 			}
 			continueNodes.clear();
 			

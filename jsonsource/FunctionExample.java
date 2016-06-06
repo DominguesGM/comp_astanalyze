@@ -11,10 +11,9 @@ public class FunctionExample {
 	}
 
 	private static int subtractTwo(int a, int b){
-		if(a > b){
+		if(a > b)
 			return (a - b);
-		}else{
+		else
 			return (b - a);
-		}
 	}
 }

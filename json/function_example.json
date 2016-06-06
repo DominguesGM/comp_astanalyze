@@ -341,15 +341,21 @@
                         }]
                      },
                      {
-                        "name": "Block",
+                        "name": "Return",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
                         "children": [
                         {
-                           "name": "Return",
+                           "name": "BinaryOperator",
+                           "content": "-",
                            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
                            "children": [
                            {
-                              "name": "BinaryOperator",
-                              "content": "-",
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableRead",
                               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
                               "children": [
                               {
@@ -358,58 +364,54 @@
                                  "children": []
                               },
                               {
-                                 "name": "VariableRead",
-                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
+                                 "name": "ParameterReference",
+                                 "content": "a",
                                  "children": [
                                  {
                                     "name": "TypeReference",
                                     "content": "int",
                                     "children": []
-                                 },
-                                 {
-                                    "name": "ParameterReference",
-                                    "content": "a",
-                                    "children": [
-                                    {
-                                       "name": "TypeReference",
-                                       "content": "int",
-                                       "children": []
-                                    }]
                                  }]
+                              }]
+                           },
+                           {
+                              "name": "VariableRead",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": []
                               },
                               {
-                                 "name": "VariableRead",
-                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
+                                 "name": "ParameterReference",
+                                 "content": "b",
                                  "children": [
                                  {
                                     "name": "TypeReference",
                                     "content": "int",
                                     "children": []
-                                 },
-                                 {
-                                    "name": "ParameterReference",
-                                    "content": "b",
-                                    "children": [
-                                    {
-                                       "name": "TypeReference",
-                                       "content": "int",
-                                       "children": []
-                                    }]
                                  }]
                               }]
                            }]
                         }]
                      },
                      {
-                        "name": "Block",
+                        "name": "Return",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
                         "children": [
                         {
-                           "name": "Return",
+                           "name": "BinaryOperator",
+                           "content": "-",
                            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
                            "children": [
                            {
-                              "name": "BinaryOperator",
-                              "content": "-",
+                              "name": "TypeReference",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableRead",
                               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
                               "children": [
                               {
@@ -418,43 +420,33 @@
                                  "children": []
                               },
                               {
-                                 "name": "VariableRead",
-                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
+                                 "name": "ParameterReference",
+                                 "content": "b",
                                  "children": [
                                  {
                                     "name": "TypeReference",
                                     "content": "int",
                                     "children": []
-                                 },
-                                 {
-                                    "name": "ParameterReference",
-                                    "content": "b",
-                                    "children": [
-                                    {
-                                       "name": "TypeReference",
-                                       "content": "int",
-                                       "children": []
-                                    }]
                                  }]
+                              }]
+                           },
+                           {
+                              "name": "VariableRead",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
+                              "children": [
+                              {
+                                 "name": "TypeReference",
+                                 "content": "int",
+                                 "children": []
                               },
                               {
-                                 "name": "VariableRead",
-                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
+                                 "name": "ParameterReference",
+                                 "content": "a",
                                  "children": [
                                  {
                                     "name": "TypeReference",
                                     "content": "int",
                                     "children": []
-                                 },
-                                 {
-                                    "name": "ParameterReference",
-                                    "content": "a",
-                                    "children": [
-                                    {
-                                       "name": "TypeReference",
-                                       "content": "int",
-                                       "children": []
-                                    }]
                                  }]
                               }]
                            }]
