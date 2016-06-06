@@ -27,18 +27,18 @@ public class CodeGenerator {
 		String output = null;
 		
 		switch(type){
-		case "TypeReference":
+		case "TypeReferenceImpl":
 			return content;
-		case "ParameterReference":
+		case "ParameterReferenceImpl":
 			return content;
-		case "VariableRead":
+		case "VariableReadImpl":
 			output = processGeneric((JSONObject) children.get(1));
 			
 			// mark variable use
 			useTemp.add(output);
 			
 			return output;
-		case "LocalVariable":
+		case "LocalVariableImpl":
 			output = processGeneric((JSONObject) children.get(0)) + " " + content;
 			if(children.size() == 2){
 				output += " = " + processGeneric((JSONObject) children.get(1));
@@ -47,28 +47,28 @@ public class CodeGenerator {
 			}
 
 			return output;
-		case "Literal":
+		case "LiteralImpl":
 			if(Tool.isNumeric(content))
 				return content;
 			else	return "\\\"" + content + "\\\""; // efectivelly having \" on the string is necessary for graphviz not to break reading the dot file
-		case "LocalVariableReference":
+		case "LocalVariableReferenceImpl":
 			return content;
-		case "BinaryOperator":
+		case "BinaryOperatorImpl":
 			rightSide = processGeneric((JSONObject)children.get(2));
 			leftSide = processGeneric((JSONObject)children.get(1));
 			return leftSide + content + rightSide;
-		case "Assignment":
+		case "AssignmentImpl":
 			leftSide = processGeneric((JSONObject)children.get(1));			
 			rightSide = processGeneric((JSONObject)children.get(2));
 			return leftSide + " = " + rightSide;
-		case "VariableWrite":
+		case "VariableWriteImpl":
 			output = processGeneric((JSONObject)children.get(1));
 			
 			// mark variable definition
 			defTemp.add(output);
 			
 			return output;
-		case "OperatorAssignment":
+		case "OperatorAssignmentImpl":
 			String rightHand = processGeneric((JSONObject)children.get(1));
 			
 			// mark variable definition
@@ -76,7 +76,7 @@ public class CodeGenerator {
 			
 			output = rightHand +" "+ content +" "+ processGeneric((JSONObject)children.get(2));
 			return processGeneric((JSONObject)children.get(1)) +" "+ content +" "+ processGeneric((JSONObject)children.get(2));
-		case "UnaryOperator":
+		case "UnaryOperatorImpl":
 			if(content.charAt(0) == '_'){
 				String contentEdited = content.replace("_", "");
 				String variable = processGeneric((JSONObject)children.get(1));
@@ -88,9 +88,9 @@ public class CodeGenerator {
 				defTemp.add(variable);
 				return contentEdited + variable;
 			}
-		case "ArrayTypeReference":
+		case "ArrayTypeReferenceImpl":
 			return processGeneric((JSONObject)children.get(0)) + "[]";
-		case "NewArray":
+		case "NewArrayImpl":
 			String array = "{";
 			for(int i = 1; i < children.size(); i++){
 				array += processGeneric((JSONObject)children.get(i));
@@ -98,15 +98,15 @@ public class CodeGenerator {
 					array += ", ";
 			}
 			return array + "}";
-		case "ArrayWrite":
+		case "ArrayWriteImpl":
 			return processGeneric((JSONObject)children.get(1)) + "[" + processGeneric((JSONObject)children.get(2)) + "]";
-		case "FieldRead":
+		case "FieldReadImpl":
 			if(children.size() == 3)
 				return processGeneric((JSONObject)children.get(1)) + "." + processGeneric((JSONObject)children.get(2));
 			else return processGeneric((JSONObject)children.get(1));
-		case "FieldReference":
+		case "FieldReferenceImpl":
 			return content;
-		case "Invocation":
+		case "InvocationImpl":
 			String function = "";
 			String thisElement = "";
 			boolean foundExecutableReference = false;
@@ -119,7 +119,7 @@ public class CodeGenerator {
 					else
 						function += ")";
 				} else {
-					if("ExecutableReference".equals(thisElement)){
+					if("ExecutableReferenceImpl".equals(thisElement)){
 						foundExecutableReference = true;
 						function += "(";
 					} else {
@@ -128,13 +128,13 @@ public class CodeGenerator {
 				}
 			}
 			return function;
-		case "ExecutableReference":
+		case "ExecutableReferenceImpl":
 			return content;
-		case "Break":
+		case "BreakImpl":
 			return type;
-		case "Continue":
+		case "ContinueImpl":
 			return type;
-		case "Return":
+		case "ReturnImpl":
 			return type;
 		default:
 			return type;

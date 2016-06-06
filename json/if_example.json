@@ -6,57 +6,57 @@
       "content": "",
       "children": [
       {
-         "name": "Package",
+         "name": "PackageImpl",
          "content": "test",
          "children": [
          {
-            "name": "Class",
+            "name": "ClassImpl",
             "content": "IfExample",
-            "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:3)",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
             "children": [
             {
-               "name": "Constructor",
+               "name": "ConstructorImpl",
                "content": "test.IfExample()",
-               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:3)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
                "children": [
                {
-                  "name": "Block",
-                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:3)",
+                  "name": "BlockImpl",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
                   "children": [
                   {
-                     "name": "Invocation",
-                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:3)",
+                     "name": "InvocationImpl",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
                      "children": [
                      {
-                        "name": "TypeReference",
+                        "name": "TypeReferenceImpl",
                         "content": "Object",
                         "children": [
                         {
-                           "name": "PackageReference",
+                           "name": "PackageReferenceImpl",
                            "content": "java.lang",
                            "children": []
                         }]
                      },
                      {
-                        "name": "ExecutableReference",
+                        "name": "ExecutableReferenceImpl",
                         "content": "<init>",
                         "children": [
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "Object",
                            "children": [
                            {
-                              "name": "PackageReference",
+                              "name": "PackageReferenceImpl",
                               "content": "java.lang",
                               "children": []
                            }]
                         },
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "Object",
                            "children": [
                            {
-                              "name": "PackageReference",
+                              "name": "PackageReferenceImpl",
                               "content": "java.lang",
                               "children": []
                            }]
@@ -66,30 +66,30 @@
                }]
             },
             {
-               "name": "Method",
+               "name": "MethodImpl",
                "content": "main",
-               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:4)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:4)",
                "children": [
                {
-                  "name": "TypeReference",
-                  "content": "float",
+                  "name": "TypeReferenceImpl",
+                  "content": "int",
                   "children": []
                },
                {
-                  "name": "Parameter",
+                  "name": "ParameterImpl",
                   "content": "args",
-                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:4)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:4)",
                   "children": [
                   {
-                     "name": "ArrayTypeReference",
+                     "name": "ArrayTypeReferenceImpl",
                      "content": "Array",
                      "children": [
                      {
-                        "name": "TypeReference",
+                        "name": "TypeReferenceImpl",
                         "content": "String",
                         "children": [
                         {
-                           "name": "PackageReference",
+                           "name": "PackageReferenceImpl",
                            "content": "java.lang",
                            "children": []
                         }]
@@ -97,100 +97,100 @@
                   }]
                },
                {
-                  "name": "Block",
+                  "name": "BlockImpl",
                   "children": [
                   {
-                     "name": "LocalVariable",
+                     "name": "LocalVariableImpl",
                      "content": "a",
-                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:5)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:5)",
                      "children": [
                      {
-                        "name": "TypeReference",
+                        "name": "TypeReferenceImpl",
                         "content": "int",
                         "children": []
                      },
                      {
-                        "name": "Literal",
+                        "name": "LiteralImpl",
                         "content": "2",
-                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:5)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:5)",
                         "children": [
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "int",
                            "children": []
                         }]
                      }]
                   },
                   {
-                     "name": "LocalVariable",
+                     "name": "LocalVariableImpl",
                      "content": "b",
-                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:6)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:6)",
                      "children": [
                      {
-                        "name": "TypeReference",
+                        "name": "TypeReferenceImpl",
                         "content": "int",
                         "children": []
                      },
                      {
-                        "name": "Literal",
+                        "name": "LiteralImpl",
                         "content": "1",
-                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:6)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:6)",
                         "children": [
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "int",
                            "children": []
                         }]
                      }]
                   },
                   {
-                     "name": "If",
+                     "name": "IfImpl",
                      "children": [
                      {
-                        "name": "BinaryOperator",
+                        "name": "BinaryOperatorImpl",
                         "content": "<=",
-                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:7)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
                         "children": [
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "boolean",
                            "children": []
                         },
                         {
-                           "name": "VariableRead",
-                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:7)",
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
                            "children": [
                            {
-                              "name": "TypeReference",
+                              "name": "TypeReferenceImpl",
                               "content": "int",
                               "children": []
                            },
                            {
-                              "name": "LocalVariableReference",
+                              "name": "LocalVariableReferenceImpl",
                               "content": "a",
                               "children": [
                               {
-                                 "name": "TypeReference",
+                                 "name": "TypeReferenceImpl",
                                  "content": "int",
                                  "children": []
                               }]
                            }]
                         },
                         {
-                           "name": "VariableRead",
-                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:7)",
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
                            "children": [
                            {
-                              "name": "TypeReference",
+                              "name": "TypeReferenceImpl",
                               "content": "int",
                               "children": []
                            },
                            {
-                              "name": "LocalVariableReference",
+                              "name": "LocalVariableReferenceImpl",
                               "content": "b",
                               "children": [
                               {
-                                 "name": "TypeReference",
+                                 "name": "TypeReferenceImpl",
                                  "content": "int",
                                  "children": []
                               }]
@@ -198,57 +198,57 @@
                         }]
                      },
                      {
-                        "name": "Block",
+                        "name": "BlockImpl",
                         "children": [
                         {
-                           "name": "Return",
-                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:8)",
+                           "name": "ReturnImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:8)",
                            "children": [
                            {
-                              "name": "BinaryOperator",
+                              "name": "BinaryOperatorImpl",
                               "content": "-",
-                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:8)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:8)",
                               "children": [
                               {
-                                 "name": "TypeReference",
+                                 "name": "TypeReferenceImpl",
                                  "content": "int",
                                  "children": []
                               },
                               {
-                                 "name": "VariableRead",
-                                 "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:8)",
+                                 "name": "VariableReadImpl",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:8)",
                                  "children": [
                                  {
-                                    "name": "TypeReference",
+                                    "name": "TypeReferenceImpl",
                                     "content": "int",
                                     "children": []
                                  },
                                  {
-                                    "name": "LocalVariableReference",
+                                    "name": "LocalVariableReferenceImpl",
                                     "content": "b",
                                     "children": [
                                     {
-                                       "name": "TypeReference",
+                                       "name": "TypeReferenceImpl",
                                        "content": "int",
                                        "children": []
                                     }]
                                  }]
                               },
                               {
-                                 "name": "VariableRead",
-                                 "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:8)",
+                                 "name": "VariableReadImpl",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:8)",
                                  "children": [
                                  {
-                                    "name": "TypeReference",
+                                    "name": "TypeReferenceImpl",
                                     "content": "int",
                                     "children": []
                                  },
                                  {
-                                    "name": "LocalVariableReference",
+                                    "name": "LocalVariableReferenceImpl",
                                     "content": "a",
                                     "children": [
                                     {
-                                       "name": "TypeReference",
+                                       "name": "TypeReferenceImpl",
                                        "content": "int",
                                        "children": []
                                     }]
@@ -259,24 +259,24 @@
                      }]
                   },
                   {
-                     "name": "Return",
-                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:10)",
+                     "name": "ReturnImpl",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:10)",
                      "children": [
                      {
-                        "name": "VariableRead",
-                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/IfExample.java:10)",
+                        "name": "VariableReadImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:10)",
                         "children": [
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "int",
                            "children": []
                         },
                         {
-                           "name": "LocalVariableReference",
+                           "name": "LocalVariableReferenceImpl",
                            "content": "a",
                            "children": [
                            {
-                              "name": "TypeReference",
+                              "name": "TypeReferenceImpl",
                               "content": "int",
                               "children": []
                            }]

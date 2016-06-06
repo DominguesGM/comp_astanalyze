@@ -6,278 +6,278 @@
       "content": "",
       "children": [
       {
-         "name": "Package",
+         "name": "PackageImpl",
          "content": "test",
          "children": [
          {
-            "name": "Class",
+            "name": "ClassImpl",
             "content": "WhileExample",
-            "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:3)",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:3)",
             "children": [
             {
-               "name": "Constructor",
+               "name": "ConstructorImpl",
                "content": "test.WhileExample()",
-               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:3)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:3)",
                "children": [
                {
-                  "name": "Block",
-                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:3)",
+                  "name": "BlockImpl",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:3)",
                   "children": [
                   {
-                     "name": "Invocation",
-                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:3)",
+                     "name": "InvocationImpl",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:3)",
                      "children": [
                      {
-                        "name": "TypeReference",
+                        "name": "TypeReferenceImpl",
                         "content": "Object",
                         "children": [
                         {
-                           "name": "PackageReference",
+                           "name": "PackageReferenceImpl",
                            "content": "java.lang",
-                           "children": [],
-                        }],
+                           "children": []
+                        }]
                      },
                      {
-                        "name": "ExecutableReference",
+                        "name": "ExecutableReferenceImpl",
                         "content": "<init>",
                         "children": [
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "Object",
                            "children": [
                            {
-                              "name": "PackageReference",
+                              "name": "PackageReferenceImpl",
                               "content": "java.lang",
-                              "children": [],
-                           }],
+                              "children": []
+                           }]
                         },
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "Object",
                            "children": [
                            {
-                              "name": "PackageReference",
+                              "name": "PackageReferenceImpl",
                               "content": "java.lang",
-                              "children": [],
-                           }],
-                        }],
-                     }],
-                  }],
-               }],
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
             },
             {
-               "name": "Method",
+               "name": "MethodImpl",
                "content": "main",
-               "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:4)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:4)",
                "children": [
                {
-                  "name": "TypeReference",
+                  "name": "TypeReferenceImpl",
                   "content": "void",
-                  "children": [],
+                  "children": []
                },
                {
-                  "name": "Parameter",
+                  "name": "ParameterImpl",
                   "content": "args",
-                  "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:4)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:4)",
                   "children": [
                   {
-                     "name": "ArrayTypeReference",
+                     "name": "ArrayTypeReferenceImpl",
                      "content": "Array",
                      "children": [
                      {
-                        "name": "TypeReference",
+                        "name": "TypeReferenceImpl",
                         "content": "String",
                         "children": [
                         {
-                           "name": "PackageReference",
+                           "name": "PackageReferenceImpl",
                            "content": "java.lang",
-                           "children": [],
-                        }],
-                     }],
-                  }],
+                           "children": []
+                        }]
+                     }]
+                  }]
                },
                {
-                  "name": "Block",
+                  "name": "BlockImpl",
                   "children": [
                   {
-                     "name": "LocalVariable",
+                     "name": "LocalVariableImpl",
                      "content": "i",
-                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:5)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:5)",
                      "children": [
                      {
-                        "name": "TypeReference",
+                        "name": "TypeReferenceImpl",
                         "content": "int",
-                        "children": [],
+                        "children": []
                      },
                      {
-                        "name": "Literal",
+                        "name": "LiteralImpl",
                         "content": "10",
-                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:5)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:5)",
                         "children": [
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "int",
-                           "children": [],
-                        }],
-                     }],
+                           "children": []
+                        }]
+                     }]
                   },
                   {
-                     "name": "LocalVariable",
+                     "name": "LocalVariableImpl",
                      "content": "multiplier",
-                     "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:6)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:6)",
                      "children": [
                      {
-                        "name": "TypeReference",
+                        "name": "TypeReferenceImpl",
                         "content": "int",
-                        "children": [],
+                        "children": []
                      },
                      {
-                        "name": "Literal",
+                        "name": "LiteralImpl",
                         "content": "1",
-                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:6)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:6)",
                         "children": [
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "int",
-                           "children": [],
-                        }],
-                     }],
+                           "children": []
+                        }]
+                     }]
                   },
                   {
-                     "name": "While",
+                     "name": "WhileImpl",
                      "children": [
                      {
-                        "name": "BinaryOperator",
+                        "name": "BinaryOperatorImpl",
                         "content": ">",
-                        "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:8)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:8)",
                         "children": [
                         {
-                           "name": "TypeReference",
+                           "name": "TypeReferenceImpl",
                            "content": "boolean",
-                           "children": [],
+                           "children": []
                         },
                         {
-                           "name": "VariableRead",
-                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:8)",
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:8)",
                            "children": [
                            {
-                              "name": "TypeReference",
+                              "name": "TypeReferenceImpl",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
-                              "name": "LocalVariableReference",
+                              "name": "LocalVariableReferenceImpl",
                               "content": "i",
                               "children": [
                               {
-                                 "name": "TypeReference",
+                                 "name": "TypeReferenceImpl",
                                  "content": "int",
-                                 "children": [],
-                              }],
-                           }],
+                                 "children": []
+                              }]
+                           }]
                         },
                         {
-                           "name": "Literal",
+                           "name": "LiteralImpl",
                            "content": "0",
-                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:8)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:8)",
                            "children": [
                            {
-                              "name": "TypeReference",
+                              "name": "TypeReferenceImpl",
                               "content": "int",
-                              "children": [],
-                           }],
-                        }],
+                              "children": []
+                           }]
+                        }]
                      },
                      {
-                        "name": "Block",
+                        "name": "BlockImpl",
                         "children": [
                         {
-                           "name": "OperatorAssignment",
+                           "name": "OperatorAssignmentImpl",
                            "content": "*=",
-                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:9)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:9)",
                            "children": [
                            {
-                              "name": "TypeReference",
+                              "name": "TypeReferenceImpl",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
-                              "name": "VariableWrite",
-                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:9)",
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:9)",
                               "children": [
                               {
-                                 "name": "TypeReference",
+                                 "name": "TypeReferenceImpl",
                                  "content": "int",
-                                 "children": [],
+                                 "children": []
                               },
                               {
-                                 "name": "LocalVariableReference",
+                                 "name": "LocalVariableReferenceImpl",
                                  "content": "multiplier",
                                  "children": [
                                  {
-                                    "name": "TypeReference",
+                                    "name": "TypeReferenceImpl",
                                     "content": "int",
-                                    "children": [],
-                                 }],
-                              }],
+                                    "children": []
+                                 }]
+                              }]
                            },
                            {
-                              "name": "VariableRead",
-                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:9)",
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:9)",
                               "children": [
                               {
-                                 "name": "TypeReference",
+                                 "name": "TypeReferenceImpl",
                                  "content": "int",
-                                 "children": [],
+                                 "children": []
                               },
                               {
-                                 "name": "LocalVariableReference",
+                                 "name": "LocalVariableReferenceImpl",
                                  "content": "i",
                                  "children": [
                                  {
-                                    "name": "TypeReference",
+                                    "name": "TypeReferenceImpl",
                                     "content": "int",
-                                    "children": [],
-                                 }],
-                              }],
-                           }],
+                                    "children": []
+                                 }]
+                              }]
+                           }]
                         },
                         {
-                           "name": "UnaryOperator",
+                           "name": "UnaryOperatorImpl",
                            "content": "_--",
-                           "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:10)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:10)",
                            "children": [
                            {
-                              "name": "TypeReference",
+                              "name": "TypeReferenceImpl",
                               "content": "int",
-                              "children": [],
+                              "children": []
                            },
                            {
-                              "name": "VariableRead",
-                              "code": "(/Users/Fabio/comp_astanalyze/jsonsource/WhileExample.java:10)",
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/WhileExample.java:10)",
                               "children": [
                               {
-                                 "name": "TypeReference",
+                                 "name": "TypeReferenceImpl",
                                  "content": "int",
-                                 "children": [],
+                                 "children": []
                               },
                               {
-                                 "name": "LocalVariableReference",
+                                 "name": "LocalVariableReferenceImpl",
                                  "content": "i",
                                  "children": [
                                  {
-                                    "name": "TypeReference",
+                                    "name": "TypeReferenceImpl",
                                     "content": "int",
-                                    "children": [],
-                                 }],
-                              }],
-                           }],
-                        }],
-                     }],
-                  }],
-               }],
-            }],
-         }],
-      }],
-   }],
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            }]
+         }]
+      }]
+   }]
 }

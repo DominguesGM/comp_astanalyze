@@ -1,4 +1,5 @@
-rmdir /S /Q bin
+#!/bin/bash
+rm -rf bin
 
 mkdir bin
 

@@ -82,7 +82,7 @@ public class CodeProcessor {
 			String childStartingNode;
 			String condition;
 			int i = 0;
-			if(currentNode.get("name").equals("Case")){
+			if(currentNode.get("name").equals("CaseImpl")){
 				JSONObject caseNode = (JSONObject) currentNodeContent.get(0);
 				if(((String) ((JSONObject) currentNodeContent.get(0)).get("name")).equals("Literal")){
 					childStartingNode = this.parent.newNodeName() + ": Case " + generator.processGeneric((JSONObject) currentNodeContent.get(0));
@@ -101,12 +101,12 @@ public class CodeProcessor {
 				if(startNodeList != null)
 					exitNodesList.addAll(startNodeList);
 			}
-			if(currentNode.get("name").equals("Case") || currentNode.get("name").equals("Block")){
+			if(currentNode.get("name").equals("CaseImpl") || currentNode.get("name").equals("BlockImpl")){
 				for(; i < currentNodeContent.size(); i++){
 					condition = null;
 					JSONObject newNode = (JSONObject) currentNodeContent.get(i);
 					exitNodesList = processNode(newNode, exitNodesList, argumentList);
-					if(getExitLoopControl() && !currentNode.get("name").equals("Case")){
+					if(getExitLoopControl() && !currentNode.get("name").equals("CaseImpl")){
 						break;
 					}
 				}
@@ -122,7 +122,7 @@ public class CodeProcessor {
 		String childStartingNode;
 		String condition = "";
 		switch((String) newNode.get("name")){
-		case "If":
+		case "IfImpl":
 			// process condition and create condition node
 			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 			childStartingNode = this.parent.newNodeName() + ": if(" + condition + ")";
@@ -152,7 +152,7 @@ public class CodeProcessor {
 				exitNodesList.add(childStartingNode);
 			}
 			break;
-		case "While":
+		case "WhileImpl":
 			// process condition and create condition node
 			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 			childStartingNode = this.parent.newNodeName() + ": while(" + condition + ")";
@@ -188,7 +188,7 @@ public class CodeProcessor {
 			exitNodesList.add(childStartingNode);
 			setExitLoopControl(false);
 			break;
-		case "For":
+		case "ForImpl":
 			// process condition and create condition node
 			String assignment = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 			String assignmentNode = this.parent.newNodeName() + ": " + assignment;
@@ -250,7 +250,7 @@ public class CodeProcessor {
 			saveDataFlow(statementNode);
 			setExitLoopControl(false);
 			break;
-		case "Do":
+		case "DoImpl":
 			String doStartNode = this.parent.newNodeName() + ": do";
 			// process condition and create condition node
 			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
@@ -292,7 +292,7 @@ public class CodeProcessor {
 			exitNodesList.add(conditionNode);
 			setExitLoopControl(false);
 			break;
-		case "Switch":
+		case "SwitchImpl":
 			// process condition and create condition node
 			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 			childStartingNode = this.parent.newNodeName() + ": switch(" + condition + ")";
@@ -324,7 +324,7 @@ public class CodeProcessor {
 			breakNodes.clear();
 			setExitLoopControl(false);
 			break;
-		case "Return":
+		case "ReturnImpl":
 			String returnContent = "";
 			if(((JSONArray) newNode.get("children")).size() != 0)
 				returnContent = " " + generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
@@ -343,7 +343,7 @@ public class CodeProcessor {
 			exitNodesList.clear();
 			setExitLoopControl(true);
 			break;
-		case "Continue":
+		case "ContinueImpl":
 			childStartingNode = this.parent.newNodeName()+": continue";
 			graph.addVertex(childStartingNode);
 			continueNodes.add(childStartingNode);
@@ -359,7 +359,7 @@ public class CodeProcessor {
 			exitNodesList.clear();
 			setExitLoopControl(true);
 			break;
-		case "Break":
+		case "BreakImpl":
 			childStartingNode = this.parent.newNodeName()+": break";
 			graph.addVertex(childStartingNode);
 			breakNodes.add(childStartingNode);
