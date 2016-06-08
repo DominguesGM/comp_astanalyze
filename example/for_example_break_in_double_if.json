@@ -1,0 +1,616 @@
+{
+   "name": "Root",
+   "children": [
+   {
+      "name": "RootPackage",
+      "content": "",
+      "children": [
+      {
+         "name": "PackageImpl",
+         "content": "test",
+         "children": [
+         {
+            "name": "ClassImpl",
+            "content": "ForExampleBreakInDoubleIf",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:3)",
+            "children": [
+            {
+               "name": "ConstructorImpl",
+               "content": "test.ForExampleBreakInDoubleIf()",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:3)",
+               "children": [
+               {
+                  "name": "BlockImpl",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:3)",
+                  "children": [
+                  {
+                     "name": "InvocationImpl",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:3)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "Object",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "ExecutableReferenceImpl",
+                        "content": "<init>",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            },
+            {
+               "name": "MethodImpl",
+               "content": "main",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:4)",
+               "children": [
+               {
+                  "name": "TypeReferenceImpl",
+                  "content": "void",
+                  "children": []
+               },
+               {
+                  "name": "ParameterImpl",
+                  "content": "args",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:4)",
+                  "children": [
+                  {
+                     "name": "ArrayTypeReferenceImpl",
+                     "content": "Array",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     }]
+                  }]
+               },
+               {
+                  "name": "BlockImpl",
+                  "children": [
+                  {
+                     "name": "LocalVariableImpl",
+                     "content": "values",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:5)",
+                     "children": [
+                     {
+                        "name": "ArrayTypeReferenceImpl",
+                        "content": "Array",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "NewArrayImpl",
+                        "content": "type:initialization",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:5)",
+                        "children": [
+                        {
+                           "name": "ArrayTypeReferenceImpl",
+                           "content": "Array",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "1",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:5)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "2",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:5)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "3",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:5)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "-",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:5)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "1",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:5)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "LocalVariableImpl",
+                     "content": "size",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:6)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "int",
+                        "children": []
+                     },
+                     {
+                        "name": "FieldReadImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:6)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:6)",
+                           "children": [
+                           {
+                              "name": "ArrayTypeReferenceImpl",
+                              "content": "Array",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "values",
+                              "children": [
+                              {
+                                 "name": "ArrayTypeReferenceImpl",
+                                 "content": "Array",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "FieldReferenceImpl",
+                           "content": "length",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "ForImpl",
+                     "children": [
+                     {
+                        "name": "LocalVariableImpl",
+                        "content": "i",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:9)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "0",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:9)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BinaryOperatorImpl",
+                        "content": "<",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:9)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "boolean",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:9)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:9)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "size",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "UnaryOperatorImpl",
+                        "content": "_++",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:9)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:9)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BlockImpl",
+                        "children": [
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:10)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "ArrayWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:10)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "VariableReadImpl",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:10)",
+                                 "children": [
+                                 {
+                                    "name": "ArrayTypeReferenceImpl",
+                                    "content": "Array",
+                                    "children": [
+                                    {
+                                       "name": "TypeReferenceImpl",
+                                       "content": "int",
+                                       "children": []
+                                    }]
+                                 },
+                                 {
+                                    "name": "LocalVariableReferenceImpl",
+                                    "content": "values",
+                                    "children": [
+                                    {
+                                       "name": "ArrayTypeReferenceImpl",
+                                       "content": "Array",
+                                       "children": [
+                                       {
+                                          "name": "TypeReferenceImpl",
+                                          "content": "int",
+                                          "children": []
+                                       }]
+                                    }]
+                                 }]
+                              },
+                              {
+                                 "name": "VariableReadImpl",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:10)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 },
+                                 {
+                                    "name": "LocalVariableReferenceImpl",
+                                    "content": "i",
+                                    "children": [
+                                    {
+                                       "name": "TypeReferenceImpl",
+                                       "content": "int",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "1",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:10)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "IfImpl",
+                           "children": [
+                           {
+                              "name": "BinaryOperatorImpl",
+                              "content": "==",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:11)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "boolean",
+                                 "children": []
+                              },
+                              {
+                                 "name": "VariableReadImpl",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:11)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 },
+                                 {
+                                    "name": "LocalVariableReferenceImpl",
+                                    "content": "i",
+                                    "children": [
+                                    {
+                                       "name": "TypeReferenceImpl",
+                                       "content": "int",
+                                       "children": []
+                                    }]
+                                 }]
+                              },
+                              {
+                                 "name": "LiteralImpl",
+                                 "content": "1",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:11)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "BlockImpl",
+                              "children": [
+                              {
+                                 "name": "IfImpl",
+                                 "children": [
+                                 {
+                                    "name": "BinaryOperatorImpl",
+                                    "content": "==",
+                                    "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:12)",
+                                    "children": [
+                                    {
+                                       "name": "TypeReferenceImpl",
+                                       "content": "boolean",
+                                       "children": []
+                                    },
+                                    {
+                                       "name": "VariableReadImpl",
+                                       "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:12)",
+                                       "children": [
+                                       {
+                                          "name": "TypeReferenceImpl",
+                                          "content": "int",
+                                          "children": []
+                                       },
+                                       {
+                                          "name": "LocalVariableReferenceImpl",
+                                          "content": "size",
+                                          "children": [
+                                          {
+                                             "name": "TypeReferenceImpl",
+                                             "content": "int",
+                                             "children": []
+                                          }]
+                                       }]
+                                    },
+                                    {
+                                       "name": "LiteralImpl",
+                                       "content": "4",
+                                       "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:12)",
+                                       "children": [
+                                       {
+                                          "name": "TypeReferenceImpl",
+                                          "content": "int",
+                                          "children": []
+                                       }]
+                                    }]
+                                 },
+                                 {
+                                    "name": "BreakImpl",
+                                    "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:13)",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "UnaryOperatorImpl",
+                                 "content": "_++",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:14)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 },
+                                 {
+                                    "name": "VariableReadImpl",
+                                    "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:14)",
+                                    "children": [
+                                    {
+                                       "name": "TypeReferenceImpl",
+                                       "content": "int",
+                                       "children": []
+                                    },
+                                    {
+                                       "name": "LocalVariableReferenceImpl",
+                                       "content": "i",
+                                       "children": [
+                                       {
+                                          "name": "TypeReferenceImpl",
+                                          "content": "int",
+                                          "children": []
+                                       }]
+                                    }]
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:16)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForExampleBreakInDoubleIf.java:16)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "i",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            }]
+         }]
+      }]
+   }]
+}

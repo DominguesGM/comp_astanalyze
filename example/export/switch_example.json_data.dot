@@ -1,0 +1,33 @@
+digraph G {
+  1 [ label="0: String main(Array args)" ];
+  2 [ label="1: int month = 8" ];
+  3 [ label="3: switch(month)" ];
+  4 [ label="6: monthString = \"January\"" ];
+  5 [ label="10: monthString = \"February\"" ];
+  6 [ label="14: monthString = \"March\"" ];
+  7 [ label="18: monthString = \"April\"" ];
+  8 [ label="22: monthString = \"May\"" ];
+  9 [ label="26: monthString = \"June\"" ];
+  10 [ label="30: monthString = \"July\"" ];
+  11 [ label="34: monthString = \"August\"" ];
+  12 [ label="38: monthString = \"September\"" ];
+  13 [ label="42: monthString = \"October\"" ];
+  14 [ label="46: monthString = \"November\"" ];
+  15 [ label="50: monthString = \"December\"" ];
+  16 [ label="53: monthString = \"Invalid month\"" ];
+  17 [ label="55: return monthString" ];
+  2 -> 3 [ label="0: month" ];
+  4 -> 17 [ label="1: monthString" ];
+  5 -> 17 [ label="2: monthString" ];
+  6 -> 17 [ label="3: monthString" ];
+  7 -> 17 [ label="4: monthString" ];
+  8 -> 17 [ label="5: monthString" ];
+  9 -> 17 [ label="6: monthString" ];
+  10 -> 17 [ label="7: monthString" ];
+  11 -> 17 [ label="8: monthString" ];
+  12 -> 17 [ label="9: monthString" ];
+  13 -> 17 [ label="10: monthString" ];
+  14 -> 17 [ label="11: monthString" ];
+  15 -> 17 [ label="12: monthString" ];
+  16 -> 17 [ label="13: monthString" ];
+}

@@ -1,0 +1,1 @@
+java -cp ..\bin;..\lib\* analyser.AstAnalyze while_example.json
