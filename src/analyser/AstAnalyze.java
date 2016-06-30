@@ -1,8 +1,7 @@
 package analyser;
 
+import java.io.File;
 import java.io.IOException;
-
-import org.json.simple.JSONObject;
 
 import data.AST;
 import other.Log;
@@ -10,7 +9,7 @@ import output.Output;
 
 public class AstAnalyze {
 	private static AST ast;
-	private static Visitor visitor;
+	private static Analyzer analyzer;
 	private static Output output;
 
 	public static void main(String args[]){
@@ -24,34 +23,39 @@ public class AstAnalyze {
 			Log.error("Error occurred while parsing json file");
 			return;
 		}
-		Log.info("json file read");
-		String delims = "[.]";
-		String[] temptokens = args[0].split("[.]");
-		String[] tokens = temptokens[0].split("[/]");
-		if(tokens.length == 1)
-			tokens = temptokens[0].split("[\\\\]");
-		visitor = new Visitor(ast);
-		output = new Output(visitor);
-		System.out.println(tokens[1]);
+		File theFile = new File(args[0]);
+		
+		try{
+			analyzer = new Analyzer(ast);
+			analyzer.analyze();
+		} catch(Exception e){
+			Log.error("Error while analyzing the abstract syntax tree. Check json format.");
+			return;
+		}
+		output = new Output(analyzer);
+		System.out.println(theFile.getName());
 		try {
-			output.printControlGraph("export/"+tokens[1]+"_control.dot");
-			output.printDataGraph("export/"+tokens[1]+"_data.dot");
+			output.printControlGraph("export/"+theFile.getName()+"_control.dot");
+			output.printDataGraph("export/"+theFile.getName()+"_data.dot");
 		} catch (IOException e) {
 			Log.error("Error outputing dot files");
 			return;
 		}
+		Log.info("Both dot files generated: ");
+		Log.info("export/"+theFile.getName()+"_control.dot");
+		Log.info("export/"+theFile.getName()+"_data.dot");
 	}
 	
 	public static AST getAST(){
 		return ast;
 	}
 
-	public static Visitor getVisitor() {
-		return visitor;
+	public static Analyzer getAnalyzer() {
+		return analyzer;
 	}
 
-	public static void setVisitor(Visitor visitor) {
-		AstAnalyze.visitor = visitor;
+	public static void setAnalyzer(Analyzer analyzer) {
+		AstAnalyze.analyzer = analyzer;
 	}
 	
 	

@@ -11,7 +11,7 @@ import org.json.simple.JSONObject;
 import data.AST;
 import javafx.util.Pair;
 
-public class Visitor {
+public class Analyzer {
 	private JSONObject mainFunction;
 	
 	private DirectedPseudograph<String, String> graph;
@@ -25,20 +25,23 @@ public class Visitor {
 	private int nodeCounter = 0;
 	private int edgeCounter = 0;
 
+	JSONObject mainClass;
 	
-	public Visitor(AST ast){
+	public Analyzer(AST ast){
 		JSONObject rootPackage = (JSONObject) ((JSONArray) ast.getTree().get("children")).get(0);
 		JSONObject packageMain = (JSONObject) ((JSONArray) rootPackage.get("children")).get(0);
-		JSONObject mainClass = (JSONObject) ((JSONArray) packageMain.get("children")).get(0);
-		JSONObject func;
-		JSONObject funcContents;
+		mainClass = (JSONObject) ((JSONArray) packageMain.get("children")).get(0);
 	
 		graph = new DirectedPseudograph<String,String>(String.class);
 		dataGraph = new DirectedPseudograph<String,String>(String.class);
 		
-		
-		
+	}
+	
+	public void analyze(){
+		JSONObject func;
+		JSONObject funcContents;
 		String funcName = "";
+		
 		for(int i = 1; i < ((JSONArray) mainClass.get("children")).size(); i++){
 			func = (JSONObject) ((JSONArray) mainClass.get("children")).get(i);
 			funcName = (String) func.get("content");
@@ -63,7 +66,6 @@ public class Visitor {
 				}
 			}
 		}
-
 	}
 
 	public String newNodeName(){

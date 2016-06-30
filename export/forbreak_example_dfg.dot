@@ -1,3 +1,0 @@
-digraph G {
-  1 [ label="0: void main(Array args)" ];
-}

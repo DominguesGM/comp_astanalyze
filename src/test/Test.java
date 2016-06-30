@@ -1,7 +1,9 @@
 package test;
 
-import analyser.Visitor;
+import analyser.Analyzer;
 import data.AST;
+import other.Log;
+
 import org.json.simple.JSONObject;
 import output.Output;
 
@@ -12,11 +14,11 @@ import java.util.ArrayList;
 public class Test {
     private static ArrayList<String> filesList = new ArrayList<>();
     private static AST ast;
-    private static Visitor visitor;
+    private static Analyzer analyzer;
     private static Output output;
 
     public static void main(String args[]){
-        listFilesForFolder(new File("json"));
+        listFilesForFolder(new File("testsuite"));
         getAllGraphs();
     }
 
@@ -47,8 +49,15 @@ public class Test {
             String nameFile = file.substring(file.lastIndexOf('/') + 1, file.lastIndexOf('.'));
 
             ast = new AST(file);
-            visitor = new Visitor(ast);
-            output = new Output(visitor);
+            
+            try{
+            	analyzer = new Analyzer(ast);
+    			analyzer.analyze();
+    		} catch(Exception e){
+    			Log.error("Error while analyzing the abstract syntax tree. Check json format.");
+    			continue;
+    		}
+            output = new Output(analyzer);
 
             try {
                 output.printControlGraph(String.format("export/%s_cfg.dot", nameFile));

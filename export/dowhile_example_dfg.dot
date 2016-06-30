@@ -1,3 +1,0 @@
-digraph G {
-  1 [ label="0: String main(Array args)" ];
-}

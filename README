@@ -1,7 +1,7 @@
 
 **PROJECT TITLE: ASTANALYZE
 
-**GROUP: 3MIEIC046ASTANALYZE
+**GROUP: 3MIEIC04_6ASTANALYZE
 
 NAME1: Fábio André da Silva Amarante, NR1: 201007656, GRADE1: 18, CONTRIBUTION: 32%
 
@@ -18,7 +18,7 @@ The output is split into two dot files, one containing the control flow graph an
 The abstract syntax tree must be generated using spoon2ast.jar, a tool developed by Joao Bispo.
 
 
-After compilation, the tool must be run using the following command (assuming working directory as project folder): java -cp bin;lib\* analyser.AstAnalyze json/<file_name>
+After compilation, the tool must be run using the following command (assuming working directory as project folder): java -cp bin;lib\* analyser.AstAnalyze <path_to_json>/<file_name>.json
 In order to start with a *.java file, execute the following list of commands :
 				java -jar <path_to_project>/extra/spoon2ast.jar <path_to_file>/<class_to_parse>.java
 				java -cp bin;lib\* analyser.AstAnalyze <json_file_path>/<json_file_name>.json
@@ -62,9 +62,11 @@ The tool makes use of the graph library jgrapht for the graph construction and o
 **TESTSUITE AND TEST INFRASTRUCTURE: 
 
 To run the test infrastructure, use the following command: java -cp bin;lib\* test.Test
-It will proceed to run the tool on all the example files present in the json folder. There exists one for each control structure. Confirmation of a correct output
+It will proceed to run the tool on all the example files present in the testsuite folder. There exists one for each control structure. Confirmation of a correct output
 can be done manually by comparing the graphs with the source code (in jsonsource) as they are farely simple pieces of code.
 
+Attention: some of the test json files had to be edited after using spoon2ast (for example do_while_example.json),
+because spoon2ast doesn't generate a valid json file if the source code makes use of strings
 
 **TASK DISTRIBUTION: 
 
@@ -96,3 +98,8 @@ Some specific and less common control structures weren't accounted for, such as 
 The usage of this tool is limited to a single java class at a time, though using it separately on more than one class would achieve
 similar results to what it would if multiple class support were to be implemented (the only difference being the graph existing in separate dot files)
 
+
+**DELIVERY DETAILS:
+
+The delivered folder contains the source code in src, the external libraries used in lib, the json ast files used to test the tool in testsuite,
+the used version of spoon2ast in extra and the source code matching the testsuite in jsonsource.

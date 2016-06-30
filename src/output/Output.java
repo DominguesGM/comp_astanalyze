@@ -1,6 +1,6 @@
 package output;
 
-import analyser.Visitor;
+import analyser.Analyzer;
 import data.AST;
 import org.jgrapht.ext.DOTExporter;
 import org.jgrapht.ext.IntegerNameProvider;
@@ -13,9 +13,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Output {
-	public static Visitor visitor;
+	public static Analyzer visitor;
 	
-	public Output(Visitor v){
+	public Output(Analyzer v){
 		visitor = v;
 
 		File exportDir = new File("export");

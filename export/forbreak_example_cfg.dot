@@ -1,7 +1,0 @@
-digraph G {
-  1 [ label="0: void main(Array args)" ];
-  2 [ label="1: Block" ];
-  3 [ label="2: exit" ];
-  1 -> 2 [ label="0" ];
-  2 -> 3 [ label="1" ];
-}

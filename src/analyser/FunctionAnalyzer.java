@@ -16,7 +16,7 @@ public class FunctionAnalyzer {
 	private DirectedPseudograph<String, String> controlGraph;
 	private DirectedPseudograph<String, String> dataGraph;
 	
-	private Visitor parent;
+	private Analyzer parent;
 	private CodeProcessor processor;
 	
 	private HashMap use;
@@ -25,7 +25,7 @@ public class FunctionAnalyzer {
 	private HashSet<Pair<Pair<String, String>, String>> avoidEdgeDuplicates;
 	private ArrayList<DataDependency> visitedPredecessors;
 
-	public FunctionAnalyzer(Visitor parent, String funcName, ArrayList<String> arguments, JSONObject funcCode, DirectedPseudograph<String, String> controlGraph, DirectedPseudograph<String, String> dataGraph){
+	public FunctionAnalyzer(Analyzer parent, String funcName, ArrayList<String> arguments, JSONObject funcCode, DirectedPseudograph<String, String> controlGraph, DirectedPseudograph<String, String> dataGraph){
 		this.parent = parent;
 		
 		use = new HashMap<>();
