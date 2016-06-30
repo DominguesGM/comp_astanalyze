@@ -1,0 +1,1264 @@
+{
+   "name": "Root",
+   "children": [
+   {
+      "name": "RootPackage",
+      "content": "",
+      "children": [
+      {
+         "name": "PackageImpl",
+         "content": "test",
+         "children": [
+         {
+            "name": "ClassImpl",
+            "content": "SwitchExample",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:3)",
+            "children": [
+            {
+               "name": "ConstructorImpl",
+               "content": "test.SwitchExample()",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:3)",
+               "children": [
+               {
+                  "name": "BlockImpl",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:3)",
+                  "children": [
+                  {
+                     "name": "InvocationImpl",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:3)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "Object",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "ExecutableReferenceImpl",
+                        "content": "<init>",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            },
+            {
+               "name": "MethodImpl",
+               "content": "main",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:4)",
+               "children": [
+               {
+                  "name": "TypeReferenceImpl",
+                  "content": "String",
+                  "children": [
+                  {
+                     "name": "PackageReferenceImpl",
+                     "content": "java.lang",
+                     "children": []
+                  }]
+               },
+               {
+                  "name": "ParameterImpl",
+                  "content": "args",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:4)",
+                  "children": [
+                  {
+                     "name": "ArrayTypeReferenceImpl",
+                     "content": "Array",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     }]
+                  }]
+               },
+               {
+                  "name": "BlockImpl",
+                  "children": [
+                  {
+                     "name": "LocalVariableImpl",
+                     "content": "month",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:5)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "int",
+                        "children": []
+                     },
+                     {
+                        "name": "LiteralImpl",
+                        "content": "8",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:5)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "LocalVariableImpl",
+                     "content": "monthString",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:6)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "SwitchImpl",
+                     "children": [
+                     {
+                        "name": "VariableReadImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:7)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "LocalVariableReferenceImpl",
+                           "content": "month",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:8)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "1",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:8)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:8)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:8)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "January",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:8)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:9)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:10)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "2",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:10)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:10)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:10)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "February",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:10)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:11)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:12)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "3",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:12)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:12)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:12)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "March",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:12)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:13)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:14)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "4",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:14)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:14)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:14)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "April",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:14)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:15)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:16)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "5",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:16)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:16)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:16)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "May",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:16)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:17)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:18)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "6",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:18)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:18)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:18)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "June",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:18)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:19)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:20)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "7",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:20)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:20)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:20)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "July",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:20)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:21)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:22)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "8",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:22)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:22)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:22)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "August",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:22)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:23)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:24)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "9",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:24)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:24)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:24)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "September",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:24)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:25)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:26)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "10",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:26)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:26)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:26)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "October",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:26)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:27)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:28)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "11",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:28)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:28)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:28)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "November",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:28)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:29)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:30)",
+                        "children": [
+                        {
+                           "name": "LiteralImpl",
+                           "content": "12",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:30)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:30)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:30)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "December",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:30)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:31)",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "CaseImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:32)",
+                        "children": [
+                        {
+                           "name": "AssignmentImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:32)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:32)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "monthString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "Invalid month",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:32)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "BreakImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:33)",
+                           "children": []
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "ReturnImpl",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:35)",
+                     "children": [
+                     {
+                        "name": "VariableReadImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/SwitchExample.java:35)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "String",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "LocalVariableReferenceImpl",
+                           "content": "monthString",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            }]
+         }]
+      }]
+   }]
+}

@@ -1,0 +1,344 @@
+{
+   "name": "Root",
+   "children": [
+   {
+      "name": "RootPackage",
+      "content": "",
+      "children": [
+      {
+         "name": "PackageImpl",
+         "content": "test",
+         "children": [
+         {
+            "name": "ClassImpl",
+            "content": "DoWhileExample",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+            "children": [
+            {
+               "name": "ConstructorImpl",
+               "content": "test.DoWhileExample()",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+               "children": [
+               {
+                  "name": "BlockImpl",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+                  "children": [
+                  {
+                     "name": "InvocationImpl",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "Object",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "ExecutableReferenceImpl",
+                        "content": "<init>",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            },
+            {
+               "name": "MethodImpl",
+               "content": "main",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:4)",
+               "children": [
+               {
+                  "name": "TypeReferenceImpl",
+                  "content": "String",
+                  "children": [
+                  {
+                     "name": "PackageReferenceImpl",
+                     "content": "java.lang",
+                     "children": []
+                  }]
+               },
+               {
+                  "name": "ParameterImpl",
+                  "content": "args",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:4)",
+                  "children": [
+                  {
+                     "name": "ArrayTypeReferenceImpl",
+                     "content": "Array",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     }]
+                  }]
+               },
+               {
+                  "name": "BlockImpl",
+                  "children": [
+                  {
+                     "name": "LocalVariableImpl",
+                     "content": "finalString",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:5)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "LiteralImpl",
+                        "content": "",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:5)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "String",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "LocalVariableImpl",
+                     "content": "i",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:6)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "int",
+                        "children": []
+                     },
+                     {
+                        "name": "LiteralImpl",
+                        "content": "10",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:6)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "DoImpl",
+                     "children": [
+                     {
+                        "name": "BinaryOperatorImpl",
+                        "content": ">",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "boolean",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "0",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BlockImpl",
+                        "children": [
+                        {
+                           "name": "OperatorAssignmentImpl",
+                           "content": "+=",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           },
+                           {
+                              "name": "VariableWriteImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "finalString",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "String",
+                                    "children": [
+                                    {
+                                       "name": "PackageReferenceImpl",
+                                       "content": "java.lang",
+                                       "children": []
+                                    }]
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "LiteralImpl",
+                              "content": "a",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "String",
+                                 "children": [
+                                 {
+                                    "name": "PackageReferenceImpl",
+                                    "content": "java.lang",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_--",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:10)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:10)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "i",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "ReturnImpl",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:13)",
+                     "children": [
+                     {
+                        "name": "VariableReadImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:13)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "String",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "LocalVariableReferenceImpl",
+                           "content": "finalString",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "String",
+                              "children": [
+                              {
+                                 "name": "PackageReferenceImpl",
+                                 "content": "java.lang",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            }]
+         }]
+      }]
+   }]
+}
