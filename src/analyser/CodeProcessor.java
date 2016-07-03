@@ -84,7 +84,7 @@ public class CodeProcessor {
 			int i = 0;
 			if(currentNode.get("name").equals("CaseImpl")){
 				JSONObject caseNode = (JSONObject) currentNodeContent.get(0);
-				if(((String) ((JSONObject) currentNodeContent.get(0)).get("name")).equals("Literal")){
+				if(((String) ((JSONObject) currentNodeContent.get(0)).get("name")).equals("LiteralImpl")){
 					childStartingNode = this.parent.newNodeName() + ": Case " + generator.processGeneric((JSONObject) currentNodeContent.get(0));
 					i = 1;
 				}else{
