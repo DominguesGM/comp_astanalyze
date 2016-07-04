@@ -128,6 +128,8 @@ public class CodeGenerator {
 				}
 			}
 			return function;
+		case "CatchVariableImpl":
+			return processGeneric((JSONObject)children.get(0));
 		case "ExecutableReferenceImpl":
 			return content;
 		case "BreakImpl":

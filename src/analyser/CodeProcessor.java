@@ -324,6 +324,38 @@ public class CodeProcessor {
 			breakNodes.clear();
 			setExitLoopControl(false);
 			break;
+		case "TryImpl": // TODO test
+			// generate try node
+			childStartingNode = this.parent.newNodeName() + ": try";
+			graph.addVertex(childStartingNode);
+			
+			// connect condition node to previous child end nodes
+			for(String node : exitNodesList){
+				graph.addEdge(node, childStartingNode, this.parent.newEdgeName());
+			}
+			
+			// reset exitNodesList array
+			exitNodesList.clear();
+			
+			// process try block
+			argumentList.clear();
+			argumentList.add(childStartingNode);
+			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(0), argumentList));
+
+			// process catch parcel (catch variable and block)
+			JSONObject catchComposite = (JSONObject) ((JSONArray) newNode.get("children")).get(1);
+
+			// process catch variable
+			argumentList.clear();
+			argumentList.add(childStartingNode);
+			String catchVarExitNode = exploreNode((JSONObject) ((JSONArray) catchComposite.get("children")).get(0), argumentList).get(0);
+			
+			// process catch variable
+			argumentList.clear();
+			argumentList.add(catchVarExitNode);
+			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) catchComposite.get("children")).get(1), argumentList));
+			
+			break;			
 		case "ReturnImpl":
 			String returnContent = "";
 			if(((JSONArray) newNode.get("children")).size() != 0)
