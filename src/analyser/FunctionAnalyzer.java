@@ -12,11 +12,10 @@ import javafx.util.Pair;
 
 public class FunctionAnalyzer {
 
-	
 	private DirectedPseudograph<String, String> controlGraph;
 	private DirectedPseudograph<String, String> dataGraph;
 	
-	private Analyzer parent;
+	private ClassAnalyzer parent;
 	private CodeProcessor processor;
 	
 	private HashMap use;
@@ -25,7 +24,7 @@ public class FunctionAnalyzer {
 	private HashSet<Pair<Pair<String, String>, String>> avoidEdgeDuplicates;
 	private ArrayList<DataDependency> visitedPredecessors;
 
-	public FunctionAnalyzer(Analyzer parent, String funcName, ArrayList<String> arguments, JSONObject funcCode, DirectedPseudograph<String, String> controlGraph, DirectedPseudograph<String, String> dataGraph){
+	public FunctionAnalyzer(ClassAnalyzer parent, String funcName, ArrayList<String> arguments, JSONObject funcCode, DirectedPseudograph<String, String> controlGraph, DirectedPseudograph<String, String> dataGraph){
 		this.parent = parent;
 		
 		use = new HashMap<>();

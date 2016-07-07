@@ -1,7 +1,6 @@
 package output;
 
-import analyser.Analyzer;
-import data.AST;
+import analyser.ClassAnalyzer;
 import org.jgrapht.ext.DOTExporter;
 import org.jgrapht.ext.IntegerNameProvider;
 import org.jgrapht.ext.StringEdgeNameProvider;
@@ -13,12 +12,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class Output {
-	public static Analyzer visitor;
+	public static ClassAnalyzer visitor;
 	
-	public Output(Analyzer v){
+	public Output(ClassAnalyzer v, String path){
 		visitor = v;
 
-		File exportDir = new File("export");
+		File exportDir = new File(path);
 
 		// if the directory does not exist, create it
 		if (!exportDir.exists()) {

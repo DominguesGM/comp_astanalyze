@@ -2,7 +2,7 @@ package other;
 
 public class Log {
 
-	private static boolean registerDetails = false; 
+	private static boolean registerDetails = true; 
 	
 	public static final void registerDetails(boolean active) {
 		registerDetails = active;

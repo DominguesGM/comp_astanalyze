@@ -24,10 +24,10 @@ public class CodeProcessor {
 	private boolean setExitLoopControl = false;
 	
 	private CodeGenerator generator;
-	private Analyzer parent;
+	private ClassAnalyzer parent;
 	
 	
-	public CodeProcessor(Analyzer parent, String funcName, ArrayList<String> arguments, JSONObject funcCode, DirectedPseudograph<String, String> graph, 
+	public CodeProcessor(ClassAnalyzer parent, String funcName, ArrayList<String> arguments, JSONObject funcCode, DirectedPseudograph<String, String> graph, 
 			ArrayList<DataDependency> dataDependency,
 			HashMap<String,HashSet<String>> use,
 			HashMap<String,HashSet<String>> def){
