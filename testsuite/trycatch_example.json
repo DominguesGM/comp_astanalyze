@@ -297,6 +297,7 @@
                         "children": [
                         {
                            "name": "CatchVariableImpl",
+						   "content": "e",
                            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:11)",
                            "children": [
                            {

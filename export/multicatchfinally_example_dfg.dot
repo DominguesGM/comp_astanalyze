@@ -1,0 +1,11 @@
+digraph G {
+  1 [ label="0: void main(Array args)" ];
+  2 [ label="2: int a = b = 0" ];
+  3 [ label="3: String nullPointer = \"null\"" ];
+  4 [ label="5: a = nullPointer.length()" ];
+  5 [ label="8: a = 3" ];
+  6 [ label="10: a = 4" ];
+  7 [ label="12: a = 5" ];
+  8 [ label="13: a = 6" ];
+  3 -> 4 [ label="0: nullPointer" ];
+}

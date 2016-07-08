@@ -8,6 +8,6 @@ class TryCatchTest{
     try{
       a = nullPointer.length();
       return;
-    } catch(NullPointerException e) {}
+    } catch(NullPointerException e) {} catch(Exception e){}
   }
 }

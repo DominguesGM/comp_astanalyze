@@ -9,10 +9,16 @@ public class ForBreakExample {
 		}
 
 		int a = 2;
-		int b = 4;
+		int b = 7;
 
 		while(b > a){
 			a++;
+			if(a < 4){
+				return;
+			}
+			b++;
 		}
+
+		a++;
 	}
 }
