@@ -30,6 +30,7 @@ public class AstAnalyze {
 			analyzer.analyze();
 		} catch(Exception e){
 			Log.error("Error while analyzing the abstract syntax tree. Check json format.");
+			e.printStackTrace();
 			return;
 		}
 		output = new Output(analyzer);

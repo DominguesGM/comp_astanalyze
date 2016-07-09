@@ -82,6 +82,8 @@ public class CodeProcessor {
 			String childStartingNode;
 			String condition;
 			int i = 0;
+			
+			
 			if(currentNode.get("name").equals("CaseImpl")){
 				JSONObject caseNode = (JSONObject) currentNodeContent.get(0);
 				if(((String) ((JSONObject) currentNodeContent.get(0)).get("name")).equals("LiteralImpl")){
@@ -121,6 +123,8 @@ public class CodeProcessor {
 		ArrayList<String> exitNodesList = new ArrayList<String>(exitNodesListParam);
 		String childStartingNode;
 		String condition = "";
+		
+		
 		switch((String) newNode.get("name")){
 		case "IfImpl":
 			// process condition and create condition node
@@ -324,6 +328,66 @@ public class CodeProcessor {
 			breakNodes.clear();
 			setExitLoopControl(false);
 			break;
+		case "TryImpl": // TODO maybe end finally implementation
+			// generate try node
+			childStartingNode = this.parent.newNodeName() + ": try";
+			graph.addVertex(childStartingNode);
+			
+			saveDataFlow(childStartingNode);
+			
+			// connect condition node to previous child end nodes
+			for(String node : exitNodesList){
+				graph.addEdge(node, childStartingNode, this.parent.newEdgeName());
+			}
+			
+			// reset exitNodesList array
+			exitNodesList.clear();
+			
+			boolean isThereFinally = (((JSONObject) ((JSONArray) newNode.get("children")).get(((JSONArray) newNode.get("children")).size()-1)).get("name").equals("BlockImpl"));
+			
+			// process try block
+			argumentList.clear();
+			argumentList.add(childStartingNode);
+			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(0), argumentList));
+			
+
+			// process each catch parcel (catch variable and block)
+			for(int iter = 1; iter < ((JSONArray) newNode.get("children")).size(); iter++){
+				JSONObject catchDefinition = (JSONObject) ((JSONArray) newNode.get("children")).get(iter);
+				
+				if(catchDefinition.get("name").equals("CatchImpl")){
+					// process catch variable
+					String definition = generator.processGeneric((JSONObject) ((JSONArray) catchDefinition.get("children")).get(0));
+					String catchVarNode = this.parent.newNodeName() + ": Catch(" + definition+ ")";
+					graph.addVertex(catchVarNode);
+					graph.addEdge(childStartingNode, catchVarNode, this.parent.newEdgeName());
+					
+					saveDataFlow(catchVarNode);
+					
+					// process catch block
+					argumentList.clear();
+					argumentList.add(catchVarNode);
+					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) catchDefinition.get("children")).get(1), argumentList));
+				} else {
+					// create finally starting node
+					String finallyNode = this.parent.newNodeName() + ": finally";
+					graph.addVertex(finallyNode);
+					for(String node : exitNodesList){
+						graph.addEdge(node, finallyNode, this.parent.newEdgeName());
+					}
+					
+					exitNodesList.clear();
+					
+					saveDataFlow(finallyNode);
+					
+					// process finally block
+					argumentList.clear();
+					argumentList.add(finallyNode);
+					exitNodesList.addAll(exploreNode(catchDefinition, argumentList));
+				}
+			}
+			
+			break;			
 		case "ReturnImpl":
 			String returnContent = "";
 			if(((JSONArray) newNode.get("children")).size() != 0)
@@ -341,7 +405,6 @@ public class CodeProcessor {
 			
 			// reset exitNodesList array
 			exitNodesList.clear();
-			setExitLoopControl(true);
 			break;
 		case "ContinueImpl":
 			childStartingNode = this.parent.newNodeName()+": continue";
