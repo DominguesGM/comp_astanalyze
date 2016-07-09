@@ -1,0 +1,848 @@
+{
+   "name": "Root",
+   "children": [
+   {
+      "name": "RootPackage",
+      "content": "",
+      "children": [
+      {
+         "name": "PackageImpl",
+         "content": "test",
+         "children": [
+         {
+            "name": "ClassImpl",
+            "content": "AllForsExample",
+            "code": "(/Users/Gil/Desktop/AllForsExample.java:3)",
+            "children": [
+            {
+               "name": "ConstructorImpl",
+               "content": "test.AllForsExample()",
+               "code": "(/Users/Gil/Desktop/AllForsExample.java:3)",
+               "children": [
+               {
+                  "name": "BlockImpl",
+                  "code": "(/Users/Gil/Desktop/AllForsExample.java:3)",
+                  "children": [
+                  {
+                     "name": "InvocationImpl",
+                     "code": "(/Users/Gil/Desktop/AllForsExample.java:3)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "Object",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     },
+                     {
+                        "name": "ExecutableReferenceImpl",
+                        "content": "<init>",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        },
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "Object",
+                           "children": [
+                           {
+                              "name": "PackageReferenceImpl",
+                              "content": "java.lang",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            },
+            {
+               "name": "MethodImpl",
+               "content": "main",
+               "code": "(/Users/Gil/Desktop/AllForsExample.java:4)",
+               "children": [
+               {
+                  "name": "TypeReferenceImpl",
+                  "content": "void",
+                  "children": []
+               },
+               {
+                  "name": "ParameterImpl",
+                  "content": "args",
+                  "code": "(/Users/Gil/Desktop/AllForsExample.java:4)",
+                  "children": [
+                  {
+                     "name": "ArrayTypeReferenceImpl",
+                     "content": "Array",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "String",
+                        "children": [
+                        {
+                           "name": "PackageReferenceImpl",
+                           "content": "java.lang",
+                           "children": []
+                        }]
+                     }]
+                  }]
+               },
+               {
+                  "name": "BlockImpl",
+                  "children": [
+                  {
+                     "name": "LocalVariableImpl",
+                     "content": "testing",
+                     "code": "(/Users/Gil/Desktop/AllForsExample.java:5)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "int",
+                        "children": []
+                     },
+                     {
+                        "name": "LiteralImpl",
+                        "content": "0",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:5)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "ForImpl",
+                     "children": [
+                     {
+                        "name": "LocalVariableImpl",
+                        "content": "i",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:7)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "0",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:7)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BinaryOperatorImpl",
+                        "content": "<",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:7)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "boolean",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:7)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "10",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:7)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "UnaryOperatorImpl",
+                        "content": "_++",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:7)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:7)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BlockImpl",
+                        "children": [
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:8)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:8)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "testing",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "ForImpl",
+                     "children": [
+                     {
+                        "name": "LocalVariableImpl",
+                        "content": "i",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:11)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "0",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:11)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "UnaryOperatorImpl",
+                        "content": "_++",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:11)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:11)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BlockImpl",
+                        "children": [
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:12)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:12)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "testing",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "IfImpl",
+                           "children": [
+                           {
+                              "name": "BinaryOperatorImpl",
+                              "content": "<",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:13)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "boolean",
+                                 "children": []
+                              },
+                              {
+                                 "name": "VariableReadImpl",
+                                 "code": "(/Users/Gil/Desktop/AllForsExample.java:13)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 },
+                                 {
+                                    "name": "LocalVariableReferenceImpl",
+                                    "content": "i",
+                                    "children": [
+                                    {
+                                       "name": "TypeReferenceImpl",
+                                       "content": "int",
+                                       "children": []
+                                    }]
+                                 }]
+                              },
+                              {
+                                 "name": "LiteralImpl",
+                                 "content": "10",
+                                 "code": "(/Users/Gil/Desktop/AllForsExample.java:13)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "BreakImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:14)",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "ForImpl",
+                     "children": [
+                     {
+                        "name": "LocalVariableImpl",
+                        "content": "i",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:17)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "0",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:17)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BinaryOperatorImpl",
+                        "content": "<",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:17)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "boolean",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:17)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "10",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:17)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BlockImpl",
+                        "children": [
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:18)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:18)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "testing",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:19)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:19)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "i",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "ForImpl",
+                     "children": [
+                     {
+                        "name": "LocalVariableImpl",
+                        "content": "i",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:22)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "0",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:22)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BlockImpl",
+                        "children": [
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:23)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:23)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "testing",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:24)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:24)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "i",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:25)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:25)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "testing",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "IfImpl",
+                           "children": [
+                           {
+                              "name": "BinaryOperatorImpl",
+                              "content": "<",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:26)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "boolean",
+                                 "children": []
+                              },
+                              {
+                                 "name": "VariableReadImpl",
+                                 "code": "(/Users/Gil/Desktop/AllForsExample.java:26)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 },
+                                 {
+                                    "name": "LocalVariableReferenceImpl",
+                                    "content": "i",
+                                    "children": [
+                                    {
+                                       "name": "TypeReferenceImpl",
+                                       "content": "int",
+                                       "children": []
+                                    }]
+                                 }]
+                              },
+                              {
+                                 "name": "LiteralImpl",
+                                 "content": "10",
+                                 "code": "(/Users/Gil/Desktop/AllForsExample.java:26)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "BreakImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:27)",
+                              "children": []
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "LocalVariableImpl",
+                     "content": "i",
+                     "code": "(/Users/Gil/Desktop/AllForsExample.java:30)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "int",
+                        "children": []
+                     },
+                     {
+                        "name": "LiteralImpl",
+                        "content": "0",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:30)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "ForImpl",
+                     "children": [
+                     {
+                        "name": "BinaryOperatorImpl",
+                        "content": "<",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:31)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "boolean",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:31)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "LiteralImpl",
+                           "content": "10",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:31)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "UnaryOperatorImpl",
+                        "content": "_++",
+                        "code": "(/Users/Gil/Desktop/AllForsExample.java:31)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "VariableReadImpl",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:31)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "LocalVariableReferenceImpl",
+                              "content": "i",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              }]
+                           }]
+                        }]
+                     },
+                     {
+                        "name": "BlockImpl",
+                        "children": [
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Desktop/AllForsExample.java:32)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Desktop/AllForsExample.java:32)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "testing",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        }]
+                     }]
+                  }]
+               }]
+            }]
+         }]
+      }]
+   }]
+}
