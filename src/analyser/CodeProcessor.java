@@ -27,22 +27,22 @@ public class CodeProcessor {
 	private ClassAnalyzer parent;
 	
 	
-	public CodeProcessor(ClassAnalyzer parent, String funcName, ArrayList<String> arguments, JSONObject funcCode, DirectedPseudograph<String, String> graph, 
+	public CodeProcessor(ClassAnalyzer parent, String funcName, ArrayList<String> arguments, JSONObject funcCode, 
+			DirectedPseudograph<String, String> graph, 
 			ArrayList<DataDependency> dataDependency,
 			HashMap<String,HashSet<String>> use,
 			HashMap<String,HashSet<String>> def){
 		this.parent = parent;
 		this.graph = graph;
-		this.breakNodes = new ArrayList<String>();
-		this.continueNodes = new ArrayList<String>();
-		this.returnNodes = new ArrayList<String>();
-		
-		useTemp = new HashSet<>();
-		defTemp = new HashSet<>();
-		
 		this.dataDependency = dataDependency;
 		this.use = use;
 		this.def = def;
+		
+		this.useTemp = new HashSet<>();
+		this.defTemp = new HashSet<>();
+		this.breakNodes = new ArrayList<String>();
+		this.continueNodes = new ArrayList<String>();
+		this.returnNodes = new ArrayList<String>();
 		
 		this.generator = new CodeGenerator(useTemp, defTemp);
 		
@@ -80,7 +80,7 @@ public class CodeProcessor {
 			
 			JSONArray currentNodeContent = (JSONArray) currentNode.get("children");
 			String childStartingNode;
-			String condition;
+			
 			int i = 0;
 			if(currentNode.get("name").equals("CaseImpl")){
 				JSONObject caseNode = (JSONObject) currentNodeContent.get(0);
@@ -103,7 +103,6 @@ public class CodeProcessor {
 			}
 			if(currentNode.get("name").equals("CaseImpl") || currentNode.get("name").equals("BlockImpl")){
 				for(; i < currentNodeContent.size(); i++){
-					condition = null;
 					JSONObject newNode = (JSONObject) currentNodeContent.get(i);
 					exitNodesList = processNode(newNode, exitNodesList, argumentList);
 					if(getExitLoopControl() && !currentNode.get("name").equals("CaseImpl")){

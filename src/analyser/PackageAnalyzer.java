@@ -39,7 +39,7 @@ public class PackageAnalyzer {
 				classAnalysis = new ClassAnalyzer(classObject, packageName);
 				classAnalysis.analyse();
 			} catch(Exception e){
-				Log.error("Error while analyzing the abstract syntax tree. Check json format.");
+				Log.error("Error while analyzing the abstract syntax tree: Check json format.");
 				e.printStackTrace();
 				return;
 			}

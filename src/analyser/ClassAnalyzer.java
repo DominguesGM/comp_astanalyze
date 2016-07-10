@@ -25,6 +25,9 @@ public class ClassAnalyzer {
 		this.classObject = classObject;
 		this.packageName = packageName;
 		this.className = (String) classObject.get("content");
+		
+		this.controlGraph = new DirectedPseudograph<String,String>(String.class);
+		this.dataGraph = new DirectedPseudograph<String,String>(String.class);
 	}
 	
 	public void analyse(){
@@ -90,8 +93,10 @@ public class ClassAnalyzer {
 		Output output = new Output(this, packageName);
 		
 		try {
-			output.printControlGraph("export/"+ className + "_control.dot");
-			output.printDataGraph("export/"+ className + "_data.dot");
+			output.printControlGraph("export/" + packageName + "/" + className + "_control.dot");
+			output.printDataGraph("export/"+ packageName + "/" + className + "_data.dot");
+			Log.info("export/" + packageName + "/" + className + "_control.dot created.");
+			Log.info("export/"+ packageName + "/" + className + "_data.dot created.");
 		} catch (IOException e) {
 			Log.error("Error outputing dot files");
 			return;
