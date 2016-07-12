@@ -1,0 +1,20 @@
+digraph G {
+  1 [ label="0: int main(Array args)" ];
+  2 [ label="1: int val1 = 10" ];
+  3 [ label="2: int val2 = 8" ];
+  4 [ label="3: int res = subtractTwo(val1, val2)" ];
+  5 [ label="4: return res" ];
+  6 [ label="6: int subtractTwo(int a, int b)" ];
+  7 [ label="7: if(a>b)" ];
+  8 [ label="8: return a-b" ];
+  9 [ label="9: return b-a" ];
+  3 -> 4 [ label="0: val2" ];
+  2 -> 4 [ label="1: val1" ];
+  4 -> 5 [ label="2: res" ];
+  6 -> 7 [ label="3: a" ];
+  6 -> 7 [ label="4: b" ];
+  6 -> 8 [ label="5: a" ];
+  6 -> 8 [ label="6: b" ];
+  6 -> 9 [ label="7: a" ];
+  6 -> 9 [ label="8: b" ];
+}
