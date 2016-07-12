@@ -87,6 +87,7 @@ public class CodeProcessor {
 				JSONObject caseNode = (JSONObject) currentNodeContent.get(0);
 				if(((String) ((JSONObject) currentNodeContent.get(0)).get("name")).equals("LiteralImpl")){
 					childStartingNode = this.parent.newNodeName() + ": Case " + generator.processGeneric((JSONObject) currentNodeContent.get(0));
+					firstNode = childStartingNode;
 					i = 1;
 				}else{
 					childStartingNode = this.parent.newNodeName() + ": Default";
@@ -111,6 +112,7 @@ public class CodeProcessor {
 					if(i == 0 && !forTerminator){
 						exitNodesList = processNode(newNode, exitNodesList, argumentList, forTerminator);
 						firstNode = exitNodesList.get(0);
+						exitNodesList.remove(0);
 					} else {
 						exitNodesList = processNode(newNode, exitNodesList, argumentList, true);
 					}
@@ -262,7 +264,7 @@ public class CodeProcessor {
 			argumentList.clear();
 			argumentList.addAll(exitNodesList);
 			exitNodesList.clear();
-			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(((JSONArray) newNode.get("children")).size() - 1), argumentList, forTerminate));
+			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(3), argumentList, forTerminate));
 			
 			if(assignment)
 				firstNode = assignmentNode;
@@ -276,7 +278,7 @@ public class CodeProcessor {
 			
 			String continueDestination =null;
 			// process statement and create statement node
-			if(((JSONArray) terminatorSubTree.get("children")).size() != 0){
+			if(((JSONArray) incrementSubTree.get("children")).size() != 0){
 				statement = true;
 				statementNode = this.parent.newNodeName() + ": " + generator.processGeneric((JSONObject)((JSONArray) incrementSubTree.get("children")).get(0));
 				graph.addVertex(statementNode);
@@ -317,17 +319,19 @@ public class CodeProcessor {
 			exitNodesList.addAll(breakNodes);
 			breakNodes.clear();
 			for(String node : continueNodes){
-				graph.addEdge(node, statementNode, this.parent.newEdgeName());
+				graph.addEdge(node, continueDestination, this.parent.newEdgeName());
 			}
 			continueNodes.clear();
 			
 			
 			
 			// the conditional node is were the loop will end and connect to the rest of the code
-			exitNodesList.add(conditionNode);
+			if(terminator)
+				exitNodesList.add(conditionNode);
 			
 			//Dataflow related
-			saveDataFlow(statementNode);
+			if(statement)
+				saveDataFlow(statementNode);
 			setExitLoopControl(false);
 			break;
 		case "DoImpl":
