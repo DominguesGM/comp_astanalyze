@@ -304,7 +304,7 @@
                      },
                      {
                         "name": "LiteralImpl",
-                        "content": "4",
+                        "content": "7",
                         "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForBreakExample.java:12)",
                         "children": [
                         {
@@ -400,6 +400,123 @@
                                     "children": []
                                  }]
                               }]
+                           }]
+                        },
+                        {
+                           "name": "IfImpl",
+                           "children": [
+                           {
+                              "name": "BinaryOperatorImpl",
+                              "content": "<",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForBreakExample.java:16)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "boolean",
+                                 "children": []
+                              },
+                              {
+                                 "name": "VariableReadImpl",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForBreakExample.java:16)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 },
+                                 {
+                                    "name": "LocalVariableReferenceImpl",
+                                    "content": "a",
+                                    "children": [
+                                    {
+                                       "name": "TypeReferenceImpl",
+                                       "content": "int",
+                                       "children": []
+                                    }]
+                                 }]
+                              },
+                              {
+                                 "name": "LiteralImpl",
+                                 "content": "4",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForBreakExample.java:16)",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           },
+                           {
+                              "name": "BlockImpl",
+                              "children": [
+                              {
+                                 "name": "ReturnImpl",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForBreakExample.java:17)",
+                                 "children": []
+                              }]
+                           }]
+                        },
+                        {
+                           "name": "UnaryOperatorImpl",
+                           "content": "_++",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForBreakExample.java:19)",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
+                           },
+                           {
+                              "name": "VariableReadImpl",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForBreakExample.java:19)",
+                              "children": [
+                              {
+                                 "name": "TypeReferenceImpl",
+                                 "content": "int",
+                                 "children": []
+                              },
+                              {
+                                 "name": "LocalVariableReferenceImpl",
+                                 "content": "b",
+                                 "children": [
+                                 {
+                                    "name": "TypeReferenceImpl",
+                                    "content": "int",
+                                    "children": []
+                                 }]
+                              }]
+                           }]
+                        }]
+                     }]
+                  },
+                  {
+                     "name": "UnaryOperatorImpl",
+                     "content": "_++",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForBreakExample.java:22)",
+                     "children": [
+                     {
+                        "name": "TypeReferenceImpl",
+                        "content": "int",
+                        "children": []
+                     },
+                     {
+                        "name": "VariableReadImpl",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForBreakExample.java:22)",
+                        "children": [
+                        {
+                           "name": "TypeReferenceImpl",
+                           "content": "int",
+                           "children": []
+                        },
+                        {
+                           "name": "LocalVariableReferenceImpl",
+                           "content": "a",
+                           "children": [
+                           {
+                              "name": "TypeReferenceImpl",
+                              "content": "int",
+                              "children": []
                            }]
                         }]
                      }]

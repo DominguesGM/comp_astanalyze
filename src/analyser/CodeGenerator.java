@@ -116,8 +116,6 @@ public class CodeGenerator {
 				if(foundExecutableReference){
 					if(i + 1 < children.size())
 						function += ", ";
-					else
-						function += ")";
 				} else {
 					if("ExecutableReferenceImpl".equals(thisElement)){
 						foundExecutableReference = true;
@@ -127,7 +125,16 @@ public class CodeGenerator {
 					}
 				}
 			}
+			function += ")";
 			return function;
+		case "CatchVariableImpl":
+			output = processGeneric((JSONObject) children.get(0)) + " " + content;
+			if(children.size() == 2){
+				output += " = " + processGeneric((JSONObject) children.get(1));
+				// mark variable definition
+				defTemp.add(content);
+			}
+			return output;
 		case "ExecutableReferenceImpl":
 			return content;
 		case "BreakImpl":
