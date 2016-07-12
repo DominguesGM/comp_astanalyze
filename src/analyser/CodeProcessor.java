@@ -205,34 +205,23 @@ public class CodeProcessor {
 			setExitLoopControl(false);
 			break;
 		case "ForImpl":
-			String assignment = null;
-			condition = null;
-			String statement = null;
+			boolean assignment = false;
+			boolean terminator = false;
+			boolean statement = false;
 			String assignmentNode = null;
 			String conditionNode = null;
 			String statementNode = null;
 			boolean forTerminate = false;
 			
-			
-			for(int i = 0; i+1 < ((JSONArray) newNode.get("children")).size(); i++){
-				String statementType = (String) ((JSONObject) ((JSONArray) newNode.get("children")).get(i)).get("name");
-				if(statementType.equals("AssignmentImpl") || statementType.equals("UnaryOperatorImpl") || statementType.equals("LocalVariableImpl")){
-					if(i == 0){
-						assignment = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(i));
-					} else {
-						statement = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(i));
-					}
-				}
-				if(((JSONObject) ((JSONArray) ((JSONObject) ((JSONArray) newNode.get("children")).get(i)).get("children")).get(0)).get("content").equals("boolean")){
-					forTerminate = true;
-					condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(i));
-				}
-			}
+			JSONObject assignmentSubTree = (JSONObject) ((JSONArray) newNode.get("children")).get(0);
+			JSONObject terminatorSubTree = (JSONObject) ((JSONArray) newNode.get("children")).get(1);
+			JSONObject incrementSubTree = (JSONObject) ((JSONArray) newNode.get("children")).get(2);
 			
 			// process condition and create condition node
-//			assignment = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
-			if(assignment != null){
-				assignmentNode = this.parent.newNodeName() + ": " + assignment;
+			
+			if(((JSONArray) assignmentSubTree.get("children")).size() != 0){
+				assignment = true;
+				assignmentNode = this.parent.newNodeName() + ": " + generator.processGeneric((JSONObject)((JSONArray) assignmentSubTree.get("children")).get(0));
 				graph.addVertex(assignmentNode);
 				
 				//Dataflow related
@@ -249,9 +238,10 @@ public class CodeProcessor {
 			}
 			
 			// process condition and create condition node
-//			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(1));
-			if(condition != null){
-				conditionNode = this.parent.newNodeName() + ": " + condition;
+			if(((JSONArray) terminatorSubTree.get("children")).size() != 0){
+				terminator = true;
+				forTerminate = true;
+				conditionNode = this.parent.newNodeName() + ": " + generator.processGeneric((JSONObject)((JSONArray) terminatorSubTree.get("children")).get(0));
 				graph.addVertex(conditionNode);
 				
 				//Dataflow related
@@ -272,9 +262,9 @@ public class CodeProcessor {
 			argumentList.clear();
 			argumentList.addAll(exitNodesList);
 			exitNodesList.clear();
-			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(3), argumentList, forTerminate));
+			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(((JSONArray) newNode.get("children")).size() - 1), argumentList, forTerminate));
 			
-			if(assignment!= null)
+			if(assignment)
 				firstNode = assignmentNode;
 			else{
 				if(forTerminate)
@@ -286,9 +276,9 @@ public class CodeProcessor {
 			
 			String continueDestination =null;
 			// process statement and create statement node
-//			statement = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(2));
-			if(statement != null){
-				statementNode = this.parent.newNodeName() + ": " + statement;
+			if(((JSONArray) terminatorSubTree.get("children")).size() != 0){
+				statement = true;
+				statementNode = this.parent.newNodeName() + ": " + generator.processGeneric((JSONObject)((JSONArray) incrementSubTree.get("children")).get(0));
 				graph.addVertex(statementNode);
 				
 				continueDestination = statementNode;
