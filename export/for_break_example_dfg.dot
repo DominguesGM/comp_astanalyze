@@ -1,0 +1,32 @@
+digraph G {
+  1 [ label="0: void main(Array args)" ];
+  2 [ label="1: int i = 0" ];
+  3 [ label="2: i<10" ];
+  4 [ label="3: if(i==6)" ];
+  5 [ label="6: i++" ];
+  6 [ label="7: int a = 2" ];
+  7 [ label="8: int b = 7" ];
+  8 [ label="9: while(b>a)" ];
+  9 [ label="10: a++" ];
+  10 [ label="11: if(a<4)" ];
+  11 [ label="13: b++" ];
+  12 [ label="14: a++" ];
+  2 -> 3 [ label="0: i" ];
+  5 -> 3 [ label="1: i" ];
+  2 -> 4 [ label="2: i" ];
+  5 -> 4 [ label="3: i" ];
+  5 -> 5 [ label="4: i" ];
+  2 -> 5 [ label="5: i" ];
+  6 -> 8 [ label="6: a" ];
+  9 -> 8 [ label="7: a" ];
+  7 -> 8 [ label="8: b" ];
+  11 -> 8 [ label="9: b" ];
+  9 -> 9 [ label="10: a" ];
+  6 -> 9 [ label="11: a" ];
+  9 -> 10 [ label="12: a" ];
+  11 -> 11 [ label="13: b" ];
+  7 -> 11 [ label="14: b" ];
+  12 -> 12 [ label="15: a" ];
+  6 -> 12 [ label="16: a" ];
+  9 -> 12 [ label="17: a" ];
+}
