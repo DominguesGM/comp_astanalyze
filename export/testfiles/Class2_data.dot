@@ -1,5 +1,0 @@
-digraph G {
-  1 [ label="0: void main(Array args)" ];
-  2 [ label="1: int c2 = 2" ];
-  3 [ label="2: char p2 = \"'p'\"" ];
-}
