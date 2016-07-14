@@ -62,7 +62,7 @@ public class CodeProcessor {
 		functionName.add(tempFuncName);
 		graph.addVertex(tempFuncName);
 		this.saveDataFlow(tempFuncName);
-		ArrayList<String> finalNodes = exploreNode(funcCode, functionName);
+		ArrayList<String> finalNodes = exploreNode(funcCode, functionName, true);
 		finalNodes.addAll(returnNodes);
 		String exitNodeName = parent.newNodeName() + ": exit";
 		graph.addVertex(exitNodeName);
@@ -73,24 +73,30 @@ public class CodeProcessor {
 	}
 	
 	
-	public ArrayList<String> exploreNode(JSONObject currentNode, ArrayList<String> prevStartNodes){
+	public ArrayList<String> exploreNode(JSONObject currentNode, ArrayList<String> prevStartNodes, boolean forTerminator){
 			ArrayList<String> startNodeList = prevStartNodes;
 			ArrayList<String> exitNodesList = new ArrayList<String>();
 			ArrayList<String> argumentList = new ArrayList<String>();
+			String firstNode=null;
 			
 			JSONArray currentNodeContent = (JSONArray) currentNode.get("children");
 			String childStartingNode;
 			
 			int i = 0;
+			
+			
 			if(currentNode.get("name").equals("CaseImpl")){
 				JSONObject caseNode = (JSONObject) currentNodeContent.get(0);
 				if(((String) ((JSONObject) currentNodeContent.get(0)).get("name")).equals("LiteralImpl")){
 					childStartingNode = this.parent.newNodeName() + ": Case " + generator.processGeneric((JSONObject) currentNodeContent.get(0));
+					firstNode = childStartingNode;
 					i = 1;
 				}else{
 					childStartingNode = this.parent.newNodeName() + ": Default";
 				}
 				graph.addVertex(childStartingNode);
+				if(!forTerminator)
+					firstNode = childStartingNode;
 				for(String node : startNodeList){
 					graph.addEdge(node, childStartingNode, this.parent.newEdgeName());
 				}
@@ -104,28 +110,42 @@ public class CodeProcessor {
 			if(currentNode.get("name").equals("CaseImpl") || currentNode.get("name").equals("BlockImpl")){
 				for(; i < currentNodeContent.size(); i++){
 					JSONObject newNode = (JSONObject) currentNodeContent.get(i);
-					exitNodesList = processNode(newNode, exitNodesList, argumentList);
+					if(i == 0 && !forTerminator){
+						exitNodesList = processNode(newNode, exitNodesList, argumentList, forTerminator);
+						firstNode = exitNodesList.get(0);
+						exitNodesList.remove(0);
+					} else {
+						exitNodesList = processNode(newNode, exitNodesList, argumentList, true);
+					}
 					if(getExitLoopControl() && !currentNode.get("name").equals("CaseImpl")){
 						break;
 					}
+					if(i == 0 && !forTerminator){
+						firstNode = exitNodesList.get(0);
+					}
 				}
 			} else {
-				exitNodesList = processNode(currentNode, exitNodesList, argumentList);
+				exitNodesList = processNode(currentNode, exitNodesList, argumentList, forTerminator);
 			}
+			if(!forTerminator)
+				exitNodesList.add(0, firstNode);
 			return exitNodesList;
 	}
 	
 	
-	public ArrayList<String> processNode(JSONObject newNode, ArrayList<String> exitNodesListParam, ArrayList<String> argumentList){
+	public ArrayList<String> processNode(JSONObject newNode, ArrayList<String> exitNodesListParam, ArrayList<String> argumentList, boolean prevForTerminator){
 		ArrayList<String> exitNodesList = new ArrayList<String>(exitNodesListParam);
 		String childStartingNode;
 		String condition = "";
+		String firstNode= null;
+		
 		switch((String) newNode.get("name")){
 		case "IfImpl":
 			// process condition and create condition node
 			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 			childStartingNode = this.parent.newNodeName() + ": if(" + condition + ")";
 			graph.addVertex(childStartingNode);
+			firstNode = childStartingNode;
 			
 			saveDataFlow(childStartingNode);
 			
@@ -140,13 +160,13 @@ public class CodeProcessor {
 			// process first block
 			argumentList.clear();
 			argumentList.add(childStartingNode);
-			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), argumentList));
+			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), argumentList, true));
 			// if second block exists, process
 			if(((JSONArray) newNode.get("children")).size() > 2){
 				// Process Else (second block)
 				argumentList.clear();
 				argumentList.add(childStartingNode);
-				exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(2), argumentList));
+				exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(2), argumentList, true));
 			} else {
 				exitNodesList.add(childStartingNode);
 			}
@@ -156,6 +176,7 @@ public class CodeProcessor {
 			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 			childStartingNode = this.parent.newNodeName() + ": while(" + condition + ")";
 			graph.addVertex(childStartingNode);
+			firstNode = childStartingNode;
 			
 			saveDataFlow(childStartingNode);
 			
@@ -167,7 +188,7 @@ public class CodeProcessor {
 			// reset exitNodesList array and process code block
 			argumentList.clear();
 			argumentList.add(childStartingNode);
-			exitNodesList = exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), argumentList);
+			exitNodesList = exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), argumentList, true);
 
 			// connect condition node to previous child end nodes
 			for(String node : exitNodesList){
@@ -188,49 +209,111 @@ public class CodeProcessor {
 			setExitLoopControl(false);
 			break;
 		case "ForImpl":
+			boolean assignment = false;
+			boolean terminator = false;
+			boolean statement = false;
+			String assignmentNode = null;
+			String conditionNode = null;
+			String statementNode = null;
+			boolean forTerminate = false;
+			
+			JSONObject assignmentSubTree = (JSONObject) ((JSONArray) newNode.get("children")).get(0);
+			JSONObject terminatorSubTree = (JSONObject) ((JSONArray) newNode.get("children")).get(1);
+			JSONObject incrementSubTree = (JSONObject) ((JSONArray) newNode.get("children")).get(2);
+			
 			// process condition and create condition node
-			String assignment = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
-			String assignmentNode = this.parent.newNodeName() + ": " + assignment;
-			graph.addVertex(assignmentNode);
 			
-			//Dataflow related
-			saveDataFlow(assignmentNode);
-			
-			// connect condition node to previous child end nodes
-			for(String node : exitNodesList){
-				graph.addEdge(node, assignmentNode, this.parent.newEdgeName());
+			if(((JSONArray) assignmentSubTree.get("children")).size() != 0){
+				assignment = true;
+				assignmentNode = this.parent.newNodeName() + ": " + generator.processGeneric((JSONObject)((JSONArray) assignmentSubTree.get("children")).get(0));
+				graph.addVertex(assignmentNode);
+				
+				//Dataflow related
+				saveDataFlow(assignmentNode);
+				
+				// connect condition node to previous child end nodes
+				for(String node : exitNodesList){
+					graph.addEdge(node, assignmentNode, this.parent.newEdgeName());
+				}
+
+				// reset exitNodesList array
+				exitNodesList.clear();
+				exitNodesList.add(assignmentNode);
 			}
 			
-			// reset exitNodesList array
-			exitNodesList.clear();
-			
 			// process condition and create condition node
-			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(1));
-			String conditionNode = this.parent.newNodeName() + ": " + condition;
-			graph.addVertex(conditionNode);
-			graph.addEdge(assignmentNode, conditionNode, this.parent.newEdgeName());
+			if(((JSONArray) terminatorSubTree.get("children")).size() != 0){
+				terminator = true;
+				forTerminate = true;
+				conditionNode = this.parent.newNodeName() + ": " + generator.processGeneric((JSONObject)((JSONArray) terminatorSubTree.get("children")).get(0));
+				graph.addVertex(conditionNode);
+				
+				//Dataflow related
+				saveDataFlow(conditionNode);
+				
+				// connect condition node to previous child end nodes
+				for(String node : exitNodesList){
+					graph.addEdge(node, conditionNode, this.parent.newEdgeName());
+				}
+
+				// reset exitNodesList array
+				exitNodesList.clear();
+				exitNodesList.add(conditionNode);
 			
-			//Dataflow related
-			saveDataFlow(conditionNode);
+			}
 			
 			// Explore For code block
 			argumentList.clear();
-			argumentList.add(conditionNode);
-			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(3), argumentList));
-
+			argumentList.addAll(exitNodesList);
+			exitNodesList.clear();
+			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(3), argumentList, forTerminate));
 			
-			
-			// process condition and create condition node
-			String statement = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(2));
-			String statementNode = this.parent.newNodeName() + ": " + statement;
-			graph.addVertex(statementNode);
-			
-
-			// connect condition node to previous child end nodes
-			for(String node : exitNodesList){
-				graph.addEdge(node, statementNode, this.parent.newEdgeName());
+			if(assignment)
+				firstNode = assignmentNode;
+			else{
+				if(forTerminate)
+					firstNode=conditionNode;
+				else
+					firstNode=exitNodesList.get(0);
 			}
-			graph.addEdge(statementNode, conditionNode, this.parent.newEdgeName());
+
+			
+			String continueDestination =null;
+			// process statement and create statement node
+			if(((JSONArray) incrementSubTree.get("children")).size() != 0){
+				statement = true;
+				statementNode = this.parent.newNodeName() + ": " + generator.processGeneric((JSONObject)((JSONArray) incrementSubTree.get("children")).get(0));
+				graph.addVertex(statementNode);
+				
+				continueDestination = statementNode;
+
+				// connect condition node (if exists) to previous child end nodes with statement
+				int j;
+
+				if(forTerminate){
+					graph.addEdge(statementNode, conditionNode, this.parent.newEdgeName());
+					j=0;
+				}else{
+					graph.addEdge(statementNode, exitNodesList.get(0), this.parent.newEdgeName());
+					j=1;
+				}
+				for(; j < exitNodesList.size(); j++){
+					graph.addEdge(exitNodesList.get(j), statementNode, this.parent.newEdgeName());
+				}
+			} else{
+				// connect condition node (if exists) to previous child end nodes without statement
+				if(forTerminate){
+					continueDestination = conditionNode;
+					for(int j = 0; j < exitNodesList.size(); j++){
+						graph.addEdge(exitNodesList.get(j), conditionNode, this.parent.newEdgeName());
+					}
+				}else{
+					continueDestination = exitNodesList.get(0);
+					for(int j = 1; j < exitNodesList.size(); j++){
+						graph.addEdge(exitNodesList.get(j), exitNodesList.get(0), this.parent.newEdgeName());
+					}
+				}
+			}
 			
 			// reset exitNodesList array
 			exitNodesList.clear();
@@ -238,15 +321,19 @@ public class CodeProcessor {
 			exitNodesList.addAll(breakNodes);
 			breakNodes.clear();
 			for(String node : continueNodes){
-				graph.addEdge(node, statementNode, this.parent.newEdgeName());
+				graph.addEdge(node, continueDestination, this.parent.newEdgeName());
 			}
 			continueNodes.clear();
 			
+			
+			
 			// the conditional node is were the loop will end and connect to the rest of the code
-			exitNodesList.add(conditionNode);
+			if(terminator)
+				exitNodesList.add(conditionNode);
 			
 			//Dataflow related
-			saveDataFlow(statementNode);
+			if(statement)
+				saveDataFlow(statementNode);
 			setExitLoopControl(false);
 			break;
 		case "DoImpl":
@@ -254,6 +341,7 @@ public class CodeProcessor {
 			// process condition and create condition node
 			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 			conditionNode = this.parent.newNodeName() + ": while(" + condition+");";
+			firstNode = doStartNode;
 			
 			graph.addVertex(conditionNode);
 			graph.addVertex(doStartNode);
@@ -269,7 +357,7 @@ public class CodeProcessor {
 			// reset exitNodesList array and process code block
 			argumentList.clear();
 			argumentList.add(doStartNode);
-			exitNodesList = exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), argumentList);
+			exitNodesList = exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(1), argumentList, true);
 
 			// connect condition node to previous child end nodes
 			for(String node : exitNodesList){
@@ -296,6 +384,7 @@ public class CodeProcessor {
 			condition = generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
 			childStartingNode = this.parent.newNodeName() + ": switch(" + condition + ")";
 			graph.addVertex(childStartingNode);
+			firstNode = childStartingNode;
 			
 			saveDataFlow(childStartingNode);
 			
@@ -315,7 +404,7 @@ public class CodeProcessor {
 				lastCaseElement.clear();
 				argumentList.add(childStartingNode);
 				argumentList.addAll(lastCaseElement);
-				lastCaseElement.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(j), argumentList));
+				lastCaseElement.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(j), argumentList, true));
 			}
 			
 			exitNodesList.addAll(lastCaseElement);
@@ -323,13 +412,10 @@ public class CodeProcessor {
 			breakNodes.clear();
 			setExitLoopControl(false);
 			break;
-		case "ReturnImpl":
-			String returnContent = "";
-			if(((JSONArray) newNode.get("children")).size() != 0)
-				returnContent = " " + generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
-			childStartingNode = this.parent.newNodeName()+": return" + returnContent;
+		case "TryImpl": // TODO maybe end finally implementation
+			// generate try node
+			childStartingNode = this.parent.newNodeName() + ": try";
 			graph.addVertex(childStartingNode);
-			returnNodes.add(childStartingNode);
 			
 			saveDataFlow(childStartingNode);
 			
@@ -340,12 +426,77 @@ public class CodeProcessor {
 			
 			// reset exitNodesList array
 			exitNodesList.clear();
-			setExitLoopControl(true);
+			
+			boolean isThereFinally = (((JSONObject) ((JSONArray) newNode.get("children")).get(((JSONArray) newNode.get("children")).size()-1)).get("name").equals("BlockImpl"));
+			
+			// process try block
+			argumentList.clear();
+			argumentList.add(childStartingNode);
+			exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) newNode.get("children")).get(0), argumentList, true));
+			
+
+			// process each catch parcel (catch variable and block)
+			for(int iter = 1; iter < ((JSONArray) newNode.get("children")).size(); iter++){
+				JSONObject catchDefinition = (JSONObject) ((JSONArray) newNode.get("children")).get(iter);
+				
+				if(catchDefinition.get("name").equals("CatchImpl")){
+					// process catch variable
+					String definition = generator.processGeneric((JSONObject) ((JSONArray) catchDefinition.get("children")).get(0));
+					String catchVarNode = this.parent.newNodeName() + ": Catch(" + definition+ ")";
+					graph.addVertex(catchVarNode);
+					graph.addEdge(childStartingNode, catchVarNode, this.parent.newEdgeName());
+					
+					saveDataFlow(catchVarNode);
+					
+					// process catch block
+					argumentList.clear();
+					argumentList.add(catchVarNode);
+					exitNodesList.addAll(exploreNode((JSONObject) ((JSONArray) catchDefinition.get("children")).get(1), argumentList, true));
+				} else {
+					// create finally starting node
+					String finallyNode = this.parent.newNodeName() + ": finally";
+					graph.addVertex(finallyNode);
+					for(String node : exitNodesList){
+						graph.addEdge(node, finallyNode, this.parent.newEdgeName());
+					}
+					
+					exitNodesList.clear();
+					
+					saveDataFlow(finallyNode);
+					
+					// process finally block
+					argumentList.clear();
+					argumentList.add(finallyNode);
+					exitNodesList.addAll(exploreNode(catchDefinition, argumentList, true));
+				}
+			}
+			
+			break;			
+		case "ReturnImpl":
+			String returnContent = "";
+			if(((JSONArray) newNode.get("children")).size() != 0)
+				returnContent = " " + generator.processGeneric((JSONObject) ((JSONArray) newNode.get("children")).get(0));
+			childStartingNode = this.parent.newNodeName()+": return" + returnContent;
+			graph.addVertex(childStartingNode);
+			returnNodes.add(childStartingNode);
+			firstNode = childStartingNode;
+			
+			saveDataFlow(childStartingNode);
+			
+			// connect condition node to previous child end nodes
+			for(String node : exitNodesList){
+				graph.addEdge(node, childStartingNode, this.parent.newEdgeName());
+			}
+			
+			// reset exitNodesList array
+			exitNodesList.clear();
 			break;
 		case "ContinueImpl":
 			childStartingNode = this.parent.newNodeName()+": continue";
 			graph.addVertex(childStartingNode);
 			continueNodes.add(childStartingNode);
+			
+			firstNode = childStartingNode;
 			
 			saveDataFlow(childStartingNode);
 			
@@ -363,6 +514,8 @@ public class CodeProcessor {
 			graph.addVertex(childStartingNode);
 			breakNodes.add(childStartingNode);
 			
+			firstNode = childStartingNode;
+			
 			saveDataFlow(childStartingNode);
 			
 			// connect condition node to previous child end nodes
@@ -379,6 +532,8 @@ public class CodeProcessor {
 			childStartingNode = this.parent.newNodeName() + ": " + generator.processGeneric(newNode);
 			graph.addVertex(childStartingNode);
 			
+			firstNode = childStartingNode;
+			
 			saveDataFlow(childStartingNode);
 			
 			// connect condition node to previous child end nodes
@@ -390,6 +545,10 @@ public class CodeProcessor {
 			exitNodesList.add(childStartingNode);
 			break;
 		}
+		if(!prevForTerminator)
+			exitNodesList.add(0, firstNode);
+		
+		
 		return exitNodesList;
 	}
 	
