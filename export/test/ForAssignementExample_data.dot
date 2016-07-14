@@ -1,0 +1,21 @@
+digraph G {
+  1 [ label="0: void main(Array args)" ];
+  2 [ label="1: int testing = 0" ];
+  3 [ label="2: int i = 0" ];
+  4 [ label="3: i++" ];
+  5 [ label="4: testing++" ];
+  6 [ label="5: if(testing>2)" ];
+  7 [ label="7: testing++" ];
+  8 [ label="8: if(testing>5)" ];
+  9 [ label="10: i++" ];
+  4 -> 4 [ label="0: i" ];
+  3 -> 4 [ label="1: i" ];
+  5 -> 5 [ label="2: testing" ];
+  2 -> 5 [ label="3: testing" ];
+  5 -> 6 [ label="4: testing" ];
+  7 -> 7 [ label="5: testing" ];
+  5 -> 7 [ label="6: testing" ];
+  7 -> 8 [ label="7: testing" ];
+  9 -> 9 [ label="8: i" ];
+  4 -> 9 [ label="9: i" ];
+}

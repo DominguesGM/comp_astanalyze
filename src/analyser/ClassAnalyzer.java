@@ -37,26 +37,28 @@ public class ClassAnalyzer {
 		JSONObject funcContents;
 		String funcName = "";
 		
-		for(int i = 1; i < ((JSONArray) classObject.get("children")).size(); i++){
-			func = (JSONObject) ((JSONArray) classObject.get("children")).get(i);
-			funcName = (String) func.get("content");
-			
-			ArrayList<String> arguments = new ArrayList<String>();
-			for(int j = 0; j < ((JSONArray) func.get("children")).size(); j++){
-				// Retrieve function content
-				funcContents = (JSONObject) ((JSONArray) func.get("children")).get(j);
-				// If content is the functions code block
-				if(j+1 == ((JSONArray) func.get("children")).size()){
-					new FunctionAnalyzer(this, funcName, arguments, funcContents, controlGraph, dataGraph);
-				} else {
-					if(j == 0){
-						arguments.add((String) funcContents.get("content"));
+		for(int i = 0; i < ((JSONArray) classObject.get("children")).size(); i++){
+			if(((JSONObject)((JSONArray) classObject.get("children")).get(i)).get("name").equals("MethodImpl")){
+				func = (JSONObject) ((JSONArray) classObject.get("children")).get(i);
+				funcName = (String) func.get("content");
+				
+				ArrayList<String> arguments = new ArrayList<String>();
+				for(int j = 0; j < ((JSONArray) func.get("children")).size(); j++){
+					// Retrieve function content
+					funcContents = (JSONObject) ((JSONArray) func.get("children")).get(j);
+					// If content is the functions code block
+					if(j+1 == ((JSONArray) func.get("children")).size()){
+						new FunctionAnalyzer(this, funcName, arguments, funcContents, controlGraph, dataGraph);
 					} else {
-						//If content is a parameter, parse parameter and insert into arguments list
-						String parameter = (String) ((JSONObject)((JSONArray)funcContents.get("children")).get(0)).get("content");
-						arguments.add(parameter);
-						parameter =(String) funcContents.get("content");
-						arguments.add(parameter);
+						if(j == 0){
+							arguments.add((String) funcContents.get("content"));
+						} else {
+							//If content is a parameter, parse parameter and insert into arguments list
+							String parameter = (String) ((JSONObject)((JSONArray)funcContents.get("children")).get(0)).get("content");
+							arguments.add(parameter);
+							parameter =(String) funcContents.get("content");
+							arguments.add(parameter);
+						}
 					}
 				}
 			}
