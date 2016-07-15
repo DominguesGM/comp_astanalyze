@@ -1,6 +1,5 @@
-package test;
 
-class TryCatchTest{
+class MultiCatchFinallyTest{
   public static void main(String args[]){
     int b;
     int a=b=0;

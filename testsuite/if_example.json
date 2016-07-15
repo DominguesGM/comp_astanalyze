@@ -7,25 +7,25 @@
       "children": [
       {
          "name": "PackageImpl",
-         "content": "test",
+         "content": "unnamed package",
          "children": [
          {
             "name": "ClassImpl",
             "content": "IfExample",
-            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:2)",
             "children": [
             {
                "name": "ConstructorImpl",
-               "content": "test.IfExample()",
-               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
+               "content": "IfExample()",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:2)",
                "children": [
                {
                   "name": "BlockImpl",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:2)",
                   "children": [
                   {
                      "name": "InvocationImpl",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:2)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -68,7 +68,7 @@
             {
                "name": "MethodImpl",
                "content": "main",
-               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:4)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
                "children": [
                {
                   "name": "TypeReferenceImpl",
@@ -78,7 +78,7 @@
                {
                   "name": "ParameterImpl",
                   "content": "args",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:4)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:3)",
                   "children": [
                   {
                      "name": "ArrayTypeReferenceImpl",
@@ -102,7 +102,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "a",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:5)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:4)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -112,7 +112,7 @@
                      {
                         "name": "LiteralImpl",
                         "content": "2",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:5)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:4)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -124,7 +124,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "b",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:6)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:5)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -134,7 +134,7 @@
                      {
                         "name": "LiteralImpl",
                         "content": "1",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:6)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:5)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -149,7 +149,7 @@
                      {
                         "name": "BinaryOperatorImpl",
                         "content": "<=",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:6)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -158,7 +158,7 @@
                         },
                         {
                            "name": "VariableReadImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:6)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -178,7 +178,7 @@
                         },
                         {
                            "name": "VariableReadImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:6)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -202,12 +202,12 @@
                         "children": [
                         {
                            "name": "ReturnImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:8)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
                            "children": [
                            {
                               "name": "BinaryOperatorImpl",
                               "content": "-",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:8)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -216,7 +216,7 @@
                               },
                               {
                                  "name": "VariableReadImpl",
-                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:8)",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
                                  "children": [
                                  {
                                     "name": "TypeReferenceImpl",
@@ -236,7 +236,7 @@
                               },
                               {
                                  "name": "VariableReadImpl",
-                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:8)",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:7)",
                                  "children": [
                                  {
                                     "name": "TypeReferenceImpl",
@@ -260,11 +260,11 @@
                   },
                   {
                      "name": "ReturnImpl",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:10)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:9)",
                      "children": [
                      {
                         "name": "VariableReadImpl",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:10)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/IfExample.java:9)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",

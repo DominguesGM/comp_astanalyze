@@ -1,8 +1,0 @@
-digraph G {
-  1 [ label="0: void main(Array args)" ];
-  2 [ label="2: int a = b = 0" ];
-  3 [ label="3: String nullPointer = \"null\"" ];
-  4 [ label="4: b = example.subtractTwo(1, 2)" ];
-  5 [ label="6: a = nullPointer.length()" ];
-  3 -> 5 [ label="0: nullPointer" ];
-}

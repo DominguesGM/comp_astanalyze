@@ -1,4 +1,3 @@
-package test;
 
 public class ForBreakExample {
 	public static void main(String args[]){

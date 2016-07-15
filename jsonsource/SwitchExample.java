@@ -1,4 +1,3 @@
-package test;
 
 public class SwitchExample {
 	public static String main(String args[]){

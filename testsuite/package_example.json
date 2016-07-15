@@ -7,7 +7,7 @@
       "children": [
       {
          "name": "PackageImpl",
-         "content": "test",
+         "content": "testpackage",
          "children": [
          {
             "name": "ClassImpl",
@@ -16,7 +16,7 @@
             "children": [
             {
                "name": "ConstructorImpl",
-               "content": "test.ForAssignementExample()",
+               "content": "testpackage.ForAssignementExample()",
                "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/testing/ForAssignementExample.java:3)",
                "children": [
                {
@@ -419,7 +419,7 @@
             "children": [
             {
                "name": "ConstructorImpl",
-               "content": "test.ForBreakExample()",
+               "content": "testpackage.ForBreakExample()",
                "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/testing/ForBreakExample.java:3)",
                "children": [
                {
@@ -934,7 +934,7 @@
             "children": [
             {
                "name": "ConstructorImpl",
-               "content": "test.ForExampleBreakInDoubleIf()",
+               "content": "testpackage.ForExampleBreakInDoubleIf()",
                "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/testing/ForExampleBreakInDoubleIf.java:3)",
                "children": [
                {
@@ -1548,7 +1548,7 @@
             "children": [
             {
                "name": "ConstructorImpl",
-               "content": "test.FunctionExample()",
+               "content": "testpackage.FunctionExample()",
                "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/testing/FunctionExample.java:3)",
                "children": [
                {
@@ -1817,14 +1817,14 @@
                   "children": [
                   {
                      "name": "PackageReferenceImpl",
-                     "content": "test",
+                     "content": "testpackage",
                      "children": []
                   }]
                }]
             },
             {
                "name": "ConstructorImpl",
-               "content": "test.TryCatchTest()",
+               "content": "testpackage.TryCatchTest()",
                "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/testing/NullCatchExample.java:3)",
                "children": [
                {
@@ -2045,7 +2045,7 @@
                               "children": [
                               {
                                  "name": "PackageReferenceImpl",
-                                 "content": "test",
+                                 "content": "testpackage",
                                  "children": []
                               }]
                            },
@@ -2059,7 +2059,7 @@
                                  "children": [
                                  {
                                     "name": "PackageReferenceImpl",
-                                    "content": "test",
+                                    "content": "testpackage",
                                     "children": []
                                  }]
                               },
@@ -2069,7 +2069,7 @@
                                  "children": [
                                  {
                                     "name": "PackageReferenceImpl",
-                                    "content": "test",
+                                    "content": "testpackage",
                                     "children": []
                                  }]
                               }]
@@ -2085,7 +2085,7 @@
                               "children": [
                               {
                                  "name": "PackageReferenceImpl",
-                                 "content": "test",
+                                 "content": "testpackage",
                                  "children": []
                               }]
                            },

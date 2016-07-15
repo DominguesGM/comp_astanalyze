@@ -1,4 +1,3 @@
-package test;
 
 public class ForExampleBreakInDoubleIf {
 	public static void main(String args[]){

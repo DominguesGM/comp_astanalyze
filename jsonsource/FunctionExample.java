@@ -1,4 +1,3 @@
-package test;
 
 public class FunctionExample {
 	public static int main(String args[]){

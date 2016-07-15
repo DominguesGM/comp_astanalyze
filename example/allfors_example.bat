@@ -1,0 +1,1 @@
+java -cp ..\bin;..\lib\* analyser.AstAnalyze allfors_example.json

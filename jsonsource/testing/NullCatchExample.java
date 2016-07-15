@@ -1,4 +1,4 @@
-package test;
+package testpackage;
 
 class TryCatchTest{
   static FunctionExample example;

@@ -17,16 +17,25 @@ public class Output {
 	public Output(ClassAnalyzer v, String path){
 		visitor = v;
 
-		File exportDir = new File(path);
+		File exportDir = new File("export");
 
 		// if the directory does not exist, create it
 		if (!exportDir.exists()) {
 			try{
 				exportDir.mkdir();
 			}
-			catch(SecurityException se){
-				//handle it
+			catch(SecurityException se){}
+		}
+
+		
+		File packageDir = new File(path);
+
+		// if the directory does not exist, create it
+		if (!packageDir.exists()) {
+			try{
+				packageDir.mkdir();
 			}
+			catch(SecurityException se){}
 		}
 	}
 	

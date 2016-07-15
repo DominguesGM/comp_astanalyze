@@ -92,7 +92,7 @@ public class ClassAnalyzer {
 	}
 
 	public void export(){
-		Output output = new Output(this, packageName);
+		Output output = new Output(this, "export/"+packageName);
 		
 		try {
 			output.printControlGraph("export/" + packageName + "/" + className + "_control.dot");

@@ -7,25 +7,25 @@
       "children": [
       {
          "name": "PackageImpl",
-         "content": "test",
+         "content": "unnamed package",
          "children": [
          {
             "name": "ClassImpl",
             "content": "ForAssignementExample",
-            "code": "(/Users/Gil/Desktop/ForAssignementExample.java:3)",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:2)",
             "children": [
             {
                "name": "ConstructorImpl",
-               "content": "test.ForAssignementExample()",
-               "code": "(/Users/Gil/Desktop/ForAssignementExample.java:3)",
+               "content": "ForAssignementExample()",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:2)",
                "children": [
                {
                   "name": "BlockImpl",
-                  "code": "(/Users/Gil/Desktop/ForAssignementExample.java:3)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:2)",
                   "children": [
                   {
                      "name": "InvocationImpl",
-                     "code": "(/Users/Gil/Desktop/ForAssignementExample.java:3)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:2)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -68,7 +68,7 @@
             {
                "name": "MethodImpl",
                "content": "main",
-               "code": "(/Users/Gil/Desktop/ForAssignementExample.java:4)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:3)",
                "children": [
                {
                   "name": "TypeReferenceImpl",
@@ -78,7 +78,7 @@
                {
                   "name": "ParameterImpl",
                   "content": "args",
-                  "code": "(/Users/Gil/Desktop/ForAssignementExample.java:4)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:3)",
                   "children": [
                   {
                      "name": "ArrayTypeReferenceImpl",
@@ -102,7 +102,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "testing",
-                     "code": "(/Users/Gil/Desktop/ForAssignementExample.java:5)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:4)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -112,7 +112,7 @@
                      {
                         "name": "LiteralImpl",
                         "content": "0",
-                        "code": "(/Users/Gil/Desktop/ForAssignementExample.java:5)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:4)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -124,7 +124,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "i",
-                     "code": "(/Users/Gil/Desktop/ForAssignementExample.java:7)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:6)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -134,7 +134,7 @@
                      {
                         "name": "LiteralImpl",
                         "content": "0",
-                        "code": "(/Users/Gil/Desktop/ForAssignementExample.java:7)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:6)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -152,7 +152,7 @@
                         {
                            "name": "UnaryOperatorImpl",
                            "content": "_++",
-                           "code": "(/Users/Gil/Desktop/ForAssignementExample.java:9)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:8)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -161,7 +161,7 @@
                            },
                            {
                               "name": "VariableReadImpl",
-                              "code": "(/Users/Gil/Desktop/ForAssignementExample.java:9)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:8)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -195,7 +195,7 @@
                         {
                            "name": "UnaryOperatorImpl",
                            "content": "_++",
-                           "code": "(/Users/Gil/Desktop/ForAssignementExample.java:10)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:9)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -204,7 +204,7 @@
                            },
                            {
                               "name": "VariableReadImpl",
-                              "code": "(/Users/Gil/Desktop/ForAssignementExample.java:10)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:9)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -229,7 +229,7 @@
                            {
                               "name": "BinaryOperatorImpl",
                               "content": ">",
-                              "code": "(/Users/Gil/Desktop/ForAssignementExample.java:11)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:10)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -238,7 +238,7 @@
                               },
                               {
                                  "name": "VariableReadImpl",
-                                 "code": "(/Users/Gil/Desktop/ForAssignementExample.java:11)",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:10)",
                                  "children": [
                                  {
                                     "name": "TypeReferenceImpl",
@@ -259,7 +259,7 @@
                               {
                                  "name": "LiteralImpl",
                                  "content": "2",
-                                 "code": "(/Users/Gil/Desktop/ForAssignementExample.java:11)",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:10)",
                                  "children": [
                                  {
                                     "name": "TypeReferenceImpl",
@@ -270,7 +270,7 @@
                            },
                            {
                               "name": "BreakImpl",
-                              "code": "(/Users/Gil/Desktop/ForAssignementExample.java:12)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:11)",
                               "children": []
                            }]
                         }]
@@ -293,7 +293,7 @@
                         {
                            "name": "UnaryOperatorImpl",
                            "content": "_++",
-                           "code": "(/Users/Gil/Desktop/ForAssignementExample.java:15)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:14)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -302,7 +302,7 @@
                            },
                            {
                               "name": "VariableReadImpl",
-                              "code": "(/Users/Gil/Desktop/ForAssignementExample.java:15)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:14)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -328,7 +328,7 @@
                         {
                            "name": "UnaryOperatorImpl",
                            "content": "_++",
-                           "code": "(/Users/Gil/Desktop/ForAssignementExample.java:16)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:15)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -337,7 +337,7 @@
                            },
                            {
                               "name": "VariableReadImpl",
-                              "code": "(/Users/Gil/Desktop/ForAssignementExample.java:16)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:15)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -362,7 +362,7 @@
                            {
                               "name": "BinaryOperatorImpl",
                               "content": ">",
-                              "code": "(/Users/Gil/Desktop/ForAssignementExample.java:17)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:16)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -371,7 +371,7 @@
                               },
                               {
                                  "name": "VariableReadImpl",
-                                 "code": "(/Users/Gil/Desktop/ForAssignementExample.java:17)",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:16)",
                                  "children": [
                                  {
                                     "name": "TypeReferenceImpl",
@@ -392,7 +392,7 @@
                               {
                                  "name": "LiteralImpl",
                                  "content": "5",
-                                 "code": "(/Users/Gil/Desktop/ForAssignementExample.java:17)",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:16)",
                                  "children": [
                                  {
                                     "name": "TypeReferenceImpl",
@@ -403,7 +403,7 @@
                            },
                            {
                               "name": "BreakImpl",
-                              "code": "(/Users/Gil/Desktop/ForAssignementExample.java:18)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/ForAssignementExample.java:17)",
                               "children": []
                            }]
                         }]

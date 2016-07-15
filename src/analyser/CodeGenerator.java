@@ -127,6 +127,8 @@ public class CodeGenerator {
 			}
 			function += ")";
 			return function;
+		case "ThisAccessImpl":
+			return "this";
 		case "CatchVariableImpl":
 			output = processGeneric((JSONObject) children.get(0)) + " " + content;
 			if(children.size() == 2){
@@ -143,6 +145,10 @@ public class CodeGenerator {
 			return type;
 		case "ReturnImpl":
 			return type;
+		case "FieldWriteImpl":
+			if(children.size() == 3)
+				return processGeneric((JSONObject)children.get(1)) + "." + processGeneric((JSONObject)children.get(2));
+			else return processGeneric((JSONObject)children.get(1));
 		default:
 			return type;
 		}

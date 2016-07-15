@@ -7,25 +7,25 @@
       "children": [
       {
          "name": "PackageImpl",
-         "content": "test",
+         "content": "unnamed package",
          "children": [
          {
             "name": "ClassImpl",
             "content": "TryCatchTest",
-            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:3)",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:2)",
             "children": [
             {
                "name": "ConstructorImpl",
-               "content": "test.TryCatchTest()",
-               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:3)",
+               "content": "TryCatchTest()",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:2)",
                "children": [
                {
                   "name": "BlockImpl",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:3)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:2)",
                   "children": [
                   {
                      "name": "InvocationImpl",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:3)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:2)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -68,7 +68,7 @@
             {
                "name": "MethodImpl",
                "content": "main",
-               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:4)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:3)",
                "children": [
                {
                   "name": "TypeReferenceImpl",
@@ -78,7 +78,7 @@
                {
                   "name": "ParameterImpl",
                   "content": "args",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:4)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:3)",
                   "children": [
                   {
                      "name": "ArrayTypeReferenceImpl",
@@ -102,7 +102,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "b",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:5)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:4)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -113,7 +113,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "a",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:6)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:5)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -122,7 +122,7 @@
                      },
                      {
                         "name": "AssignmentImpl",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:6)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:5)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -131,7 +131,7 @@
                         },
                         {
                            "name": "VariableWriteImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:6)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:5)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -152,7 +152,7 @@
                         {
                            "name": "LiteralImpl",
                            "content": "0",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:6)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:5)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -165,7 +165,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "nullPointer",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:7)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:6)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -180,7 +180,7 @@
                      {
                         "name": "LiteralImpl",
                         "content": "null",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:7)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:6)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -197,7 +197,7 @@
                         "children": [
                         {
                            "name": "AssignmentImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:9)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:8)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -206,7 +206,7 @@
                            },
                            {
                               "name": "VariableWriteImpl",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:9)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:8)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -226,7 +226,7 @@
                            },
                            {
                               "name": "InvocationImpl",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:9)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:8)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -235,7 +235,7 @@
                               },
                               {
                                  "name": "VariableReadImpl",
-                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:9)",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:8)",
                                  "children": [
                                  {
                                     "name": "TypeReferenceImpl",
@@ -284,21 +284,15 @@
                                  }]
                               }]
                            }]
-                        },
-                        {
-                           "name": "ReturnImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:10)",
-                           "children": []
                         }]
                      },
                      {
                         "name": "CatchImpl",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:11)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:9)",
                         "children": [
                         {
                            "name": "CatchVariableImpl",
-						   "content": "e",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:11)",
+                           "content": "e",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -317,7 +311,7 @@
                            {
                               "name": "UnaryOperatorImpl",
                               "content": "_++",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:12)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:10)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -326,7 +320,7 @@
                               },
                               {
                                  "name": "VariableReadImpl",
-                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:12)",
+                                 "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:10)",
                                  "children": [
                                  {
                                     "name": "TypeReferenceImpl",
@@ -344,11 +338,6 @@
                                     }]
                                  }]
                               }]
-                           },
-                           {
-                              "name": "ReturnImpl",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/TryCatchExample.java:13)",
-                              "children": []
                            }]
                         }]
                      }]

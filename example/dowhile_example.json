@@ -7,25 +7,25 @@
       "children": [
       {
          "name": "PackageImpl",
-         "content": "test",
+         "content": "unnamed package",
          "children": [
          {
             "name": "ClassImpl",
             "content": "DoWhileExample",
-            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:2)",
             "children": [
             {
                "name": "ConstructorImpl",
-               "content": "test.DoWhileExample()",
-               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+               "content": "DoWhileExample()",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:2)",
                "children": [
                {
                   "name": "BlockImpl",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:2)",
                   "children": [
                   {
                      "name": "InvocationImpl",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:2)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -68,7 +68,7 @@
             {
                "name": "MethodImpl",
                "content": "main",
-               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:4)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
                "children": [
                {
                   "name": "TypeReferenceImpl",
@@ -83,7 +83,7 @@
                {
                   "name": "ParameterImpl",
                   "content": "args",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:4)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:3)",
                   "children": [
                   {
                      "name": "ArrayTypeReferenceImpl",
@@ -107,7 +107,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "finalString",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:5)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:4)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -122,7 +122,7 @@
                      {
                         "name": "LiteralImpl",
                         "content": "",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:5)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:4)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -139,7 +139,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "i",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:6)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:5)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -149,7 +149,7 @@
                      {
                         "name": "LiteralImpl",
                         "content": "10",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:6)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:5)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -164,7 +164,7 @@
                      {
                         "name": "BinaryOperatorImpl",
                         "content": ">",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:11)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -173,7 +173,7 @@
                         },
                         {
                            "name": "VariableReadImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:11)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -194,7 +194,7 @@
                         {
                            "name": "LiteralImpl",
                            "content": "0",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:11)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -209,7 +209,7 @@
                         {
                            "name": "OperatorAssignmentImpl",
                            "content": "+=",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:8)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -223,7 +223,7 @@
                            },
                            {
                               "name": "VariableWriteImpl",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:8)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -254,7 +254,7 @@
                            {
                               "name": "LiteralImpl",
                               "content": "a",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:8)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -271,7 +271,7 @@
                         {
                            "name": "UnaryOperatorImpl",
                            "content": "_--",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:10)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -280,7 +280,7 @@
                            },
                            {
                               "name": "VariableReadImpl",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:10)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:9)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -303,11 +303,11 @@
                   },
                   {
                      "name": "ReturnImpl",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:13)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
                      "children": [
                      {
                         "name": "VariableReadImpl",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:13)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/DoWhileExample.java:12)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
