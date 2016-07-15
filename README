@@ -15,7 +15,7 @@ NAME3: Pedro Martins Pontes, NR3: 201305367, GRADE3: 18, CONTRIBUTION: 32%
 
 The tool developed generates two graphs, a control flow graph and a data dependency graph, given an abstract syntax tree.
 The output is split into two dot files, one containing the control flow graph and another containing the data dependency graph.
-The abstract syntax tree must be generated using spoon2ast.jar, a tool developed by Joao Bispo.
+The abstract syntax tree must be generated using spoon2ast.jar, a tool developed by Tiago Carvalho.
 
 
 After compilation, the tool must be run using the following command (assuming working directory as project folder): java -cp bin;lib\* analyser.AstAnalyze <path_to_json>/<file_name>.json
@@ -23,6 +23,8 @@ In order to start with a *.java file, execute the following list of commands :
 				java -jar <path_to_project>/extra/spoon2ast.jar <path_to_file>/<class_to_parse>.java
 				java -cp bin;lib\* analyser.AstAnalyze <json_file_path>/<json_file_name>.json
 ATTENTION: spoon2ast.jar exports 2 files, one called ast.json and another called ast.txt. The one to use is the json file.
+
+We suggest using the program Graphviz to visualize the output graphs.
 
 
 **DEALING WITH SYNTACTIC ERRORS: 
@@ -52,9 +54,9 @@ taking each variable used and looking for the closest definition in the path cre
 variable definition that may be directly affecting that variable use. It does this for each line of code until it runs out of variable uses in each line.
 The result are two parallel ArrayLists associated with each graph node, one with the variables it uses, and the other with the node where that variable was defined.
 
-After analyzing each function in the class, it outputs two dot files, one with the control flow graph and the other with the data dependency graph.
+After analyzing each function in the class, it outputs two dot files per class analyzed, one with the control flow graph and the other with the data dependency graph.
 
-The tool makes use of the graph library jgrapht for the graph construction and output as well as the json library json-simple.
+The tool makes use of the graph library jgrapht for the graph construction and output as well as the json library json-simple for reading the AST file.
 
 
 
@@ -79,14 +81,15 @@ Pedro Pontes: data flow graph generation;
 
 **PROS: 
 
-This tool is prepared to analyze a java class containing multiple functions. In case there are multiple functions present
+This tool is prepared to analyze java packages containing multiple classes containing multiple functions. In case there are multiple functions present
 in the class, a graph is generated for each method (all the graphs are exported to the same CFG dot file). Even though there is
 no edge connecting these graphs, for each method its header is present in the graph and method invocations from within a method body are 
 explicit in that method's graph. The fact the graphs of different functions aren't connected was a design choice for the dot file to be more
 easily visualized and more understandable when using a tool like graphviz.
+Two dot files are generated per class, one for the control flow and another for the data dependencies.
 The code generated for the construction of the graphs is designed to be easily interpreted, making it more suitable for presentation
 purposes.
-Most control structure are supported (with the exception mentioned in the CONS section).
+All control structure are supported (including the previously unsupported try/catch blocks and incomplete for statements).
 
 
 
@@ -94,9 +97,6 @@ Most control structure are supported (with the exception mentioned in the CONS s
 **CONS: 
 
 This tool is entirely dependent of the spoon2ast.jar tool, given that it was this tool's specific output our tool was designed to process.
-Some specific and less common control structures weren't accounted for, such as try/catch and incomplete for loops (for example for(; i<0; i++) or even for(;;)).
-The usage of this tool is limited to a single java class at a time, though using it separately on more than one class would achieve
-similar results to what it would if multiple class support were to be implemented (the only difference being the graph existing in separate dot files)
 
 
 **DELIVERY DETAILS:

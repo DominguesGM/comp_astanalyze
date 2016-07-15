@@ -1,4 +1,4 @@
-package test;
+package testpackage;
 
 public class FunctionExample {
 

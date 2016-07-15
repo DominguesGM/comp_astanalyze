@@ -1,0 +1,1 @@
+java -cp ..\bin;..\lib\* analyser.AstAnalyze trycatch_example.json

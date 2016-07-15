@@ -1,4 +1,3 @@
-package test;
 
 class TryCatchTest{
   public static void main(String args[]){
@@ -7,10 +6,8 @@ class TryCatchTest{
     String nullPointer = null;
     try{
       a = nullPointer.length();
-      return;
     } catch(NullPointerException e) {
       b++;
-      return;
     }
   }
 }

@@ -1,4 +1,3 @@
-package test;
 
 public class DoWhileExample {
 	public static String main(String args[]){

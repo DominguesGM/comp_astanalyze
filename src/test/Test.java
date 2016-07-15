@@ -57,16 +57,6 @@ public class Test {
     			Log.error("Error while analyzing the abstract syntax tree. Check json format.");
     			continue;
     		}
-            
-            /*output = new Output(analyzer);
-
-            try {
-                output.printControlGraph(String.format("export/%s_cfg.dot", nameFile));
-                output.printDataGraph(String.format("export/%s_dfg.dot", nameFile));
-                System.out.println("Foram criados os grafos para o ficheiro " + nameFile);
-            } catch (IOException e) {
-                System.out.println("Erro ao criar os grafos para o ficheiro " + nameFile);
-            }*/
         }
     }
 

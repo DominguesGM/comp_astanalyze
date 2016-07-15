@@ -7,25 +7,25 @@
       "children": [
       {
          "name": "PackageImpl",
-         "content": "test",
+         "content": "unnamed package",
          "children": [
          {
             "name": "ClassImpl",
             "content": "FunctionExample",
-            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:3)",
+            "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:2)",
             "children": [
             {
                "name": "ConstructorImpl",
-               "content": "test.FunctionExample()",
-               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:3)",
+               "content": "FunctionExample()",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:2)",
                "children": [
                {
                   "name": "BlockImpl",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:3)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:2)",
                   "children": [
                   {
                      "name": "InvocationImpl",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:3)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:2)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -68,7 +68,7 @@
             {
                "name": "MethodImpl",
                "content": "main",
-               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:4)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:3)",
                "children": [
                {
                   "name": "TypeReferenceImpl",
@@ -78,7 +78,7 @@
                {
                   "name": "ParameterImpl",
                   "content": "args",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:4)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:3)",
                   "children": [
                   {
                      "name": "ArrayTypeReferenceImpl",
@@ -102,7 +102,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "val1",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:5)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:4)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -112,7 +112,7 @@
                      {
                         "name": "LiteralImpl",
                         "content": "10",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:5)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:4)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -124,7 +124,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "val2",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:6)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:5)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -134,7 +134,7 @@
                      {
                         "name": "LiteralImpl",
                         "content": "8",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:6)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:5)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -146,7 +146,7 @@
                   {
                      "name": "LocalVariableImpl",
                      "content": "res",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:8)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:7)",
                      "children": [
                      {
                         "name": "TypeReferenceImpl",
@@ -155,7 +155,7 @@
                      },
                      {
                         "name": "InvocationImpl",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:8)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:7)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -169,12 +169,7 @@
                            {
                               "name": "TypeReferenceImpl",
                               "content": "FunctionExample",
-                              "children": [
-                              {
-                                 "name": "PackageReferenceImpl",
-                                 "content": "test",
-                                 "children": []
-                              }]
+                              "children": []
                            },
                            {
                               "name": "TypeReferenceImpl",
@@ -184,7 +179,7 @@
                         },
                         {
                            "name": "VariableReadImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:8)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:7)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -204,7 +199,7 @@
                         },
                         {
                            "name": "VariableReadImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:8)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:7)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -226,11 +221,11 @@
                   },
                   {
                      "name": "ReturnImpl",
-                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:10)",
+                     "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:9)",
                      "children": [
                      {
                         "name": "VariableReadImpl",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:10)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:9)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -254,7 +249,7 @@
             {
                "name": "MethodImpl",
                "content": "subtractTwo",
-               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:13)",
+               "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:12)",
                "children": [
                {
                   "name": "TypeReferenceImpl",
@@ -264,7 +259,7 @@
                {
                   "name": "ParameterImpl",
                   "content": "a",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:13)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:12)",
                   "children": [
                   {
                      "name": "TypeReferenceImpl",
@@ -275,7 +270,7 @@
                {
                   "name": "ParameterImpl",
                   "content": "b",
-                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:13)",
+                  "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:12)",
                   "children": [
                   {
                      "name": "TypeReferenceImpl",
@@ -292,7 +287,7 @@
                      {
                         "name": "BinaryOperatorImpl",
                         "content": ">",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:14)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:13)",
                         "children": [
                         {
                            "name": "TypeReferenceImpl",
@@ -301,7 +296,7 @@
                         },
                         {
                            "name": "VariableReadImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:14)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:13)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -321,7 +316,7 @@
                         },
                         {
                            "name": "VariableReadImpl",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:14)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:13)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -342,12 +337,12 @@
                      },
                      {
                         "name": "ReturnImpl",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:14)",
                         "children": [
                         {
                            "name": "BinaryOperatorImpl",
                            "content": "-",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:14)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -356,7 +351,7 @@
                            },
                            {
                               "name": "VariableReadImpl",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:14)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -376,7 +371,7 @@
                            },
                            {
                               "name": "VariableReadImpl",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:15)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:14)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -398,12 +393,12 @@
                      },
                      {
                         "name": "ReturnImpl",
-                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
+                        "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:16)",
                         "children": [
                         {
                            "name": "BinaryOperatorImpl",
                            "content": "-",
-                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
+                           "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:16)",
                            "children": [
                            {
                               "name": "TypeReferenceImpl",
@@ -412,7 +407,7 @@
                            },
                            {
                               "name": "VariableReadImpl",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:16)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
@@ -432,7 +427,7 @@
                            },
                            {
                               "name": "VariableReadImpl",
-                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:17)",
+                              "code": "(/Users/Gil/Univ/3ano/2semestre/COMP/workspace/comp_astanalyze/jsonsource/FunctionExample.java:16)",
                               "children": [
                               {
                                  "name": "TypeReferenceImpl",
